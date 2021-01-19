@@ -10,7 +10,10 @@ class HomeScreen extends StatelessWidget {
         child: Center(
             child: FlatButton(
           onPressed: () => Navigator.pushNamed(context, '/hi'),
-          child: Icon(Icons.home),
+          child: Text(
+            'navigate',
+            style: Theme.of(context).textTheme.bodyText2,
+          ),
         )),
       ),
     );
