@@ -1,6 +1,6 @@
-import 'package:barter/app/middlewares/validHomeScreenData.dart';
 import 'package:barter/ui/screens/404.dart';
 import 'package:barter/ui/screens/home.dart';
+import 'package:barter/ui/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -10,10 +10,10 @@ class CustomRouter {
     final dynamic _args = settings.arguments;
 
     switch (settings.name) {
+      case '/onboarding':
+        return MaterialPageRoute(builder: (_) => OnBoardingScreen());
       case '/':
-        return ValidHomeScreenData().handle(_args)
-            ? MaterialPageRoute(builder: (_) => HomeScreen())
-            : _notFound404Screen;
+        return MaterialPageRoute(builder: (_) => HomeScreen());
       default:
         return MaterialPageRoute(builder: (_) => _notFound404Screen);
     }
