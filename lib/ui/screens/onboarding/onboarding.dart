@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:barter/ui/screens/onboarding/_screens/first_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/second_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/third_onboarding.dart';
+import 'package:flutter/services.dart';
 
 @immutable
 class OnBoardingScreen extends StatefulWidget {
@@ -13,6 +14,13 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _controller = PageController(initialPage: 0);
+  int _currentPage;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentPage = 0;
+  }
 
   @override
   void dispose() {
@@ -26,15 +34,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       top: false,
       child: Scaffold(
         body: PageView(
+          onPageChanged: (int page) => _onPageChanged(page),
           controller: _controller,
           physics: BouncingScrollPhysics(),
           children: [
-            FirstOnboarding(),
+            FirstOnboarding(_currentPage),
             SecondOnboarding(),
             ThirdOnboarding(),
           ],
         ),
       ),
     );
+  }
+
+  void _onPageChanged(int page) {
+    HapticFeedback.mediumImpact();
+    setState(() => _currentPage = page);
   }
 }

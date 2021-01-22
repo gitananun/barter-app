@@ -1,3 +1,4 @@
+import 'package:barter/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomIndicators extends StatelessWidget {
@@ -8,28 +9,23 @@ class CustomIndicators extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _SingleIndicator(page == 0),
-        SizedBox(width: 5),
-        _SingleIndicator(page == 1),
-        SizedBox(width: 5),
-        _SingleIndicator(page == 2),
-      ],
+      children: [for (int i = 0; i < OnBoardingConstants.totalPages; i++) _SingleIndicator(page == i)],
     );
   }
 }
 
 class _SingleIndicator extends StatelessWidget {
-  _SingleIndicator(this.isActive, {Key key}) : super(key: key);
-
+  _SingleIndicator(this.isActive);
   final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeContext = Theme.of(context);
-    return CircleAvatar(
-      radius: 4,
-      backgroundColor: isActive ? _themeContext.primaryColor : _themeContext.disabledColor.withOpacity(0.3),
+    final Color _bgColor = isActive ? _themeContext.primaryColor : _themeContext.disabledColor.withOpacity(0.3);
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 3.0),
+      child: CircleAvatar(radius: 4, backgroundColor: _bgColor),
     );
   }
 }

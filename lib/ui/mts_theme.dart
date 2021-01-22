@@ -16,7 +16,7 @@ class MTStheme {
     headline2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w700, fontSize: 30),
     headline3: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 28),
     headline4: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w700, fontSize: 22),
-    headline5: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 20),
+    headline5: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 20),
     headline6: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 18),
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),

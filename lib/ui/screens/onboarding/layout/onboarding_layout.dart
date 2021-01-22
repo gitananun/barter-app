@@ -12,7 +12,6 @@ class OnBoardingLayout extends StatelessWidget {
       padding: OnBoardingStyle.contentPadding,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: content,
       ),
     );
