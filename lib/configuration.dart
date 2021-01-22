@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class Configuration {
+class Configurations {
   static const bool developmentMode = true;
   static const bool logging = true;
   static const bool useMockData = true;

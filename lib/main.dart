@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Barter',
-      theme: customThemeData,
+      theme: MTStheme.customThemeData,
       initialRoute: '/onboarding',
       onGenerateRoute: CustomRouter.generateRoutes,
     );

@@ -8,7 +8,6 @@ class CustomRouter {
   static Route<dynamic> generateRoutes(RouteSettings settings) {
     const NotFound404Screen _notFound404Screen = NotFound404Screen();
     // final dynamic _args = settings.arguments;
-
     switch (settings.name) {
       case '/onboarding':
         return MaterialPageRoute(builder: (_) => OnBoardingScreen());
