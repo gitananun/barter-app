@@ -40,13 +40,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         appBar: OnBoardingAppBar(),
         backgroundColor: Colors.white,
         bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
-        floatingActionButton: OnBoardingCustomCircularButton(),
+        floatingActionButton: OnBoardingCustomCircularButton(_onNextPage),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: PageView(
           onPageChanged: (int page) => _onPageChanged(page),
           controller: _controller,
           physics: BouncingScrollPhysics(),
-          children: [FirstOnboarding(_currentPage), SecondOnboarding(), ThirdOnboarding()],
+          children: [
+            FirstOnboarding(_currentPage),
+            SecondOnboarding(_currentPage),
+            ThirdOnboarding(_currentPage),
+          ],
         ),
       ),
     );
@@ -56,4 +60,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     HapticFeedback.mediumImpact();
     setState(() => _currentPage = page);
   }
+
+  void _onNextPage() => _controller.nextPage(
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeIn,
+      );
 }

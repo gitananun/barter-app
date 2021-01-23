@@ -1,16 +1,31 @@
+import 'package:barter/ui/shared_widgets/indicators.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class OnBoardingLayout extends StatelessWidget {
-  const OnBoardingLayout(this.content, {Key key}) : super(key: key);
-  final List<Widget> content;
+  const OnBoardingLayout({
+    Key key,
+    @required this.currentPage,
+    @required this.section1,
+    @required this.section2,
+  }) : super(key: key);
+  final int currentPage;
+  final Widget section1;
+  final Widget section2;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: OnBoardingStyle.contentPadding,
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: content),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(flex: 3, child: section1),
+          Expanded(flex: 1, child: CustomIndicators(currentPage)),
+          Expanded(flex: 2, child: section2),
+        ],
+      ),
     );
   }
 }

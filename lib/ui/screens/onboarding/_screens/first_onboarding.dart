@@ -1,5 +1,4 @@
 import 'package:barter/constants.dart';
-import 'package:barter/ui/shared_widgets/indicators.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,22 +18,16 @@ class FirstOnboarding extends StatelessWidget {
       'body': "Let\'s estimate the overall cost of the things, that are not important for you"
     };
 
-    return OnBoardingLayout([
-      Expanded(
-        flex: 3,
-        child: SvgPicture.asset(OnBoardingConstants.imgPath + '1st_onboarding_illustration.svg', fit: BoxFit.contain),
+    return OnBoardingLayout(
+      currentPage: currentPage,
+      section1: SvgPicture.asset(OnBoardingConstants.imgPath + '1st_onboarding_illustration.svg', fit: BoxFit.contain),
+      section2: Column(
+        children: [
+          Text(_info['title'], style: _themeData.textTheme.headline5),
+          SizedBox(height: 10),
+          Text(_info['body'], style: _themeData.textTheme.bodyText2, textAlign: TextAlign.center, maxLines: 4),
+        ],
       ),
-      Expanded(flex: 1, child: CustomIndicators(currentPage)),
-      Expanded(
-        flex: 2,
-        child: Column(
-          children: [
-            Text(_info['title'], style: _themeData.textTheme.headline5),
-            SizedBox(height: 10),
-            Text(_info['body'], style: _themeData.textTheme.bodyText2, textAlign: TextAlign.center, maxLines: 4),
-          ],
-        ),
-      ),
-    ]);
+    );
   }
 }

@@ -19,7 +19,7 @@ class CustomCircularButton extends StatelessWidget {
       child: Material(
         color: color,
         child: InkWell(
-          splashColor: splashColor, // inkwell color
+          splashColor: splashColor,
           child: child,
           onTap: onTap ?? () {},
         ),
