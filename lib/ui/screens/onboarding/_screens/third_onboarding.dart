@@ -1,6 +1,8 @@
-import 'package:barter/constants.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_image.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_info.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title_vertical_space.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:barter/ui/screens/onboarding/layout/onboarding_layout.dart';
 
@@ -11,8 +13,6 @@ class ThirdOnboarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData _themeData = Theme.of(context);
-
     const Map<String, String> _info = {
       'title': 'Always active',
       'body': "Notifications that will help you be more active  ✌🏻"
@@ -20,12 +20,12 @@ class ThirdOnboarding extends StatelessWidget {
 
     return OnBoardingLayout(
       currentPage: currentPage,
-      section1: SvgPicture.asset(OnBoardingConstants.imgPath + '3rd_onboarding_illustration.svg', fit: BoxFit.contain),
+      section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
       section2: Column(
         children: [
-          Text(_info['title'], style: _themeData.textTheme.headline5),
-          SizedBox(height: 10),
-          Text(_info['body'], style: _themeData.textTheme.bodyText2, textAlign: TextAlign.center, maxLines: 4),
+          OnBoardingContentTitle(_info['title']),
+          onBoardingContentVerticalSpace,
+          OnBoardingContentInfo(_info['body']),
         ],
       ),
     );

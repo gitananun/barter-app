@@ -29,7 +29,7 @@ class DeviceScreenHelper {
     else
       deviceWidth = mediaQuery.size.width;
 
-    if (deviceWidth > 400) return DeviceScreenSize.Large;
+    if (deviceWidth > 500) return DeviceScreenSize.Large;
 
     if (deviceWidth > 320) return DeviceScreenSize.Medium;
 

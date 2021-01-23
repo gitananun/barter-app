@@ -21,9 +21,9 @@ class OnBoardingLayout extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(flex: 3, child: section1),
-          Expanded(flex: 1, child: CustomIndicators(currentPage)),
-          Expanded(flex: 2, child: section2),
+          Expanded(flex: 5, child: section1),
+          Expanded(flex: 2, child: CustomIndicators(currentPage)),
+          Expanded(flex: 3, child: section2),
         ],
       ),
     );

@@ -1,28 +1,29 @@
-import 'package:barter/ui/device_screen_helper.dart';
+import 'package:barter/app.dart';
+import 'package:barter/app/app_helper.dart';
+import 'package:barter/env.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 
-import 'package:barter/app/router.dart';
-import 'package:barter/ui/mts_theme.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(DevicePreview(builder: (context) => MyApp()));
+void main() => runApp(
+      DevicePreview(
+        enabled: AppHelper.getDevicePreviewStatus(APP_MODE),
+        builder: (context) => AppHelper.getMainAppWidget,
+      ),
+    );
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key key}) : super(key: key);
+class AppOriginator extends StatefulWidget {
+  const AppOriginator({Key key}) : super(key: key);
   @override
-  _MyAppState createState() => _MyAppState();
+  _AppOriginatorState createState() => _AppOriginatorState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _AppOriginatorState extends State<AppOriginator> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Barter',
-      theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(MediaQuery.of(context))),
-      initialRoute: '/onboarding',
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      onGenerateRoute: CustomRouter.generateRoutes,
-    );
+    SystemUiOverlayStyle(statusBarColor: Colors.white);
+
+    return MaterialApp(home: App());
   }
 }

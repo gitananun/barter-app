@@ -62,7 +62,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   void _onNextPage() => _controller.nextPage(
-        duration: Duration(milliseconds: 500),
-        curve: Curves.easeIn,
+        duration: Duration(milliseconds: 400),
+        curve: Curves.easeInBack,
       );
 }
