@@ -12,10 +12,16 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       leading: const SizedBox(),
-      title: SvgPicture.asset(OnBoardingConstants.imgPath + 'welcome_top.svg', fit: BoxFit.contain),
+      title: Container(
+        margin: OnBoardingStyle.topAppBarTitleTopMargin,
+        child: SvgPicture.asset(
+          OnBoardingConstants.imgPath + 'welcome_top.svg',
+          fit: BoxFit.contain,
+        ),
+      ),
     );
   }
 }

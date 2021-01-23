@@ -22,7 +22,11 @@ class AppOriginator extends StatefulWidget {
 class _AppOriginatorState extends State<AppOriginator> {
   @override
   Widget build(BuildContext context) {
-    SystemUiOverlayStyle(statusBarColor: Colors.white);
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
 
     return MaterialApp(home: App());
   }
