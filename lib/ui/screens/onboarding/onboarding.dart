@@ -1,3 +1,6 @@
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_app_bar.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_custom_circular_button.dart';
+import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/onboarding/_screens/first_onboarding.dart';
@@ -32,16 +35,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
+      bottom: false,
       child: Scaffold(
+        appBar: OnBoardingAppBar(),
+        backgroundColor: Colors.white,
+        bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
+        floatingActionButton: OnBoardingCustomCircularButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: PageView(
           onPageChanged: (int page) => _onPageChanged(page),
           controller: _controller,
           physics: BouncingScrollPhysics(),
-          children: [
-            FirstOnboarding(_currentPage),
-            SecondOnboarding(),
-            ThirdOnboarding(),
-          ],
+          children: [FirstOnboarding(_currentPage), SecondOnboarding(), ThirdOnboarding()],
         ),
       ),
     );

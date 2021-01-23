@@ -10,10 +10,7 @@ class OnBoardingLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: OnBoardingStyle.contentPadding,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: content,
-      ),
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: content),
     );
   }
 }
