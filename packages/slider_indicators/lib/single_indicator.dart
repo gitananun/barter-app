@@ -4,8 +4,8 @@ class SingleIndicator extends StatelessWidget {
   const SingleIndicator(
     this.isActive, {
     Key key,
-    this.paddingBetween = 3,
-    this.size = 10,
+    this.paddingBetween = 2,
+    this.size = 5,
   }) : super(key: key);
   final bool isActive;
   final double paddingBetween;

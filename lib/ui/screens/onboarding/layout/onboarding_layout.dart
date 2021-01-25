@@ -1,7 +1,8 @@
-import 'package:barter/ui/shared_widgets/indicators.dart';
+import 'package:barter/constants.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:slider_indicators/slider_indicators.dart';
 
 @immutable
 class OnBoardingLayout extends StatelessWidget {
@@ -23,7 +24,7 @@ class OnBoardingLayout extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(flex: 5, child: section1),
-          Expanded(flex: 2, child: CustomIndicators(currentPage)),
+          Expanded(flex: 2, child: SliderIndicators(currentPage, OnBoardingConstants.totalPages)),
           Expanded(flex: 3, child: SingleChildScrollView(child: section2)),
         ],
       ),

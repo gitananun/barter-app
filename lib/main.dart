@@ -22,7 +22,9 @@ class AppOriginator extends StatefulWidget {
 class _AppOriginatorState extends State<AppOriginator> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white));
+
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

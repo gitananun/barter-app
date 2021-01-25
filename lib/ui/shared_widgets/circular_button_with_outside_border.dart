@@ -6,20 +6,24 @@ class CustomCircularButtonWithOutsideBorder extends StatelessWidget {
     this.child = const SizedBox(),
     this.color = Colors.blueGrey,
     this.splashColor,
+    this.borderPadding = 5,
+    this.borderWidth = 1,
     this.onTap,
   }) : super(key: key);
   final Widget child;
   final Color color;
   final Color splashColor;
+  final double borderPadding;
+  final double borderWidth;
   final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(borderPadding),
       decoration: BoxDecoration(
         color: Colors.transparent,
-        border: Border.all(color: color, width: 1),
+        border: Border.all(color: color, width: borderWidth),
         shape: BoxShape.circle,
       ),
       child: ClipOval(

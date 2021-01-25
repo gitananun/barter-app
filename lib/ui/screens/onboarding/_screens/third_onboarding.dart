@@ -1,15 +1,21 @@
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_image.dart';
-import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_info.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title_vertical_space.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/onboarding/layout/onboarding_layout.dart';
 
 @immutable
-class ThirdOnboarding extends StatelessWidget {
+class ThirdOnboarding extends StatefulWidget {
   const ThirdOnboarding(this.currentPage, {Key key}) : super(key: key);
   final int currentPage;
+  @override
+  _ThirdOnboardingState createState() => _ThirdOnboardingState();
+}
+
+class _ThirdOnboardingState extends State<ThirdOnboarding> {
+  bool _switchValue = true;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +25,16 @@ class ThirdOnboarding extends StatelessWidget {
     };
 
     return OnBoardingLayout(
-      currentPage: currentPage,
+      currentPage: widget.currentPage,
       section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
       section2: Column(
         children: [
           OnBoardingContentTitle(_info['title']),
           onBoardingContentVerticalSpace,
-          OnBoardingContentInfo(_info['body']),
+          CupertinoSwitch(
+            value: _switchValue,
+            onChanged: (value) => setState(() => _switchValue = value),
+          ),
         ],
       ),
     );

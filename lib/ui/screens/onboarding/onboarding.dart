@@ -35,7 +35,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
-      bottom: false,
+      bottom: true,
       child: Scaffold(
         appBar: OnBoardingAppBar(),
         backgroundColor: Colors.white,
@@ -46,6 +46,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           onPageChanged: (int page) => _onPageChanged(page),
           controller: _controller,
           physics: BouncingScrollPhysics(),
+          scrollDirection: Axis.horizontal,
           children: [
             FirstOnboarding(_currentPage),
             SecondOnboarding(_currentPage),
