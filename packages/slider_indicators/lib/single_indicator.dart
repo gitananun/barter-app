@@ -19,7 +19,7 @@ class SingleIndicator extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: paddingBetween),
       child: Container(
-        width: isActive ? size + 10 : size,
+        width: isActive ? size + 5 : size,
         height: size,
         decoration: BoxDecoration(
           color: _bgColor,

@@ -8,8 +8,7 @@ import 'package:barter/ui/screens/onboarding/layout/onboarding_layout.dart';
 
 @immutable
 class FirstOnboarding extends StatelessWidget {
-  const FirstOnboarding(this.currentPage, {Key key}) : super(key: key);
-  final int currentPage;
+  const FirstOnboarding({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,6 @@ class FirstOnboarding extends StatelessWidget {
     };
 
     return OnBoardingLayout(
-      currentPage: currentPage,
       section1: OnBoardingContentImage('1st_onboarding_illustration.svg'),
       section2: Column(
         children: [

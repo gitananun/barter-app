@@ -1,5 +1,6 @@
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_app_bar.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_custom_circular_button.dart';
+import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_welcome_button.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ import 'package:barter/ui/screens/onboarding/_screens/first_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/second_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/third_onboarding.dart';
 import 'package:flutter/services.dart';
+import 'package:slider_indicators/slider_indicators.dart';
 
 @immutable
 class OnBoardingScreen extends StatefulWidget {
@@ -17,6 +19,7 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _controller = PageController(initialPage: 0);
+  final int _totalPages = 3;
   int _currentPage;
 
   @override
@@ -33,6 +36,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool _isLastPage = (_currentPage == _totalPages - 1);
+
     return SafeArea(
       top: false,
       bottom: true,
@@ -40,17 +45,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         appBar: OnBoardingAppBar(),
         backgroundColor: Colors.white,
         bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
-        floatingActionButton: OnBoardingCustomCircularButton(_onNextPage),
+        floatingActionButton: !_isLastPage ? OnBoardingCustomCircularButton(_onNextPage) : OnBoardingWelcomeButton(),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        body: PageView(
-          onPageChanged: (int page) => _onPageChanged(page),
-          controller: _controller,
-          physics: BouncingScrollPhysics(),
-          scrollDirection: Axis.horizontal,
+        body: Stack(
           children: [
-            FirstOnboarding(_currentPage),
-            SecondOnboarding(_currentPage),
-            ThirdOnboarding(_currentPage),
+            PageView(
+              onPageChanged: (int page) => _onPageChanged(page),
+              controller: _controller,
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              children: [
+                FirstOnboarding(),
+                SecondOnboarding(),
+                ThirdOnboarding(),
+              ],
+            ),
+            Center(child: SliderIndicators(_currentPage, _totalPages)),
           ],
         ),
       ),

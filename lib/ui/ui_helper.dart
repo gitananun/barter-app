@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 @immutable
+class SharedStyle {
+  
+}
+
+@immutable
 class OnBoardingStyle {
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 30, vertical: 30);
   static const EdgeInsets nextBtnIconPadding = EdgeInsets.all(15.0); // btn-size
