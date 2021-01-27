@@ -6,6 +6,10 @@ class OnBoardingWelcomeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomFlatButton(primary: true, text: "Get started");
+    return CustomFlatButton(
+      primary: true,
+      text: "Get started",
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+    );
   }
 }

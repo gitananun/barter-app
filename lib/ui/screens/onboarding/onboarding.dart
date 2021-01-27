@@ -60,7 +60,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ThirdOnboarding(),
               ],
             ),
-            Center(child: SliderIndicators(_currentPage, _totalPages)),
+            SliderIndicators(_currentPage, _totalPages),
           ],
         ),
       ),

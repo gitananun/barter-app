@@ -20,18 +20,18 @@ class _OnBoardingNotificationsSectionState extends State<OnBoardingNotifications
       children: [
         NotificationListTile(
           title: 'Products',
-          subtitle: "Be aware of new hot deals",
+          subtitle: "Active, New & Hot deals.",
           switchValue: _switchValue,
           leadingImgPath: OnBoardingConstants.imgPath + 'icon_calendar.svg',
           onSwitch: (value) => setState(() => _switchValue = value),
         ),
         NotificationListTile(
           title: 'New requests',
-          subtitle: "Be connected, make deals",
+          subtitle: "Be connected, make deals.",
           switchValue: _switchValue,
           leadingImgPath: OnBoardingConstants.imgPath + 'icon_opened_letter.svg',
           onSwitch: (value) => setState(() => _switchValue = value),
-        )
+        ),
       ],
     );
   }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class OnBoardingLayout extends StatelessWidget {
-  const OnBoardingLayout({
+  OnBoardingLayout({
     Key key,
     @required this.section1,
     @required this.section2,
@@ -18,9 +18,8 @@ class OnBoardingLayout extends StatelessWidget {
       padding: OnBoardingStyle.contentPadding,
       child: Column(
         children: [
-          Expanded(flex: 4, child: section1),
-          Expanded(flex: 2, child: SizedBox()),
-          Expanded(flex: 4, child: SingleChildScrollView(child: section2)),
+          Expanded(flex: 6, child: section1),
+          Expanded(flex: 4, child: Center(child: SingleChildScrollView(child: section2)))
         ],
       ),
     );
