@@ -12,10 +12,9 @@ class OnBoardingCustomCircularButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    final EdgeInsets _btnPadding =
-        DeviceScreenHelper.getDeviceScreenSize(MediaQuery.of(context)) == DeviceScreenSize.Small
-            ? OnBoardingStyle.nextBtnIconPaddingSmall
-            : OnBoardingStyle.nextBtnIconPadding;
+    final EdgeInsets _btnPadding = DeviceScreenHelper.getDeviceScreenSize(context) == DeviceScreenSize.Small
+        ? OnBoardingStyle.nextBtnIconPaddingSmall
+        : OnBoardingStyle.nextBtnIconPadding;
 
     return CustomCircularButtonWithOutsideBorder(
       color: _themeData.primaryColor,

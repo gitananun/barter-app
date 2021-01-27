@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:barter/constants.dart';
-import 'package:barter/ui/shared_widgets/cupertino_switch_resizeable.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:barter/ui/screens/onboarding/_components/notification_list_tile.dart';
+import 'package:flutter/material.dart';
 
 @immutable
 class OnBoardingNotificationsSection extends StatefulWidget {
@@ -15,23 +14,24 @@ class _OnBoardingNotificationsSectionState extends State<OnBoardingNotifications
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme _textTheme = Theme.of(context).textTheme;
-
     return ListView(
       shrinkWrap: true,
       physics: BouncingScrollPhysics(),
       children: [
-        ListTile(
-          leading: SvgPicture.asset(OnBoardingConstants.imgPath + 'icon_opened_letter.svg'),
-          title: Text('Daily Products', style: _textTheme.subtitle1),
-          subtitle: Text('For each new posted product'),
-          visualDensity: VisualDensity.compact,
-          dense: true,
-          trailing: CustomCupertinoSwitchResizeable(
-            _switchValue,
-            (value) => setState(() => _switchValue = value),
-          ),
+        NotificationListTile(
+          title: 'Products',
+          subtitle: "Be aware of new hot deals",
+          switchValue: _switchValue,
+          leadingImgPath: OnBoardingConstants.imgPath + 'icon_calendar.svg',
+          onSwitch: (value) => setState(() => _switchValue = value),
         ),
+        NotificationListTile(
+          title: 'New requests',
+          subtitle: "Be connected, make deals",
+          switchValue: _switchValue,
+          leadingImgPath: OnBoardingConstants.imgPath + 'icon_opened_letter.svg',
+          onSwitch: (value) => setState(() => _switchValue = value),
+        )
       ],
     );
   }

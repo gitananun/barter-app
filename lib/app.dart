@@ -16,7 +16,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Barter',
-      theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(MediaQuery.of(context))),
+      theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
       initialRoute: '/onboarding',
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

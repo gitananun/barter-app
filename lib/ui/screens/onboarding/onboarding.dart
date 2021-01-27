@@ -1,6 +1,6 @@
+import 'package:barter/ui/screens/onboarding/_components/onboarding_welcome_button.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_app_bar.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_custom_circular_button.dart';
-import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_welcome_button.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 

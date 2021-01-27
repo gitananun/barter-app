@@ -20,8 +20,9 @@ class DeviceScreenHelper {
     return DeviceScreenType.Mobile;
   }
 
-  static DeviceScreenSize getDeviceScreenSize(MediaQueryData mediaQuery) {
-    Orientation orientation = mediaQuery.orientation;
+  static DeviceScreenSize getDeviceScreenSize(BuildContext context) {
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    final Orientation orientation = mediaQuery.orientation;
     double deviceWidth = 0;
 
     if (orientation == Orientation.landscape)
@@ -30,7 +31,6 @@ class DeviceScreenHelper {
       deviceWidth = mediaQuery.size.width;
 
     if (deviceWidth > 500) return DeviceScreenSize.Large;
-
     if (deviceWidth > 320) return DeviceScreenSize.Medium;
 
     return DeviceScreenSize.Small;

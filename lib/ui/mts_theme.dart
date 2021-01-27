@@ -20,8 +20,8 @@ class MTStheme {
     headline6: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w500, fontSize: 18),
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 14),
     bodyText2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 14),
-    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 12),
-    subtitle2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 12),
+    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 12),
+    subtitle2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 10),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 12),
   );
 
@@ -34,9 +34,9 @@ class MTStheme {
     headline6: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w500, fontSize: 30),
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
     bodyText2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
-    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
-    subtitle2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
-    button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 12),
+    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 16),
+    subtitle2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 14),
+    button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14),
   );
 
   static const TextTheme customLargeTextTheme = TextTheme(
@@ -48,8 +48,9 @@ class MTStheme {
     headline6: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 50),
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 30),
     bodyText2: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 25),
-    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 20),
+    subtitle1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600, fontSize: 20),
     subtitle2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 15),
+    button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 16),
   );
 
   static ThemeData customThemeData(DeviceScreenSize screenSize) {
@@ -78,6 +79,7 @@ class MTStheme {
       textTheme: _textTheme,
       buttonColor: primaryColor,
       cursorColor: primaryColor,
+      buttonTheme: ButtonThemeData(buttonColor: primaryColor),
       fontFamily: 'AvenirNextRounded',
       pageTransitionsTheme: PageTransitionsTheme(builders: {
         TargetPlatform.iOS: ZoomPageTransitionsBuilder(),

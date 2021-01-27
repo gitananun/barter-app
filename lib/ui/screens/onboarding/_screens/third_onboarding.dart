@@ -23,11 +23,10 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
       section2: Column(
         children: [
           OnBoardingContentTitle(
-            'Notifications help you being active ✌🏻',
+            'Always be notified ✌🏻',
             textStyle: Theme.of(context).textTheme.headline6,
           ),
           onBoardingContentVerticalSpace,
-          SizedBox(height: 5),
           OnBoardingNotificationsSection(),
         ],
       ),
