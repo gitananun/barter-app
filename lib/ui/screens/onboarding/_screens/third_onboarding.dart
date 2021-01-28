@@ -21,6 +21,7 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
     return OnBoardingLayout(
       section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
       section2: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           OnBoardingContentTitle(
             'Be notified ✌🏻',

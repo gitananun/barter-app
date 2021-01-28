@@ -38,31 +38,29 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     final bool _isLastPage = (_currentPage == _totalPages - 1);
 
-    return SafeArea(
-      top: false,
-      bottom: true,
-      child: Scaffold(
-        appBar: OnBoardingAppBar(),
-        backgroundColor: Colors.white,
-        bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
-        floatingActionButton: !_isLastPage ? OnBoardingCustomCircularButton(_onNextPage) : OnBoardingWelcomeButton(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        body: Stack(
-          children: [
-            PageView(
-              onPageChanged: (int page) => _onPageChanged(page),
-              controller: _controller,
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: [
-                FirstOnboarding(),
-                SecondOnboarding(),
-                ThirdOnboarding(),
-              ],
-            ),
-            SliderIndicators(_currentPage, _totalPages),
-          ],
-        ),
+    return Scaffold(
+      appBar: OnBoardingAppBar(),
+      backgroundColor: Colors.white,
+      bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
+      floatingActionButton: !_isLastPage
+          ? OnBoardingCustomCircularButton(_onNextPage)
+          : OnBoardingWelcomeButton(() => Navigator.pushNamed(context, '/login')),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: Stack(
+        children: [
+          PageView(
+            onPageChanged: (int page) => _onPageChanged(page),
+            controller: _controller,
+            physics: BouncingScrollPhysics(),
+            scrollDirection: Axis.horizontal,
+            children: [
+              FirstOnboarding(),
+              SecondOnboarding(),
+              ThirdOnboarding(),
+            ],
+          ),
+          SliderIndicators(_currentPage, _totalPages),
+        ],
       ),
     );
   }

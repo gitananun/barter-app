@@ -16,7 +16,6 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       leading: const SizedBox(),
       title: Container(
-        margin: OnBoardingStyle.topAppBarTitleTopMargin,
         child: SvgPicture.asset(
           OnBoardingConstants.imgPath + 'welcome_top.svg',
           fit: BoxFit.contain,

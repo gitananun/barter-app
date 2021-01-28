@@ -18,9 +18,8 @@ class OnBoardingLayout extends StatelessWidget {
       padding: OnBoardingStyle.contentPadding,
       child: Column(
         children: [
-          Expanded(flex: 5, child: section1),
-          SizedBox(height: 5),
-          Expanded(flex: 5, child: Center(child: SingleChildScrollView(child: section2)))
+          Expanded(flex: 6, child: section1),
+          Expanded(flex: 4, child: Center(child: SingleChildScrollView(child: section2)))
         ],
       ),
     );
