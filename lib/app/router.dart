@@ -1,5 +1,5 @@
 import 'package:barter/ui/screens/home.dart';
-import 'package:barter/ui/screens/login/login.dart';
+import 'package:barter/ui/screens/auth/login/login.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 

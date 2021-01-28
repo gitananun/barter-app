@@ -15,7 +15,7 @@ class OnBoardingLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: OnBoardingStyle.contentPadding,
+      padding: SharedStyle.contentPadding,
       child: Column(
         children: [
           Expanded(flex: 5, child: section1),
