@@ -10,7 +10,7 @@ class CustomFlatButton extends StatelessWidget {
     this.padding,
     this.color,
     this.text,
-    this.minWidth = 20,
+    this.minWidth = 150,
     this.height,
   }) : super(key: key);
   final bool primary;
