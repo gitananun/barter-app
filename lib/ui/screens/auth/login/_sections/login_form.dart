@@ -22,13 +22,13 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Column(
+      child: Wrap(
+        runSpacing: FormStyle.spacingBtwInputs,
         children: [
           CustomTextFormField(
             hintText: 'Email or phone number',
             prefixIcon: FontAwesomeIcons.envelope,
           ),
-          FormStyle.spacingBtwInputs,
           CustomTextFormField(
             hintText: 'Password',
             prefixIcon: FontAwesomeIcons.lock,

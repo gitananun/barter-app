@@ -5,15 +5,17 @@ import 'package:flutter/material.dart';
 
 @immutable
 class CustomRouter {
+  static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(builder: (_) => screen);
+
   static Route<dynamic> generateRoutes(RouteSettings settings) {
     // final dynamic _args = settings.arguments;
     switch (settings.name) {
       case '/onboarding':
-        return MaterialPageRoute(builder: (_) => OnBoardingScreen());
+        return _returnScreen(OnBoardingScreen());
       case '/login':
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return _returnScreen(LoginScreen());
       case '/':
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return _returnScreen(HomeScreen());
       default:
         return null;
     }

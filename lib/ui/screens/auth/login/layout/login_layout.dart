@@ -22,7 +22,7 @@ class LoginLayout extends StatelessWidget {
         children: [
           Expanded(flex: 1, child: section1),
           Expanded(flex: 5, child: section2),
-          Expanded(flex: 4, child: SingleChildScrollView(child: section3)),
+          Expanded(flex: 4, child: section3),
         ],
       ),
     );
