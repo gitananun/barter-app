@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SharedStyle {
-  static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 30, vertical: 30);
+  static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
 }
 
 class FormStyle {
@@ -19,7 +19,6 @@ class FormStyle {
 class CustomButtonStyle {
   static flatButtonHeight(BuildContext context) {
     double height;
-
     switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
       case DeviceScreenSize.Large:
         height = 70;
