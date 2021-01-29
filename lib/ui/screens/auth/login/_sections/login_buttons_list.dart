@@ -12,13 +12,13 @@ class LoginButtonsList extends StatelessWidget {
     return ListViewWithColumn(
       children: <Widget>[
         CustomFlatButton(primary: true, text: 'Login', minWidth: double.infinity),
-        Text('Or continue with'),
+        Text('Or continue with', style: _themeData.textTheme.caption),
         CustomFlatButton(text: 'Facebook', minWidth: double.infinity, color: Colors.blue),
         CustomFlatButton(text: 'Google', minWidth: double.infinity, color: Colors.red),
         RichText(
           text: TextSpan(
             text: 'Don\'t have account yet? ',
-            style: _themeData.textTheme.headline6,
+            style: _themeData.textTheme.caption,
             children: <TextSpan>[TextSpan(text: 'Sign Up', style: TextStyle(color: _themeData.primaryColor))],
           ),
         )

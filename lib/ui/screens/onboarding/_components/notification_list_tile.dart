@@ -25,8 +25,8 @@ class NotificationListTile extends StatelessWidget {
 
     return ListTile(
       leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath) : FlutterLogo(),
-      title: title != null ? Text(title, style: _textTheme.subtitle1) : Text('title'),
-      subtitle: subtitle != null ? Text(subtitle, style: _textTheme.subtitle2) : Text('subtitle'),
+      title: title != null ? Text(title, style: _textTheme.subtitle2) : Text('title'),
+      subtitle: subtitle != null ? Text(subtitle, style: _textTheme.overline) : Text('subtitle'),
       visualDensity: VisualDensity.compact,
       trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch),
       dense: true,

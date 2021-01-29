@@ -6,9 +6,11 @@ class OnBoardingContentInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData _themeData = Theme.of(context);
+
     return Text(
       info,
-      style: Theme.of(context).textTheme.bodyText2,
+      style: _themeData.textTheme.subtitle2.apply(color: _themeData.disabledColor),
       textAlign: TextAlign.center,
       maxLines: 4,
     );

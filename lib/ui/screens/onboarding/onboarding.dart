@@ -1,7 +1,6 @@
-import 'package:barter/ui/screens/onboarding/_components/onboarding_welcome_button.dart';
+import 'package:barter/ui/screens/onboarding/_components/onboarding_bottom_nav_bar.dart';
+import 'package:barter/ui/screens/onboarding/_components/onboarding_floating_action_button.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_app_bar.dart';
-import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_custom_circular_button.dart';
-import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/onboarding/_screens/first_onboarding.dart';
@@ -38,13 +37,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     final bool _isLastPage = (_currentPage == _totalPages - 1);
 
+    void _onNextPage() => _isLastPage
+        ? Navigator.pushReplacementNamed(context, '/login')
+        : _controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOutSine);
+
     return Scaffold(
       appBar: OnBoardingAppBar(),
-      backgroundColor: Colors.white,
-      bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
-      floatingActionButton: !_isLastPage
-          ? OnBoardingCustomCircularButton(_onNextPage)
-          : OnBoardingWelcomeButton(() => Navigator.pushReplacementNamed(context, '/login')),
+      bottomNavigationBar: OnBoardingBottomNavBar(),
+      floatingActionButton: OnBoardingFloatingActionButton(isLastPage: _isLastPage, onNextPage: _onNextPage),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Stack(
         children: [
@@ -69,9 +69,4 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     HapticFeedback.mediumImpact();
     setState(() => _currentPage = page);
   }
-
-  void _onNextPage() => _controller.nextPage(
-        duration: Duration(milliseconds: 400),
-        curve: Curves.easeInOutSine,
-      );
 }

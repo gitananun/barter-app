@@ -25,7 +25,7 @@ class LoginFormWithHeading extends StatelessWidget {
           children: [
             LoginForm(),
             Align(
-              child: Text('Forgot password?', style: _themeData.textTheme.headline6),
+              child: Text('Forgot password?', style: _themeData.textTheme.caption),
               alignment: Alignment.centerRight,
             ),
           ],

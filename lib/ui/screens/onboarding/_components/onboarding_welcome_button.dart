@@ -10,7 +10,7 @@ class OnBoardingWelcomeButton extends StatelessWidget {
     return CustomFlatButton(
       primary: true,
       text: "Get started",
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+      minWidth: MediaQuery.of(context).size.width - 80,
       onPressed: onPressed,
     );
   }

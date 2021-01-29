@@ -44,7 +44,7 @@ class CustomTextFormField extends StatelessWidget {
               child: Icon(prefixIcon, color: _themeData.indicatorColor),
             ),
             hintText: hintText,
-            hintStyle: _themeData.textTheme.bodyText2,
+            hintStyle: _themeData.textTheme.caption,
             helperText: helperText,
             contentPadding: FormStyle.contentPadding,
             border: FormStyle.inputBorder(),

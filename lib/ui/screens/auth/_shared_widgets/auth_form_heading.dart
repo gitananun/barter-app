@@ -12,8 +12,8 @@ class AuthFormHeading extends StatelessWidget {
 
     return Column(
       children: [
-        Text(title, style: _themeData.textTheme.headline4),
-        Text(subtitle, style: _themeData.textTheme.subtitle2),
+        Text(title, style: _themeData.textTheme.headline5),
+        Text(subtitle, style: _themeData.textTheme.caption),
       ],
     );
   }

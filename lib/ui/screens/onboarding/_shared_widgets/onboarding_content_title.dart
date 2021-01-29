@@ -6,5 +6,12 @@ class OnBoardingContentTitle extends StatelessWidget {
   final TextStyle textStyle;
 
   @override
-  Widget build(BuildContext context) => Text(title, style: textStyle ?? Theme.of(context).textTheme.headline5);
+  Widget build(BuildContext context) {
+    final ThemeData _themeData = Theme.of(context);
+
+    return Text(
+      title,
+      style: textStyle ?? _themeData.textTheme.headline5.apply(color: _themeData.disabledColor),
+    );
+  }
 }

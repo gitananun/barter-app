@@ -23,10 +23,7 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
       section2: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          OnBoardingContentTitle(
-            'Be notified ✌🏻',
-            textStyle: Theme.of(context).textTheme.headline6,
-          ),
+          OnBoardingContentTitle('Be notified ✌🏻'),
           onBoardingContentVerticalSpace,
           OnBoardingNotificationsSection(),
         ],
