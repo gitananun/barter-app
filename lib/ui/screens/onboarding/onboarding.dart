@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       bottomNavigationBar: SizedBox(height: OnBoardingStyle.bottomAppBarHeight),
       floatingActionButton: !_isLastPage
           ? OnBoardingCustomCircularButton(_onNextPage)
-          : OnBoardingWelcomeButton(() => Navigator.pushNamed(context, '/login')),
+          : OnBoardingWelcomeButton(() => Navigator.pushReplacementNamed(context, '/login')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Stack(
         children: [
