@@ -16,9 +16,9 @@ def main():
     file = open('lib/env.dart', 'w')
     file.write(code)
 
-    print('\033[94m' + 'Changed successfully to ' + '\033[92m' + mode + '\033[92m')
+    print('\033[94m' + 'Changed successfully to ' + '\033[92m' + mode + '\033[0m')
     print('\n')
-    
+
     # Run CLI commands
     way = input('Enter preffered way to extract: ')
     ways = ('git', 'Git', 'local', 'Local')
@@ -27,7 +27,7 @@ def main():
         print('\033[91m' + 'Valid ways: ' + '\033[93m' + str(ways) + '\033[93m')
         return
 
-    print('\033[92m' + 'Build started...')
+    print('\033[92m' + 'Build started...' + '\033[0m')
 
     if(way == 'git' or way == 'Git'):
         os.system('git add . && git commit -m "App Build"')
