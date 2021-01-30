@@ -18,6 +18,7 @@ def main():
 
     print('\033[94m' + 'Changed successfully to ' + '\033[92m' + mode + '\033[92m')
     print('\n')
+    
     # Run CLI commands
     way = input('Enter preffered way to extract: ')
     ways = ('git', 'Git', 'local', 'Local')
