@@ -1,7 +1,9 @@
+
 import os
 
 def main():
     # Change the app mode
+   
     mode = input('Please enter build app mode: ')
     app_modes = ('dev', 'Dev', 'release', 'Release')
 
