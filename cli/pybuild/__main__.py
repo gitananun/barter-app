@@ -29,7 +29,8 @@ def main():
     print('\033[92m' + 'Build started...')
 
     if(way == 'git' or way == 'Git'):
-        os.system('git add . && git commit -m "App Build" && git push')    
+        os.system('git add . && git commit -m "App Build"')
+        os.system('git push')    
         return
 
     os.system('flutter clean && flutter build apk')    
