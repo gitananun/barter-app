@@ -20,8 +20,9 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
   Widget build(BuildContext context) {
     return OnBoardingLayout(
       section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
-      section2: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      section2: Wrap(
+        alignment: WrapAlignment.center,
+        runSpacing: 10,
         children: [
           OnBoardingContentTitle('Be notified ✌🏻'),
           onBoardingContentVerticalSpace,

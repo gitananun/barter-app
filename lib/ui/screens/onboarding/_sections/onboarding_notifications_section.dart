@@ -14,9 +14,7 @@ class _OnBoardingNotificationsSectionState extends State<OnBoardingNotifications
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
+    return Wrap(
       children: [
         NotificationListTile(
           title: 'Products',
