@@ -1,6 +1,7 @@
 import 'package:barter/app.dart';
 import 'package:barter/app/app_helper.dart';
 import 'package:barter/env.dart';
+import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -22,8 +23,11 @@ class AppOriginator extends StatefulWidget {
 class _AppOriginatorState extends State<AppOriginator> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white));
+    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: MTStheme.primaryColor,
+    ));
 
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
