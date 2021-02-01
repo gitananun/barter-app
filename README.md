@@ -166,3 +166,6 @@ _IoC Container (inversion of control)_
 BarterApplication app = new BarterApplication(new IocContaiiner);
 
 app.run(MainWidgetProvider)
+
++----------------------------------+----------------------------------+
+pybuild - run the app

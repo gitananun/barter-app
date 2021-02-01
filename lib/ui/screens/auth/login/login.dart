@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
       resizeToAvoidBottomInset: false,
       resizeToAvoidBottomPadding: false,
       body: LoginLayout(
-        section1: Padding(child: BarterLogo(), padding: const EdgeInsets.only(top: 5)),
+        section1: BarterLogo(),
         section2: LoginFormWithHeading(),
         section3: LoginButtonsList(),
       ),

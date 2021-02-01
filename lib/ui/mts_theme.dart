@@ -39,8 +39,8 @@ class MTStheme {
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 24),
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 22),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 22),
-    caption: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 20),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
+    caption: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
+    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
   );
 
   static const TextTheme customLargeTextTheme = TextTheme(
