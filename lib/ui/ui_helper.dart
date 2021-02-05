@@ -8,9 +8,9 @@ class SharedStyle {
 }
 
 class FormStyle {
-  static const EdgeInsets contentPadding = const EdgeInsets.symmetric(horizontal: 10, vertical: 20);
+  static const EdgeInsets contentPadding = const EdgeInsets.symmetric(horizontal: 5, vertical: 20);
   static const double spacingBtwInputs = 10;
-  static InputBorder inputBorder({double borderRadius = 30, Color color}) => OutlineInputBorder(
+  static InputBorder inputBorder({double borderRadius, Color color}) => OutlineInputBorder(
         borderRadius: BorderRadius.circular(borderRadius),
         borderSide: BorderSide(width: 1, color: color ?? Colors.black),
       );

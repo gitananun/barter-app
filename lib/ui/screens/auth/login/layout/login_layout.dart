@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/auth_main_layout.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -16,8 +16,7 @@ class LoginLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: SharedStyle.contentPadding,
+    return AuthMainContainer(
       child: Column(
         children: [
           Expanded(flex: 1, child: section1),

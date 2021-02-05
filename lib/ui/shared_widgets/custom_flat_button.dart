@@ -26,18 +26,21 @@ class CustomFlatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
 
-    Color _color = color != null
+    Color _bgColor = color != null
         ? color
         : primary
             ? _theme.primaryColor
-            : _theme.accentColor;
+            : Colors.white;
+
+    Color _textColor = primary ? Colors.white : _theme.accentColor;
+    Color _borderColor = primary ? Colors.transparent : _theme.accentColor;
 
     return FlatButton(
       minWidth: minWidth,
       height: height ?? CustomButtonStyle.flatButtonHeight(context),
-      color: _color,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button),
+      color: _bgColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30), side: BorderSide(color: _borderColor)),
+      child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button.apply(color: _textColor)),
       onPressed: onPressed ?? () {},
     );
   }

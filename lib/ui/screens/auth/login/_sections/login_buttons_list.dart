@@ -13,7 +13,12 @@ class LoginButtonsList extends StatelessWidget {
       children: <Widget>[
         CustomFlatButton(primary: true, text: 'Login', minWidth: double.infinity),
         Text('Or continue with', style: _themeData.textTheme.caption),
-        CustomFlatButton(text: 'Facebook', minWidth: double.infinity, color: Colors.blue),
+        CustomFlatButton(
+          text: 'Facebook',
+          minWidth: double.infinity,
+          color: Colors.blue,
+          onPressed: () => Navigator.pushReplacementNamed(context, '/auth_verify_with_code'),
+        ),
         CustomFlatButton(text: 'Google', minWidth: double.infinity, color: Colors.red),
         RichText(
           text: TextSpan(
