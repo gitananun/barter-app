@@ -1,4 +1,5 @@
 import 'package:barter/ui/screens/auth/login/login.dart';
+import 'package:barter/ui/screens/auth/signup/signup.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,8 @@ class CustomRouter {
         return _returnScreen(OnBoardingScreen());
       case '/login':
         return _returnScreen(LoginScreen());
+      case '/signup':
+        return _returnScreen(SignupScreen());
       case '/auth_verify_with_code':
         return _returnScreen(VerifyWithCodeScreen());
       default:

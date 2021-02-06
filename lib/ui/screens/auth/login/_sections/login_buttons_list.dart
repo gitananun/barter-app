@@ -1,5 +1,6 @@
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:barter/ui/shared_widgets/list_view_with_column.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class LoginButtonsList extends StatelessWidget {
@@ -24,7 +25,12 @@ class LoginButtonsList extends StatelessWidget {
           text: TextSpan(
             text: 'Don\'t have account yet? ',
             style: _themeData.textTheme.caption,
-            children: <TextSpan>[TextSpan(text: 'Sign Up', style: TextStyle(color: _themeData.primaryColor))],
+            children: <TextSpan>[
+              TextSpan(
+                  text: 'Sign Up',
+                  style: TextStyle(color: _themeData.primaryColor),
+                  recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushReplacementNamed(context, '/signup')),
+            ],
           ),
         )
       ],
