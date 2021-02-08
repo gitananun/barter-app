@@ -1,4 +1,4 @@
-import 'package:barter/constants.dart';
+import 'package:barter/paths.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -9,7 +9,7 @@ class OnBoardingContentImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      OnBoardingConstants.imgPath + imgTitle,
+      Paths.ONBOARDING_ASSETS + imgTitle,
       fit: BoxFit.contain,
     );
   }

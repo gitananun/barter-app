@@ -1,8 +1,8 @@
 import 'package:barter/ui/shared_widgets/custom_circular_container.dart';
 import 'package:flutter/material.dart';
 
-class SignupValidationListTile extends StatelessWidget {
-  const SignupValidationListTile({
+class CustomValidationListTile extends StatelessWidget {
+  const CustomValidationListTile({
     Key key,
     @required this.title,
     @required this.leadingIcon,

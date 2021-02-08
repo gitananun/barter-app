@@ -1,9 +1,9 @@
-import 'package:barter/ui/screens/auth/signup/_shared_widgets/signup_validation_list_tile.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/components/custom_validation_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SignupValidationColumn extends StatelessWidget {
-  const SignupValidationColumn({Key key}) : super(key: key);
+class PasswordValidationColumn extends StatelessWidget {
+  const PasswordValidationColumn({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class SignupValidationColumn extends StatelessWidget {
         Wrap(
           runSpacing: 3,
           children: [
-            SignupValidationListTile(
+            CustomValidationListTile(
               title: 'At least 6 characters',
               leadingIcon: FontAwesomeIcons.check,
               active: true,
             ),
-            SignupValidationListTile(
+            CustomValidationListTile(
               title: 'Contains a number',
               leadingIcon: FontAwesomeIcons.check,
               active: false,

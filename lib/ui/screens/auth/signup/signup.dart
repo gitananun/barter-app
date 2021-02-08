@@ -1,7 +1,7 @@
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_form_heading.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_scaffold.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/password_validation_column.dart';
 import 'package:barter/ui/screens/auth/signup/_sections/signup_form.dart';
-import 'package:barter/ui/screens/auth/signup/_sections/signup_validation_column.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/layout/verify_with_code_layout.dart';
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class SignupScreen extends StatelessWidget {
         children: [
           AuthFormHeading(title: 'Welcome!', subtitle: 'Please enter your account here'),
           SignupForm(),
-          SignupValidationColumn(),
+          PasswordValidationColumn(),
           Wrap(
             runSpacing: 15,
             children: [

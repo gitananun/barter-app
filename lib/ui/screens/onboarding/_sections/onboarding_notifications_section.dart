@@ -1,4 +1,4 @@
-import 'package:barter/constants.dart';
+import 'package:barter/paths.dart';
 import 'package:barter/ui/screens/onboarding/_components/notification_list_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -20,14 +20,14 @@ class _OnBoardingNotificationsSectionState extends State<OnBoardingNotifications
           title: 'Products',
           subtitle: "Active, New & Hot deals.",
           switchValue: _switchValue,
-          leadingImgPath: OnBoardingConstants.imgPath + 'icon_calendar.svg',
+          leadingImgPath: Paths.ONBOARDING_ASSETS + 'icon_calendar.svg',
           onSwitch: (value) => setState(() => _switchValue = value),
         ),
         NotificationListTile(
           title: 'New requests',
           subtitle: "Be connected, make deals.",
           switchValue: _switchValue,
-          leadingImgPath: OnBoardingConstants.imgPath + 'icon_opened_letter.svg',
+          leadingImgPath: Paths.ONBOARDING_ASSETS + 'icon_opened_letter.svg',
           onSwitch: (value) => setState(() => _switchValue = value),
         ),
       ],

@@ -1,4 +1,4 @@
-import 'package:barter/constants.dart';
+import 'package:barter/paths.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,7 +17,7 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: const SizedBox(),
       title: Container(
         child: SvgPicture.asset(
-          OnBoardingConstants.imgPath + 'welcome_top.svg',
+          Paths.ONBOARDING_ASSETS + 'welcome_top.svg',
           fit: BoxFit.contain,
         ),
       ),
