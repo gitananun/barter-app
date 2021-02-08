@@ -13,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.width,
     this.height,
+    this.textAlign = TextAlign.start,
     this.readOnly = false,
     this.obscureText = false,
     this.isDense = true,
@@ -31,10 +32,14 @@ class CustomTextFormField extends StatelessWidget {
   final double width;
   final double height;
   final double borderRadius;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
+
+    final bool _isPrefix = prefixIcon != null;
+    final bool _isSuffix = suffixIcon != null;
 
     return Container(
       width: width,
@@ -44,14 +49,17 @@ class CustomTextFormField extends StatelessWidget {
         controller: controller,
         readOnly: readOnly,
         obscureText: obscureText,
+        textAlign: textAlign,
         decoration: inputDecoration ??
             InputDecoration(
               isDense: true,
-              suffixIcon: Icon(suffixIcon, color: _themeData.indicatorColor),
-              prefixIcon: Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 10.0),
-                child: Icon(prefixIcon, color: _themeData.indicatorColor),
-              ),
+              suffixIcon: _isSuffix ? Icon(suffixIcon, color: _themeData.indicatorColor) : null,
+              prefixIcon: _isPrefix
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 20.0, right: 10.0),
+                      child: Icon(prefixIcon, color: _themeData.indicatorColor),
+                    )
+                  : null,
               hintText: hintText,
               hintStyle: _themeData.textTheme.caption,
               helperText: helperText,

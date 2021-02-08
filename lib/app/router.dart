@@ -1,4 +1,5 @@
 import 'package:barter/ui/screens/auth/login/login.dart';
+import 'package:barter/ui/screens/auth/password_recover/password_recover.dart';
 import 'package:barter/ui/screens/auth/signup/signup.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
@@ -19,6 +20,8 @@ class CustomRouter {
         return _returnScreen(SignupScreen());
       case '/auth_verify_with_code':
         return _returnScreen(VerifyWithCodeScreen());
+      case '/password_recover':
+        return _returnScreen(PasswordRecoverScreen());
       default:
         return null;
     }

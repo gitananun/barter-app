@@ -1,5 +1,5 @@
+import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.dart';
 import 'package:barter/ui/shared_widgets/custom_text_form_field.dart';
-import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -22,8 +22,7 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Wrap(
-        runSpacing: FormStyle.spacingBtwInputs,
+      child: CustomWrapWithRunSpacing(
         children: [
           CustomTextFormField(
             hintText: 'Email or phone number',

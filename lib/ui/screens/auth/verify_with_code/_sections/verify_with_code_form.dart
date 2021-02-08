@@ -11,7 +11,12 @@ class VerifyWithCodeForm extends StatelessWidget {
     return Wrap(
       spacing: 10,
       children: [
-        for (int i = 0; i < 4; i++) CustomTextFormField(width: _inputWidth, borderRadius: 15),
+        for (int i = 0; i < 4; i++)
+          CustomTextFormField(
+            width: _inputWidth,
+            borderRadius: 15,
+            textAlign: TextAlign.center,
+          ),
       ],
     );
   }

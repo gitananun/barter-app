@@ -1,4 +1,5 @@
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_form_heading.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/auth_scaffold.dart';
 import 'package:barter/ui/screens/auth/signup/_sections/signup_form.dart';
 import 'package:barter/ui/screens/auth/signup/_sections/signup_validation_column.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/layout/verify_with_code_layout.dart';
@@ -10,9 +11,7 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      resizeToAvoidBottomPadding: false,
+    return AuthScaffold(
       body: VerifyWithCodeLayout(
         children: [
           AuthFormHeading(title: 'Welcome!', subtitle: 'Please enter your account here'),

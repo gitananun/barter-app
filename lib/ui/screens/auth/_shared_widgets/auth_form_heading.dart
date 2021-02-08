@@ -11,9 +11,10 @@ class AuthFormHeading extends StatelessWidget {
     final ThemeData _themeData = Theme.of(context);
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(title, style: _themeData.textTheme.headline5),
-        Text(subtitle, style: _themeData.textTheme.caption),
+        Text(title, style: _themeData.textTheme.headline5, textAlign: TextAlign.center),
+        Text(subtitle, style: _themeData.textTheme.caption, textAlign: TextAlign.center),
       ],
     );
   }
