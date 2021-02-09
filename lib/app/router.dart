@@ -8,7 +8,9 @@ import 'package:flutter/material.dart';
 
 @immutable
 class CustomRouter {
-  static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(builder: (_) => screen);
+  static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(
+        builder: (_) => screen,
+      );
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
     // final dynamic _args = settings.arguments;

@@ -89,8 +89,8 @@ class MTStheme {
       buttonTheme: ButtonThemeData(buttonColor: primaryColor),
       fontFamily: 'AvenirNextRounded',
       pageTransitionsTheme: PageTransitionsTheme(builders: {
-        TargetPlatform.iOS: ZoomPageTransitionsBuilder(),
-        TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+        TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+        TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
       }),
     );
   }

@@ -3,7 +3,6 @@ import 'package:barter/ui/screens/auth/_shared_widgets/auth_scaffold.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/components/auth_action_suggestion_rich_text.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/components/continue_with_social_text.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/components/multiple/social_buttons.dart';
-import 'package:barter/ui/screens/auth/_shared_widgets/password_validation_column.dart';
 import 'package:barter/ui/screens/auth/signup/_sections/signup_form.dart';
 import 'package:barter/ui/screens/auth/signup/layout/signup_layout.dart';
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
@@ -19,7 +18,6 @@ class SignupScreen extends StatelessWidget {
         children: [
           AuthFormHeading(title: 'Welcome!', subtitle: 'Please enter your account here'),
           SignupForm(),
-          PasswordValidationColumn(),
           CustomFlatButton(text: 'Sign Up', minWidth: double.infinity),
           ContinueWithSocialText(),
           ...SocialButtonsList.getButtonsIterable(context),

@@ -14,7 +14,9 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.width,
     this.height,
+    this.maxLength,
     this.suffixOnPressed,
+    this.counterText = '',
     this.textAlign = TextAlign.start,
     this.readOnly = false,
     this.obscureText = false,
@@ -26,8 +28,10 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final double width;
   final double height;
+  final int maxLength;
   final String hintText;
   final String helperText;
+  final String counterText;
   final IconData suffixIcon;
   final IconData prefixIcon;
   final double borderRadius;
@@ -48,6 +52,7 @@ class CustomTextFormField extends StatelessWidget {
       width: width,
       height: height,
       child: TextFormField(
+        maxLength: maxLength ?? null,
         validator: validator,
         controller: controller,
         readOnly: readOnly,
@@ -56,6 +61,7 @@ class CustomTextFormField extends StatelessWidget {
         decoration: inputDecoration ??
             InputDecoration(
               isDense: true,
+              counterText: '',
 
               ///
               suffixIcon: _isSuffix
