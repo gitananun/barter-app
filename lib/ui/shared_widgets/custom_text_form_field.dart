@@ -21,21 +21,21 @@ class CustomTextFormField extends StatelessWidget {
     this.isDense = true,
     this.borderRadius = 30,
   }) : super(key: key);
-  final String Function(String) validator;
-  final TextEditingController controller;
   final bool readOnly;
-  final bool obscureText;
   final bool isDense;
-  final InputDecoration inputDecoration;
-  final IconData suffixIcon;
-  final IconData prefixIcon;
-  final String hintText;
-  final String helperText;
+  final bool obscureText;
   final double width;
   final double height;
+  final String hintText;
+  final String helperText;
+  final IconData suffixIcon;
+  final IconData prefixIcon;
   final double borderRadius;
   final TextAlign textAlign;
   final Function suffixOnPressed;
+  final String Function(String) validator;
+  final TextEditingController controller;
+  final InputDecoration inputDecoration;
 
   @override
   Widget build(BuildContext context) {

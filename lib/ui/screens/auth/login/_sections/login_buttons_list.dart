@@ -1,6 +1,8 @@
+import 'package:barter/ui/screens/auth/_shared_widgets/components/continue_with_social_text.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/components/multiple/social_buttons.dart';
+import 'package:barter/ui/screens/auth/login/_components/signup_suggestion_rich_text.dart';
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:barter/ui/shared_widgets/list_view_with_column.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class LoginButtonsList extends StatelessWidget {
@@ -8,31 +10,12 @@ class LoginButtonsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData _themeData = Theme.of(context);
-
-    return ListViewWithColumn(
+    return CustomSingleChildScrollViewWithColumn(
       children: <Widget>[
         CustomFlatButton(primary: true, text: 'Login', minWidth: double.infinity),
-        Text('Or continue with', style: _themeData.textTheme.caption),
-        CustomFlatButton(
-          text: 'Facebook',
-          minWidth: double.infinity,
-          color: Colors.blue,
-          onPressed: () => Navigator.pushReplacementNamed(context, '/auth_verify_with_code'),
-        ),
-        CustomFlatButton(text: 'Google', minWidth: double.infinity, color: Colors.red),
-        RichText(
-          text: TextSpan(
-            text: 'Don\'t have account yet? ',
-            style: _themeData.textTheme.caption,
-            children: <TextSpan>[
-              TextSpan(
-                  text: 'Sign Up',
-                  style: TextStyle(color: _themeData.primaryColor),
-                  recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushReplacementNamed(context, '/signup')),
-            ],
-          ),
-        )
+        ContinueWithSocialText(),
+        ...SocialButtonsList.getButtonsIterable(context),
+        SignupSuggestionRichText(),
       ],
     );
   }

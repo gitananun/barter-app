@@ -16,7 +16,7 @@ class LoginFormWithHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    return ListViewWithColumn(
+    return CustomSingleChildScrollViewWithColumn(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         AuthFormHeading(title: _headingInfo['title'], subtitle: _headingInfo['subtitle']),
