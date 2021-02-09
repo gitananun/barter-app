@@ -1,7 +1,7 @@
+import 'package:barter/ui/screens/auth/_shared_widgets/inputs/custom_email_phone_input.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/inputs/custom_password_input.dart';
 import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.dart';
-import 'package:barter/ui/shared_widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupForm extends StatefulWidget {
   SignupForm({Key key}) : super(key: key);
@@ -24,15 +24,8 @@ class _SignupFormState extends State<SignupForm> {
       key: _formKey,
       child: CustomWrapWithRunSpacing(
         children: [
-          CustomTextFormField(
-            hintText: 'Email or phone number',
-            prefixIcon: FontAwesomeIcons.envelope,
-          ),
-          CustomTextFormField(
-            hintText: 'Password',
-            prefixIcon: FontAwesomeIcons.lock,
-            suffixIcon: FontAwesomeIcons.eye,
-          ),
+          CustomEmailPhoneInput(),
+          CustomPasswordInput(),
         ],
       ),
     );

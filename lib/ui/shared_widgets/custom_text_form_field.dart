@@ -1,3 +1,4 @@
+import 'package:barter/ui/shared_widgets/form_components/input_icon_padding.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.width,
     this.height,
+    this.suffixOnPressed,
     this.textAlign = TextAlign.start,
     this.readOnly = false,
     this.obscureText = false,
@@ -33,6 +35,7 @@ class CustomTextFormField extends StatelessWidget {
   final double height;
   final double borderRadius;
   final TextAlign textAlign;
+  final Function suffixOnPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -53,13 +56,31 @@ class CustomTextFormField extends StatelessWidget {
         decoration: inputDecoration ??
             InputDecoration(
               isDense: true,
-              suffixIcon: _isSuffix ? Icon(suffixIcon, color: _themeData.indicatorColor) : null,
-              prefixIcon: _isPrefix
-                  ? Padding(
-                      padding: const EdgeInsets.only(left: 20.0, right: 10.0),
-                      child: Icon(prefixIcon, color: _themeData.indicatorColor),
+
+              ///
+              suffixIcon: _isSuffix
+                  ? InputIconPadding(
+                      child: IconButton(
+                        splashRadius: 1,
+                        padding: EdgeInsets.zero,
+                        icon: Icon(suffixIcon),
+                        color: _themeData.indicatorColor,
+                        onPressed: suffixOnPressed,
+                      ),
                     )
                   : null,
+
+              ///
+              prefixIcon: _isPrefix
+                  ? InputIconPadding(
+                      child: Icon(
+                        prefixIcon,
+                        color: _themeData.indicatorColor,
+                      ),
+                    )
+                  : null,
+
+              ///
               hintText: hintText,
               hintStyle: _themeData.textTheme.caption,
               helperText: helperText,

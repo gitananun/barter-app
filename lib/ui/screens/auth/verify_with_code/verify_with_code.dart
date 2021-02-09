@@ -1,6 +1,6 @@
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_form_heading.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_scaffold.dart';
-import 'package:barter/ui/screens/auth/verify_with_code/_sections/code_expires_in.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/components/code_expires_in.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/_sections/verify_with_code_buttons.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/_sections/verify_with_code_form.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/layout/verify_with_code_layout.dart';
