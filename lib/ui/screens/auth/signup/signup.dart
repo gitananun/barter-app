@@ -1,6 +1,6 @@
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_form_heading.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/auth_scaffold.dart';
-import 'package:barter/ui/screens/auth/_shared_widgets/components/back_to_login_button.dart';
+import 'package:barter/ui/screens/auth/_shared_widgets/components/auth_action_suggestion_rich_text.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/components/continue_with_social_text.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/components/multiple/social_buttons.dart';
 import 'package:barter/ui/screens/auth/_shared_widgets/password_validation_column.dart';
@@ -23,7 +23,11 @@ class SignupScreen extends StatelessWidget {
           CustomFlatButton(text: 'Sign Up', minWidth: double.infinity),
           ContinueWithSocialText(),
           ...SocialButtonsList.getButtonsIterable(context),
-          BackToLoginButton(),
+          AuthActionSuggestionRichText(
+            text: 'Already have an account? ',
+            actionNameText: 'Sign In',
+            path: '/login',
+          ),
         ],
       ),
     );

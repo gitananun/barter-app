@@ -1,5 +1,6 @@
 import 'package:barter/paths.dart';
 import 'package:barter/ui/screens/onboarding/_components/notification_list_tile.dart';
+import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -14,7 +15,7 @@ class _OnBoardingNotificationsSectionState extends State<OnBoardingNotifications
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
+    return CustomWrapWithRunSpacing(
       children: [
         NotificationListTile(
           title: 'Products',

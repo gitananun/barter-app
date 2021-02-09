@@ -1,6 +1,7 @@
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_image.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title.dart';
 import 'package:barter/ui/screens/onboarding/_shared_widgets/onboarding_content_title_vertical_space.dart';
+import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:barter/ui/screens/onboarding/_sections/onboarding_notifications_section.dart';
@@ -20,9 +21,7 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
   Widget build(BuildContext context) {
     return OnBoardingLayout(
       section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
-      section2: Wrap(
-        alignment: WrapAlignment.center,
-        runSpacing: 10,
+      section2: CustomWrapWithRunSpacing(
         children: [
           OnBoardingContentTitle('Be notified ✌🏻'),
           onBoardingContentVerticalSpace,
