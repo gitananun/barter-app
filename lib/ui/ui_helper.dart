@@ -7,15 +7,23 @@ class SharedStyle {
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
 }
 
-class FormStyle {
-  static const EdgeInsets contentPadding = const EdgeInsets.symmetric(horizontal: 5, vertical: 20);
-
-  static InputBorder inputBorder({double borderRadius, Color color}) => OutlineInputBorder(
-        borderRadius: BorderRadius.circular(borderRadius),
-        borderSide: BorderSide(width: 1, color: color ?? Colors.black),
-      );
+@immutable
+@immutable
+class OnBoardingStyle {
+  static const EdgeInsets nextBtnIconPadding = EdgeInsets.all(15.0);
+  static const EdgeInsets nextBtnIconPaddingSmall = EdgeInsets.all(5.0);
+  static const double nextBtnIconSize = 30.0;
+  static const double bottomAppBarHeight = 50;
+  static const double topAppBarHeight = 80;
+  static const EdgeInsets topAppBarTitleTopMargin = EdgeInsets.only(top: 20);
 }
 
+@immutable
+class LoginStyle {
+  static const double topAppBarHeight = 80;
+}
+
+@immutable
 class CustomButtonStyle {
   static flatButtonHeight(BuildContext context) {
     double height;
@@ -34,16 +42,11 @@ class CustomButtonStyle {
   }
 }
 
-@immutable
-class OnBoardingStyle {
-  static const EdgeInsets nextBtnIconPadding = EdgeInsets.all(15.0);
-  static const EdgeInsets nextBtnIconPaddingSmall = EdgeInsets.all(5.0);
-  static const double nextBtnIconSize = 30.0;
-  static const double bottomAppBarHeight = 50;
-  static const double topAppBarHeight = 80;
-  static const EdgeInsets topAppBarTitleTopMargin = EdgeInsets.only(top: 20);
-}
+class FormStyle {
+  static const EdgeInsets contentPadding = const EdgeInsets.symmetric(horizontal: 5, vertical: 20);
 
-class LoginStyle {
-  static const double topAppBarHeight = 80;
+  static InputBorder inputBorder({double borderRadius, Color color}) => OutlineInputBorder(
+        borderRadius: BorderRadius.circular(borderRadius),
+        borderSide: BorderSide(width: 1, color: color ?? Colors.black),
+      );
 }

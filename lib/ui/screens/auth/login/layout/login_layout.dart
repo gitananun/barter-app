@@ -16,7 +16,7 @@ class LoginLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthMainContainer(
+    return AuthMainLayout(
       child: Column(
         children: [
           Expanded(flex: 1, child: section1),

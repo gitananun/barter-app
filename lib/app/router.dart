@@ -3,6 +3,7 @@ import 'package:barter/ui/screens/auth/password_recover/password_recover.dart';
 import 'package:barter/ui/screens/auth/password_reset/password_reset.dart';
 import 'package:barter/ui/screens/auth/signup/signup.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
+import 'package:barter/ui/screens/home/home_dashboard/home_dashboard.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,8 @@ class CustomRouter {
         return _returnScreen(PasswordRecoverScreen());
       case '/password_reset':
         return _returnScreen(PasswordResetScreen());
+      case '/home_dashboard':
+        return _returnScreen(HomeDashboardScreen());
       default:
         return null;
     }

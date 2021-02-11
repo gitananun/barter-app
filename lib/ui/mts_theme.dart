@@ -77,6 +77,7 @@ class MTStheme {
     return ThemeData(
       primaryColor: primaryColor,
       accentColor: accentColor,
+      indicatorColor: primaryTextColor,
       disabledColor: secondaryTextColor,
       canvasColor: canvasColor,
       dividerColor: dividerColor,

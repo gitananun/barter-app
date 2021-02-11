@@ -8,7 +8,7 @@ class VerifyWithCodeLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthMainContainer(
+    return AuthMainLayout(
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
