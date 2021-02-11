@@ -11,7 +11,12 @@ class HomeDashboardAppBarActions {
 
   List<Widget> getActions() {
     return [
-      Align(child: HomeDashboardSizedicon(FontAwesomeIcons.filter, color: Theme.of(context).indicatorColor)),
+      Align(
+        child: HomeDashboardSizedicon(
+          FontAwesomeIcons.filter,
+          color: Theme.of(context).indicatorColor,
+        ),
+      ),
     ];
   }
 }

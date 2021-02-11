@@ -12,25 +12,26 @@ class NotificationListTile extends StatelessWidget {
     this.leadingImgPath,
     this.isThreeLine,
   }) : super(key: key);
-  final ValueChanged<bool> onSwitch;
-  final bool switchValue;
+
   final String title;
   final String subtitle;
-  final String leadingImgPath;
+  final bool switchValue;
   final bool isThreeLine;
+  final String leadingImgPath;
+  final ValueChanged<bool> onSwitch;
 
   @override
   Widget build(BuildContext context) {
     final TextTheme _textTheme = Theme.of(context).textTheme;
 
     return ListTile(
-      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath) : FlutterLogo(),
-      title: title != null ? Text(title, style: _textTheme.subtitle2) : Text('title'),
-      subtitle: subtitle != null ? Text(subtitle, style: _textTheme.caption) : Text('subtitle'),
-      visualDensity: VisualDensity.compact,
-      trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch),
       dense: true,
       isThreeLine: isThreeLine ?? true,
+      visualDensity: VisualDensity.compact,
+      trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch),
+      title: title != null ? Text(title, style: _textTheme.subtitle2) : Text('title'),
+      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath) : FlutterLogo(),
+      subtitle: subtitle != null ? Text(subtitle, style: _textTheme.overline) : Text('subtitle'),
     );
   }
 }
