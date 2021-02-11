@@ -6,6 +6,6 @@ class ContinueWithSocialText extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text(
         'Or continue with',
-        style: Theme.of(context).textTheme.caption,
+        style: Theme.of(context).textTheme.overline,
       );
 }

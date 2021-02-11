@@ -23,8 +23,8 @@ class MTStheme {
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 14),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14),
-    caption: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 12),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 10),
+    caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 12),
+    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 12),
   );
 
   static const TextTheme customMediumTextTheme = TextTheme(
@@ -39,8 +39,8 @@ class MTStheme {
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 24),
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 22),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 22),
-    caption: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 16),
+    caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
+    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 18),
   );
 
   static const TextTheme customLargeTextTheme = TextTheme(
@@ -55,8 +55,8 @@ class MTStheme {
     bodyText1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 36),
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 34),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 34),
-    caption: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 32),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, fontSize: 30),
+    caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 32),
+    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 32),
   );
 
   static ThemeData customThemeData(DeviceScreenSize screenSize) {

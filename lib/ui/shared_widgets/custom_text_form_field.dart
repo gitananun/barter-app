@@ -77,18 +77,12 @@ class CustomTextFormField extends StatelessWidget {
                   : null,
 
               ///
-              prefixIcon: _isPrefix
-                  ? InputIconPadding(
-                      child: Icon(
-                        prefixIcon,
-                        color: _themeData.indicatorColor,
-                      ),
-                    )
-                  : null,
+              prefixIcon:
+                  _isPrefix ? InputIconPadding(child: Icon(prefixIcon, color: _themeData.indicatorColor)) : null,
 
               ///
               hintText: hintText,
-              hintStyle: _themeData.textTheme.caption,
+              hintStyle: _themeData.textTheme.overline,
               helperText: helperText,
               contentPadding: FormStyle.contentPadding,
               border: FormStyle.inputBorder(borderRadius: borderRadius),
