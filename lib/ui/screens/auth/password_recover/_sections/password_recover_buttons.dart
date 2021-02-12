@@ -13,7 +13,7 @@ class PasswordRecoverButtons extends StatelessWidget {
         CustomFlatButton(
           text: 'Reset password',
           minWidth: double.infinity,
-          onPressed: () => Navigator.pushNamed(context, '/password_reset'),
+          onPressed: () => Navigator.pushReplacementNamed(context, '/password_reset'),
         ),
         BackToLoginButton(),
       ],

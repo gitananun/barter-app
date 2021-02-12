@@ -7,11 +7,11 @@ class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
   const HomeDashboardSelectCategoryHorizontalListView({Key key}) : super(key: key);
 
   final List<Map<String, dynamic>> icons = const [
-    {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones'},
-    {'icon': FontAwesomeIcons.carAlt, 'title': 'Cars'},
-    {'icon': FontAwesomeIcons.heartbeat, 'title': 'Medical'},
-    {'icon': FontAwesomeIcons.book, 'title': 'Books'},
-    {'icon': FontAwesomeIcons.handHoldingMedical, 'title': 'Care'},
+    {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones', 'active': true},
+    {'icon': FontAwesomeIcons.carAlt, 'title': 'Cars', 'active': false},
+    {'icon': FontAwesomeIcons.heartbeat, 'title': 'Medical', 'active': false},
+    {'icon': FontAwesomeIcons.book, 'title': 'Books', 'active': false},
+    {'icon': FontAwesomeIcons.handHoldingMedical, 'title': 'Care', 'active': false},
   ];
 
   @override
@@ -28,6 +28,7 @@ class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
           return HomeDashboardCategoryHorizontalListItem(
             icon: icons[index]['icon'],
             title: icons[index]['title'],
+            isActive: icons[index]['active'],
           );
         },
       ),

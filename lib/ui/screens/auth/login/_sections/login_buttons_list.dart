@@ -16,7 +16,7 @@ class LoginButtonsList extends StatelessWidget {
           primary: true,
           text: 'Login',
           minWidth: double.infinity,
-          onPressed: () => Navigator.pushNamed(context, '/home_dashboard'),
+          onPressed: () => Navigator.pushReplacementNamed(context, '/home_dashboard'),
         ),
         ContinueWithSocialText(),
         ...SocialButtonsList.getButtonsIterable(context),

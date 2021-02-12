@@ -9,7 +9,7 @@ class SocialButtonsList {
           color: Colors.blue,
           minWidth: double.infinity,
           icon: FontAwesomeIcons.facebookF,
-          onPressed: () => Navigator.pushNamed(context, '/auth_verify_with_code'),
+          onPressed: () => Navigator.pushReplacementNamed(context, '/auth_verify_with_code'),
         ),
         CustomSocialFlatButton(
           text: 'Google',

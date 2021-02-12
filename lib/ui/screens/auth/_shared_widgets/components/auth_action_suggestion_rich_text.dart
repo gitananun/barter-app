@@ -25,7 +25,7 @@ class AuthActionSuggestionRichText extends StatelessWidget {
           TextSpan(
             text: actionNameText,
             style: TextStyle(color: _themeData.primaryColor),
-            recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushNamed(context, path),
+            recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushReplacementNamed(context, path),
           ),
         ],
       ),

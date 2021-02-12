@@ -26,7 +26,7 @@ class LoginFormWithHeading extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: GestureDetector(
-                onTap: () => Navigator.pushNamed(context, '/password_recover'),
+                onTap: () => Navigator.pushReplacementNamed(context, '/password_recover'),
                 child: Text('Forgot password?', style: _themeData.textTheme.caption),
               ),
             ),
