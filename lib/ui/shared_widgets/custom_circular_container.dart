@@ -6,17 +6,19 @@ class CustomCircularContainer extends StatelessWidget {
     this.icon,
     this.child,
     this.width,
+    this.height,
     this.margin,
     this.bgColor,
     this.alignment,
     this.boxShadow,
     this.active = true,
-    this.padding = const EdgeInsets.all(10),
+    this.padding = const EdgeInsets.all(12),
   }) : super(key: key);
 
   final bool active;
   final Widget child;
   final double width;
+  final double height;
   final Color bgColor;
   final IconData icon;
   final List<BoxShadow> boxShadow;
@@ -36,6 +38,7 @@ class CustomCircularContainer extends StatelessWidget {
 
     return Container(
       width: width,
+      height: height,
       margin: margin,
       padding: padding,
       alignment: alignment,

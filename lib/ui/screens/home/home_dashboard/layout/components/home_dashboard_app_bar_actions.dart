@@ -11,7 +11,9 @@ class HomeDashboardAppBarActions {
 
   List<Widget> getActions() {
     return [
-      Align(
+      Container(
+        alignment: Alignment.center,
+        margin: const EdgeInsets.only(right: 20),
         child: HomeDashboardSizedicon(
           FontAwesomeIcons.filter,
           color: Theme.of(context).indicatorColor,

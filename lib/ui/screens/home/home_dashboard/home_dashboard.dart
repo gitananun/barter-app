@@ -1,4 +1,5 @@
-import 'package:barter/ui/screens/home/home_dashboard/_sections/components/home_dashboard_category_section.dart';
+import 'package:barter/ui/screens/home/home_dashboard/_sections/home_dashboard_category_section.dart';
+import 'package:barter/ui/screens/home/home_dashboard/_sections/home_dashboard_search_section.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/home_dashboard_layout.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/home_dashboard_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class _HomeDashboardScreenState extends State<HomeDashboardScreen> {
       body: HomeDashboardLayout(
         children: [
           HomeDashboardCategorySection(),
+          HomeDashboardSearchSection(),
         ],
       ),
     );

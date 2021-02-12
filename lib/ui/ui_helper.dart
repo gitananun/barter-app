@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SharedStyle {
+  static const double spaceBetweenSection = 20;
   static const double sectionTitleContentSpacing = 20;
   static const Widget listItemTitleTopSpacing = SizedBox(height: 10);
   static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 20);
@@ -42,6 +43,25 @@ class CustomButtonStyle {
         break;
       default:
         height = 40;
+        break;
+    }
+    return height;
+  }
+}
+
+@immutable
+class HorizontalListViewHeightResponsive {
+  static getHorizontalHeight(BuildContext context) {
+    double height;
+    switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
+      case DeviceScreenSize.Large:
+        height = 140;
+        break;
+      case DeviceScreenSize.Medium:
+        height = 120;
+        break;
+      default:
+        height = 100;
         break;
     }
     return height;

@@ -9,6 +9,7 @@ class HomeDashboardCategorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      runAlignment: WrapAlignment.spaceEvenly,
       runSpacing: SharedStyle.sectionTitleContentSpacing,
       children: [
         HomeDashboardSectionTitleRow(title: 'Select Category', moreText: 'view all'),

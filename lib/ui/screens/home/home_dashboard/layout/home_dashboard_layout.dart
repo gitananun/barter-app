@@ -1,4 +1,5 @@
 import 'package:barter/ui/styles/home_dashboard/style.dart';
+import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,17 @@ class HomeDashboardLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: HomeDashboardStyle.contentPadding,
-        child: SingleChildScrollView(child: Wrap(children: children)),
+        child: Flex(
+          direction: Axis.vertical,
+          children: [
+            Expanded(
+              child: Wrap(
+                runSpacing: SharedStyle.spaceBetweenSection,
+                runAlignment: WrapAlignment.start,
+                children: children,
+              ),
+            ),
+          ],
+        ),
       );
 }
