@@ -1,12 +1,15 @@
+import 'package:barter/ui/styles/home_dashboard/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class HomeDashboardLayout extends StatelessWidget {
-  HomeDashboardLayout({Key key}) : super(key: key);
+  HomeDashboardLayout({Key key, @required this.children}) : super(key: key);
+  final List<Widget> children;
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox();
-  }
+  Widget build(BuildContext context) => Padding(
+        padding: HomeDashboardStyle.contentPadding,
+        child: SingleChildScrollView(child: Wrap(children: children)),
+      );
 }

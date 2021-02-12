@@ -1,3 +1,4 @@
+import 'package:barter/ui/screens/home/home_dashboard/_sections/components/home_dashboard_category_section.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/home_dashboard_layout.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/home_dashboard_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,12 @@ class HomeDashboardScreen extends StatefulWidget {
 class _HomeDashboardScreenState extends State<HomeDashboardScreen> {
   @override
   Widget build(BuildContext context) {
-    return HomeDashboardScaffold(body: HomeDashboardLayout());
+    return HomeDashboardScaffold(
+      body: HomeDashboardLayout(
+        children: [
+          HomeDashboardCategorySection(),
+        ],
+      ),
+    );
   }
 }

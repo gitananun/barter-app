@@ -1,10 +1,16 @@
 import 'package:barter/ui/device_screen_helper.dart';
 import 'package:barter/ui/enums/device_screen_size.dart';
+import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class SharedStyle {
+  static const double sectionTitleContentSpacing = 20;
+  static const Widget listItemTitleTopSpacing = SizedBox(height: 10);
+  static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 20);
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
+  static BoxShadow mainBoxShadow =
+      BoxShadow(color: MTStheme.accentColor.withOpacity(0.2), spreadRadius: 4, blurRadius: 6);
 }
 
 @immutable
