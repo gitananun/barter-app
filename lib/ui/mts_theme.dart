@@ -6,6 +6,7 @@ class MTStheme {
   static const Color accentColor = Color(0xFFd0dbea);
   static const Color canvasColor = Colors.white;
   static const Color dividerColor = Color(0xFFf4f5f7);
+  static const Color cardBgDarkColor = Color(0xFF101010);
   static const Color errorColor = Color(0xFFe02a1f);
   static const Color primaryTextColor = Color(0xFF3e5481);
   static const Color secondaryTextColor = Color(0xFF9fa5c0);
@@ -86,6 +87,7 @@ class MTStheme {
       textTheme: _textTheme,
       buttonColor: primaryColor,
       scaffoldBackgroundColor: canvasColor,
+      cardColor: cardBgDarkColor,
       cursorColor: primaryColor,
       buttonTheme: ButtonThemeData(buttonColor: primaryColor),
       fontFamily: 'AvenirNextRounded',

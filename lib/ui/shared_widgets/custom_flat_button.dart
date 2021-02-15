@@ -4,23 +4,23 @@ import 'package:flutter/material.dart';
 class CustomFlatButton extends StatelessWidget {
   const CustomFlatButton({
     Key key,
-    this.primary = true,
-    this.child,
-    this.onPressed,
-    this.padding,
-    this.color,
     this.text,
-    this.minWidth = 150,
+    this.child,
+    this.color,
     this.height,
+    this.padding,
+    this.onPressed,
+    this.primary = true,
+    this.minWidth = 150,
   }) : super(key: key);
-  final bool primary;
-  final Widget child;
-  final Function onPressed;
-  final EdgeInsetsGeometry padding;
   final Color color;
   final String text;
-  final double minWidth;
+  final Widget child;
+  final bool primary;
   final double height;
+  final double minWidth;
+  final Function onPressed;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
