@@ -61,8 +61,7 @@ class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
             height: 35,
             minWidth: 10,
             color: Colors.white,
-            child:
-                Text('Go to Product', style: _themeData.textTheme.caption.apply(fontWeightDelta: 1, fontSizeDelta: -3)),
+            child: Text("Let's Go", style: _themeData.textTheme.caption.apply(fontWeightDelta: 1, fontSizeDelta: -3)),
           ),
         ],
       ),
