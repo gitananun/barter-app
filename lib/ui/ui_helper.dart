@@ -58,10 +58,10 @@ class HorizontalListViewHeightResponsive {
         height = 140;
         break;
       case DeviceScreenSize.Medium:
-        height = 120;
+        height = 100;
         break;
       default:
-        height = 100;
+        height = 85;
         break;
     }
     return height;

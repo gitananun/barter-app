@@ -25,19 +25,19 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
         child: Column(
           children: [
             CustomCircularContainer(
-              width: 70,
+              width: 60,
               alignment: Alignment.center,
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(15),
               boxShadow: [SharedStyle.mainBoxShadow],
               bgColor: isActive ? _themeData.primaryColor : Colors.white,
               child: FaIcon(
                 icon,
-                size: _themeData.textTheme.headline5.fontSize,
+                size: _themeData.textTheme.headline6.fontSize,
                 color: isActive ? Colors.white : _themeData.accentColor,
               ),
             ),
             SharedStyle.listItemTitleTopSpacing,
-            Text(title, style: _themeData.textTheme.caption),
+            Text(title, style: _themeData.textTheme.caption.apply(fontSizeDelta: -3)),
           ],
         ),
       ),
