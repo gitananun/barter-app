@@ -7,7 +7,7 @@ class HomeDashboardProductsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 600,
       alignment: Alignment.topCenter,
       child: GridView.count(
         crossAxisCount: 2,
