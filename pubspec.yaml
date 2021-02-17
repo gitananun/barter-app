@@ -43,6 +43,7 @@ flutter:
   assets:
     - assets/images/deals_carousel/
     - assets/images/onboarding/
+    - assets/images/products/
     - assets/images/
     - assets/
 
