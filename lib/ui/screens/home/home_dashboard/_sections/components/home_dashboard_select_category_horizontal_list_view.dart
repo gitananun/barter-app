@@ -17,7 +17,7 @@ class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: HorizontalListViewHeightResponsive.getHorizontalHeight(context),
+      height: HorizontalCategoriesListViewHeightResponsive.getHorizontalHeight(context),
       child: ListView.builder(
         itemCount: 5,
         shrinkWrap: true,

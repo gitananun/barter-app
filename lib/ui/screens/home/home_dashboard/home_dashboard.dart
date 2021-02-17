@@ -14,6 +14,21 @@ class HomeDashboardScreen extends StatefulWidget {
 }
 
 class _HomeDashboardScreenState extends State<HomeDashboardScreen> {
+  /// Initialize [productsGridController]
+  /// In order to [closeCarouselContainer]
+  ScrollController productsGridController = ScrollController();
+  bool closeCarouselContainer = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    /// Listen to grid scroll
+    productsGridController.addListener(() {
+      setState(() => closeCarouselContainer = productsGridController.offset > 30);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return HomeDashboardScaffold(
@@ -21,8 +36,8 @@ class _HomeDashboardScreenState extends State<HomeDashboardScreen> {
         children: [
           HomeDashboardCategorySection(),
           HomeDashboardSearchSection(),
-          HomeDashboardDealsCarouselSection(),
-          HomeDashboardProductsGridSection(),
+          HomeDashboardDealsCarouselSection(closeCarouselContainer: closeCarouselContainer),
+          HomeDashboardProductsGridSection(controller: productsGridController),
         ],
       ),
     );

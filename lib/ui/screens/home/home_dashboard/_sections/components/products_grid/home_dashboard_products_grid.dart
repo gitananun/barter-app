@@ -2,7 +2,8 @@ import 'package:barter/ui/screens/home/home_dashboard/_sections/components/produ
 import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGrid extends StatelessWidget {
-  const HomeDashboardProductsGrid({Key key}) : super(key: key);
+  const HomeDashboardProductsGrid({Key key, this.controller}) : super(key: key);
+  final ScrollController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,8 @@ class HomeDashboardProductsGrid extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: GridView.count(
         crossAxisCount: 2,
+        physics: BouncingScrollPhysics(),
+        controller: controller,
         children: List.generate(20, (index) => HomeDashboardProductsGridItem()),
       ),
     );
