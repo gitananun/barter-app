@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SharedStyle {
-  static const double spaceBetweenSection = 10;
+  static const double spaceBetweenSection = 15;
   static const double sectionTitleContentSpacing = 20;
   static const Widget listItemTitleTopSpacing = SizedBox(height: 10);
-  static const Duration animationDuration = const Duration(milliseconds: 300);
+  static const Duration animationDuration = const Duration(milliseconds: 400);
   static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 20);
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
   static BoxShadow mainBoxShadow =

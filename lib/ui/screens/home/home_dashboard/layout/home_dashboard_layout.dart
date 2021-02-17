@@ -5,13 +5,11 @@ import 'package:flutter/material.dart';
 
 @immutable
 class HomeDashboardLayout extends StatelessWidget {
-  HomeDashboardLayout({Key key, @required this.children, @required this.controller}) : super(key: key);
+  HomeDashboardLayout({Key key, @required this.children}) : super(key: key);
   final List<Widget> children;
-  final ScrollController controller;
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
-        controller: controller,
         child: Padding(
           padding: HomeDashboardStyle.contentPadding,
           child: Wrap(
