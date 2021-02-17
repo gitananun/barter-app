@@ -8,13 +8,13 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeDashboardDealsCarouselSection extends StatelessWidget {
-  const HomeDashboardDealsCarouselSection({Key key, @required this.closeCarouselContainer}) : super(key: key);
-  final bool closeCarouselContainer;
+  const HomeDashboardDealsCarouselSection({Key key, @required this.closeTopContainer}) : super(key: key);
+  final bool closeTopContainer;
 
   @override
   Widget build(BuildContext context) {
-    final double _containerHeight = closeCarouselContainer ? 0 : MediaQuery.of(context).size.width * 0.65;
-    final double _opacity = closeCarouselContainer ? 0 : 1;
+    final double _containerHeight = closeTopContainer ? 0 : MediaQuery.of(context).size.width * 0.65;
+    final double _opacity = closeTopContainer ? 0 : 1;
 
     return HomeDashboardDealsCarouselAnimatedContainer(
       HomeDashboardSectionTitleWithContentWrapper(

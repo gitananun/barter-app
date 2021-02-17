@@ -1,3 +1,4 @@
+import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 class HomeDashboardDealsCarouselAnimatedContainer extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomeDashboardDealsCarouselAnimatedContainer extends StatelessWidget {
   final double height;
   final double opacity;
 
-  final Duration _duration = const Duration(milliseconds: 400);
+  final Duration _duration = SharedStyle.animationDuration;
 
   @override
   Widget build(BuildContext context) {
