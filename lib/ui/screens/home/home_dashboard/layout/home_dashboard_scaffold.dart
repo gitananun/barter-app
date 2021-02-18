@@ -1,5 +1,6 @@
 import 'package:barter/ui/screens/home/home_dashboard/layout/components/home_dashboard_app_bar_actions.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/components/home_dashboard_app_bar_title.dart';
+import 'package:barter/ui/screens/home/home_dashboard/layout/components/home_dashboard_floating_action_button.dart';
 import 'package:barter/ui/shared_widgets/layout_components/custom_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +13,14 @@ class HomeDashboardScaffold extends StatelessWidget {
     return Scaffold(
       body: body,
       bottomNavigationBar: CustomBottomNavigationBar(),
+      floatingActionButton: HomeDashboardFloatingActionButton(),
       appBar: AppBar(
         elevation: 0,
         primary: true,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
         title: HomeDashboardAppBarTitle(),
+        backgroundColor: Colors.transparent,
         actions: HomeDashboardAppBarActions(context).getActions(),
       ),
     );

@@ -10,6 +10,7 @@ class MTStheme {
   static const Color errorColor = Color(0xFFe02a1f);
   static const Color primaryTextColor = Color(0xFF3e5481);
   static const Color secondaryTextColor = Color(0xFF9fa5c0);
+  static const Color splashColor = Color(0xFFFF3c00);
   static const Color hintColor = secondaryTextColor;
 
   static const TextTheme customSmallTextTheme = TextTheme(
@@ -76,21 +77,22 @@ class MTStheme {
     }
 
     return ThemeData(
-      primaryColor: primaryColor,
-      accentColor: accentColor,
-      indicatorColor: primaryTextColor,
-      disabledColor: secondaryTextColor,
-      canvasColor: canvasColor,
-      dividerColor: dividerColor,
-      errorColor: errorColor,
       hintColor: hintColor,
       textTheme: _textTheme,
+      errorColor: errorColor,
+      canvasColor: canvasColor,
+      accentColor: accentColor,
+      splashColor: splashColor,
       buttonColor: primaryColor,
-      scaffoldBackgroundColor: canvasColor,
-      cardColor: cardBgDarkColor,
       cursorColor: primaryColor,
-      buttonTheme: ButtonThemeData(buttonColor: primaryColor),
+      primaryColor: primaryColor,
+      dividerColor: dividerColor,
+      cardColor: cardBgDarkColor,
       fontFamily: 'AvenirNextRounded',
+      indicatorColor: primaryTextColor,
+      disabledColor: secondaryTextColor,
+      scaffoldBackgroundColor: canvasColor,
+      buttonTheme: ButtonThemeData(buttonColor: primaryColor),
       pageTransitionsTheme: PageTransitionsTheme(builders: {
         TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
         TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
