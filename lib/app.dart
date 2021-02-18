@@ -17,7 +17,7 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: 'Barter',
       theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
-      initialRoute: '/home_dashboard',
+      initialRoute: '/',
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       onGenerateRoute: CustomRouter.generateRoutes,

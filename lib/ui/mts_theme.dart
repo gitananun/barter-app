@@ -2,16 +2,16 @@ import 'package:barter/ui/enums/device_screen_size.dart';
 import 'package:flutter/material.dart';
 
 class MTStheme {
-  static const Color primaryColor = Color(0xFFFFb82e);
-  static const Color accentColor = Color(0xFFd0dbea);
   static const Color canvasColor = Colors.white;
-  static const Color dividerColor = Color(0xFFf4f5f7);
-  static const Color cardBgDarkColor = Color(0xFF101010);
+  static const Color hintColor = secondaryTextColor;
   static const Color errorColor = Color(0xFFe02a1f);
+  static const Color accentColor = Color(0xFFd0dbea);
+  static const Color primaryColor = Color(0xFFFFb82e);
+  static const Color dividerColor = Color(0xFFf4f5f7);
+  static const Color splashColor = Colors.transparent;
+  static const Color cardBgDarkColor = Color(0xFF101010);
   static const Color primaryTextColor = Color(0xFF3e5481);
   static const Color secondaryTextColor = Color(0xFF9fa5c0);
-  static const Color splashColor = Color(0xFFFF3c00);
-  static const Color hintColor = secondaryTextColor;
 
   static const TextTheme customSmallTextTheme = TextTheme(
     headline1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 96),
