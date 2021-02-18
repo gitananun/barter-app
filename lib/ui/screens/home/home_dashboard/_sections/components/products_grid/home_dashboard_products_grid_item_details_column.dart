@@ -10,9 +10,11 @@ class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    return Align(
+    return Container(
       alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(

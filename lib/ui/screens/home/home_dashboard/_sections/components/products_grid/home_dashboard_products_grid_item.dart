@@ -1,6 +1,6 @@
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_details_column.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_image_container.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_make_favorite_gesture_detector.dart';
 import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGridItem extends StatelessWidget {
@@ -18,21 +18,26 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 15, 20, 20),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [SharedStyle.mainBoxShadow],
-        borderRadius: BorderRadius.circular(25),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          HomeDashboardProductsGridItemImageContainer(image),
-          SizedBox(height: 10),
-          HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
-        ],
-      ),
+    return Stack(
+      alignment: Alignment.topRight,
+      children: [
+        Container(
+          padding: const EdgeInsets.only(top: 10),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(25),
+            border: Border.all(color: Theme.of(context).accentColor.withOpacity(0.5)),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: HomeDashboardProductsGridItemImageContainer(image)),
+              HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
+            ],
+          ),
+        ),
+        HomeDashboardProductsGridItemMakeFavoriteGestureDetector(),
+      ],
     );
   }
 }

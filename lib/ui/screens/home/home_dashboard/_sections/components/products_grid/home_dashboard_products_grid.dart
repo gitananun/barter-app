@@ -16,9 +16,8 @@ class HomeDashboardProductsGrid extends StatelessWidget {
     return GridView.count(
       shrinkWrap: true,
       crossAxisCount: 2,
-      mainAxisSpacing: 20,
-      crossAxisSpacing: 20,
-      padding: const EdgeInsets.all(8),
+      mainAxisSpacing: 10,
+      crossAxisSpacing: 10,
       physics: BouncingScrollPhysics(),
       children: List.generate(
         products.length,

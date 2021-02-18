@@ -7,11 +7,9 @@ class HomeDashboardProductsGridItemImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(Paths.PRODUCTS_ASSETS + url), fit: BoxFit.contain),
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage(Paths.PRODUCTS_ASSETS + url), fit: BoxFit.contain),
       ),
     );
   }
