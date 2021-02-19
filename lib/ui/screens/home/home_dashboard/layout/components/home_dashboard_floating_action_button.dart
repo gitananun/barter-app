@@ -1,3 +1,4 @@
+import 'package:barter/ui/dialogs/feedback/custom_feedback_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -11,7 +12,7 @@ class HomeDashboardFloatingActionButton extends StatelessWidget {
     return FloatingActionButton(
       child: FaIcon(FontAwesomeIcons.plus, color: Colors.white),
       elevation: 0,
-      onPressed: () {},
+      onPressed: () => showDialog(context: context, builder: (_) => customFeedbackAlertDialog(context)),
       highlightElevation: 0,
       backgroundColor: _themeData.primaryColor,
     );

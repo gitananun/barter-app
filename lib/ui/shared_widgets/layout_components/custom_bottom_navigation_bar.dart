@@ -1,4 +1,5 @@
 import 'package:barter/ui/shared_widgets/layout_components/components/custom_bottom_navigation_bar_icon.dart';
+import 'package:barter/ui/utils/navigation/navigation_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,6 +22,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       selectedItemColor: _themeData.primaryColor,
       unselectedItemColor: _themeData.accentColor,
+      onTap: (index) => NavigationUtils.navigateToScreen(context, SizedBox()),
       items: [
         for (int i = 0; i < navigationBarItems.length; i++)
           BottomNavigationBarItem(

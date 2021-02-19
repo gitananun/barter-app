@@ -10,6 +10,7 @@ class CustomFlatButton extends StatelessWidget {
     this.height,
     this.padding,
     this.onPressed,
+    this.borderColor,
     this.primary = true,
     this.minWidth = 150,
   }) : super(key: key);
@@ -19,6 +20,7 @@ class CustomFlatButton extends StatelessWidget {
   final bool primary;
   final double height;
   final double minWidth;
+  final Color borderColor;
   final Function onPressed;
   final EdgeInsetsGeometry padding;
 
@@ -32,16 +34,21 @@ class CustomFlatButton extends StatelessWidget {
             ? _theme.primaryColor
             : Colors.white;
 
+    Color _borderColor = borderColor != null
+        ? borderColor
+        : primary
+            ? Colors.transparent
+            : _theme.accentColor;
+
     Color _textColor = primary ? Colors.white : _theme.accentColor;
-    Color _borderColor = primary ? Colors.transparent : _theme.accentColor;
 
     return FlatButton(
-      minWidth: minWidth,
-      height: height ?? CustomButtonStyle.flatButtonHeight(context),
       color: _bgColor,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30), side: BorderSide(color: _borderColor)),
-      child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button.apply(color: _textColor)),
+      minWidth: minWidth,
       onPressed: onPressed ?? () {},
+      height: height ?? CustomButtonStyle.flatButtonHeight(context),
+      child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button.apply(color: _textColor)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30), side: BorderSide(color: _borderColor)),
     );
   }
 }
