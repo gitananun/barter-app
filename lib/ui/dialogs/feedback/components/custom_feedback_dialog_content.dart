@@ -11,10 +11,10 @@ class CustomFeedbackDialogContent extends StatefulWidget {
 }
 
 class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogContent> {
-  /// Did user submitted or not
-  bool _readyToSubmit = false;
+  /// Stars rating value
+  int _rating = 0;
 
-  void _rate() => setState(() => _readyToSubmit = !_readyToSubmit);
+  void _rate(int index) => setState(() => _rating = index);
 
   @override
   Widget build(_) {
@@ -36,14 +36,15 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
               GestureDetector(
-                onTap: _rate,
+                onTap: () => _rate(i),
                 child: Container(
                   padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: _readyToSubmit ? _themeData.primaryColor : _themeData.accentColor,
+                    color: i <= _rating ? _themeData.primaryColor : _themeData.accentColor,
                   ),
                   child: FaIcon(
                     FontAwesomeIcons.solidStar,
@@ -61,7 +62,7 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
         /// [AnimatedCrossFade] as disabled and enabled
         AnimatedCrossFade(
           duration: Duration(milliseconds: 100),
-          crossFadeState: _readyToSubmit ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+          crossFadeState: _rating > 0 ? CrossFadeState.showFirst : CrossFadeState.showSecond,
           firstChild: Center(
             child: CustomFlatButton(
               onPressed: () {},
