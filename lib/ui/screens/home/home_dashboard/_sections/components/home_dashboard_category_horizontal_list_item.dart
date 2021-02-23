@@ -37,7 +37,7 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
               ),
             ),
             SharedStyle.listItemTitleTopSpacing,
-            Text(title, style: _themeData.textTheme.caption.apply(fontSizeDelta: -3)),
+            Text(title, style: _themeData.textTheme.caption.apply(fontSizeDelta: -2)),
           ],
         ),
       ),
