@@ -7,19 +7,14 @@ class CustomProductFiltersBottomSheetCategoriesGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(minHeight: 0, maxHeight: 150),
-      child: GridView.count(
+    return Container(
+      height: 40,
+      child: ListView.builder(
         shrinkWrap: true,
-        crossAxisCount: 3,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        childAspectRatio: 2.2,
+        itemCount: categories.length,
+        scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
-        children: List.generate(
-          categories.length,
-          (i) => CustomProductFiltersBottomSheetCategoriesGridItem(categories[i]),
-        ),
+        itemBuilder: (BuildContext context, int i) => CustomProductFiltersBottomSheetCategoriesGridItem(categories[i]),
       ),
     );
   }

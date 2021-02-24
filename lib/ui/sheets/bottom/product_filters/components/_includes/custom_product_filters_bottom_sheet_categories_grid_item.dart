@@ -11,6 +11,7 @@ class CustomProductFiltersBottomSheetCategoriesGridItem extends StatelessWidget 
 
     return Container(
       alignment: Alignment.center,
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),

@@ -12,7 +12,7 @@ class SharedStyle {
   static const Duration animationDuration = const Duration(milliseconds: 400);
   static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 15);
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
-  static const EdgeInsets bottomModalSheetMarginBetweenSections = const EdgeInsets.only(bottom: 10);
+  static const EdgeInsets bottomModalSheetMarginBetweenSections = const EdgeInsets.only(bottom: 20);
   static RoundedRectangleBorder dialogShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(30));
   static BoxShadow mainBoxShadow =
       BoxShadow(color: MTStheme.accentColor.withOpacity(0.2), spreadRadius: 4, blurRadius: 6);

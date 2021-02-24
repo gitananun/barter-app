@@ -1,7 +1,7 @@
 import 'package:barter/ui/sheets/bottom/components/custom_bottom_sheet_title_body_divider.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_categories_grid.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_main_wrapper.dart';
-import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_price_slider.dart';
+import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_price_range_slider.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_section_aligned_column.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_title.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 class CustomProductFiltersBottomSheet extends StatelessWidget {
   const CustomProductFiltersBottomSheet({Key key}) : super(key: key);
 
-  final List<String> _categories = const ['All', 'Computer', 'Books', 'Cars'];
+  final List<String> _categories = const ['All', 'Computer', 'Books', 'Cars', 'Medical'];
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,11 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
         CustomBottomSheetTitleBodyDivider(),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Category',
-          spaceBetweenTitleAndBody: 15,
           body: CustomProductFiltersBottomSheetCategoriesGrid(_categories),
         ),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
-          spaceBetweenTitleAndBody: 0,
-          body: CustomProductFiltersBottomSheetPriceSlider(),
+          body: CustomProductFiltersBottomSheetPriceRangeSlider(),
         ),
       ],
     );
