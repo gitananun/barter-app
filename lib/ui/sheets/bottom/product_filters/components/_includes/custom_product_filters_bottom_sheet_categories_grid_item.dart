@@ -12,15 +12,16 @@ class CustomProductFiltersBottomSheetCategoriesGridItem extends StatelessWidget 
     return Container(
       alignment: Alignment.center,
       margin: const EdgeInsets.symmetric(horizontal: 5),
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: _themeData.textTheme.overline.color),
+        border: Border.all(color: active ? _themeData.primaryColor : _themeData.textTheme.overline.color),
+        color: active ? _themeData.primaryColor : Colors.transparent,
       ),
       child: Text(
         title,
         maxLines: 1,
-        style: _themeData.textTheme.overline.apply(fontSizeFactor: 0.8),
+        style: _themeData.textTheme.overline.apply(fontSizeFactor: 0.8, color: active ? Colors.white : null),
         overflow: TextOverflow.ellipsis,
       ),
     );

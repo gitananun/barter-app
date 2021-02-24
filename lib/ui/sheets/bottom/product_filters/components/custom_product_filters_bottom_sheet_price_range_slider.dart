@@ -22,7 +22,6 @@ class _CustomProductFiltersBottomSheetPriceRangeSliderState
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('\$${_rangeValues.start.floor()}', style: _themeData.textTheme.overline),
-            Text('\$${(_rangeValues.end / 2).floor()}', style: _themeData.textTheme.overline),
             Text('\$${_rangeValues.end.floor()}', style: _themeData.textTheme.overline),
           ],
         ),

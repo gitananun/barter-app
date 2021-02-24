@@ -1,3 +1,4 @@
+import 'package:barter/ui/shared_widgets/buttons_groups/custom_cancel_apply_buttons_row.dart';
 import 'package:barter/ui/sheets/bottom/components/custom_bottom_sheet_title_body_divider.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_categories_grid.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_main_wrapper.dart';
@@ -24,6 +25,9 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
           body: CustomProductFiltersBottomSheetPriceRangeSlider(),
+        ),
+        CustomProductFiltersBottomSheetSectionAlignedColumn(
+          body: CustomCancelApplyButtonsRow(applyText: 'Filter'),
         ),
       ],
     );

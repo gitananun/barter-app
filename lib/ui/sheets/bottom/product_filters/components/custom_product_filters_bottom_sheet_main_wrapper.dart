@@ -10,7 +10,7 @@ class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
     return Container(
       padding: SharedStyle.bottomModalSheetPadding,
       child: Wrap(
-        alignment: WrapAlignment.center,
+        alignment: WrapAlignment.spaceEvenly,
         children: [
           Column(children: children),
         ],

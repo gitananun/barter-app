@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class CustomProductFiltersBottomSheetSectionAlignedColumn extends StatelessWidget {
   const CustomProductFiltersBottomSheetSectionAlignedColumn({
     Key key,
+    this.title,
     @required this.body,
-    @required this.title,
     this.spaceBetweenTitleAndBody = 15,
   }) : super(key: key);
   final Widget body;
@@ -21,7 +21,9 @@ class CustomProductFiltersBottomSheetSectionAlignedColumn extends StatelessWidge
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: Theme.of(context).textTheme.bodyText2.apply(fontWeightDelta: 1)),
+            title != null
+                ? Text(title, style: Theme.of(context).textTheme.bodyText2.apply(fontWeightDelta: 1))
+                : SizedBox(),
             SizedBox(height: spaceBetweenTitleAndBody),
             body,
           ],

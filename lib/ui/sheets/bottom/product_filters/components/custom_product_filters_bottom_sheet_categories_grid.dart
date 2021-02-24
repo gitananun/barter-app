@@ -8,13 +8,17 @@ class CustomProductFiltersBottomSheetCategoriesGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
+      height: 45,
+      padding: const EdgeInsets.symmetric(vertical: 5),
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: categories.length,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int i) => CustomProductFiltersBottomSheetCategoriesGridItem(categories[i]),
+        itemBuilder: (BuildContext context, int i) => CustomProductFiltersBottomSheetCategoriesGridItem(
+          categories[i],
+          active: i == 0,
+        ),
       ),
     );
   }

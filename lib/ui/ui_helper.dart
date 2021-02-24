@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class SharedStyle {
   static const double spaceBetweenSection = 15;
   static const double sectionTitleContentSpacing = 20;
+  static const Widget buttonsRowMarginBetween = SizedBox(width: 10);
   static const Widget listItemTitleTopSpacing = SizedBox(height: 10);
   static const EdgeInsets bottomModalSheetPadding = const EdgeInsets.all(20);
   static const Duration animationDuration = const Duration(milliseconds: 400);

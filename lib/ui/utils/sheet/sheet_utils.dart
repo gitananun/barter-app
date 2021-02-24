@@ -5,6 +5,7 @@ class SheetUtils {
   static void showBottomSheet(BuildContext context, Widget sheet) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       builder: (context) => sheet,
     );
   }
