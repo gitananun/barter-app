@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SharedStyle {
+  static const double commonRadius = 30;
   static const double spaceBetweenSection = 15;
   static const double sectionTitleContentSpacing = 20;
   static const Widget buttonsRowMarginBetween = SizedBox(width: 10);
@@ -12,14 +13,14 @@ class SharedStyle {
   static const EdgeInsets bottomModalSheetPadding = const EdgeInsets.all(20);
   static const Duration animationDuration = const Duration(milliseconds: 400);
   static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 15);
+  static BorderRadius bottomSheetBorderRadius = BorderRadius.circular(commonRadius);
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
   static const EdgeInsets bottomModalSheetMarginBetweenSections = const EdgeInsets.only(bottom: 20);
-  static RoundedRectangleBorder dialogShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(30));
+  static RoundedRectangleBorder dialogShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(commonRadius));
   static BoxShadow mainBoxShadow =
       BoxShadow(color: MTStheme.accentColor.withOpacity(0.2), spreadRadius: 4, blurRadius: 6);
 }
 
-@immutable
 @immutable
 class OnBoardingStyle {
   static const EdgeInsets nextBtnIconPadding = EdgeInsets.all(15.0);

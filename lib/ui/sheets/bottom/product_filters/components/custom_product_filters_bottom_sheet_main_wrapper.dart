@@ -9,6 +9,7 @@ class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: SharedStyle.bottomModalSheetPadding,
+      decoration: BoxDecoration(borderRadius: SharedStyle.bottomSheetBorderRadius, color: Colors.white),
       child: Wrap(
         alignment: WrapAlignment.spaceEvenly,
         children: [
