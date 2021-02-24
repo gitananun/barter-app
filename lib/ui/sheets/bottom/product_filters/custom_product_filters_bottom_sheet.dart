@@ -19,10 +19,12 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
         CustomBottomSheetTitleBodyDivider(),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Category',
+          spaceBetweenTitleAndBody: 15,
           body: CustomProductFiltersBottomSheetCategoriesGrid(_categories),
         ),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
+          spaceBetweenTitleAndBody: 0,
           body: CustomProductFiltersBottomSheetPriceSlider(),
         ),
       ],

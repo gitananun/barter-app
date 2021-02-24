@@ -8,9 +8,7 @@ class CustomProductFiltersBottomSheetPriceSlider extends StatefulWidget {
 }
 
 class _CustomProductFiltersBottomSheetPriceSliderState extends State<CustomProductFiltersBottomSheetPriceSlider> {
-  double price = 20;
-  final double _min = 10;
-  final double _max = 100;
+  RangeValues _rangeValues = RangeValues(50, 100);
 
   @override
   Widget build(BuildContext context) {
@@ -19,20 +17,19 @@ class _CustomProductFiltersBottomSheetPriceSliderState extends State<CustomProdu
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('\$${_min.floor()}', style: _themeData.textTheme.overline),
+        Text('\$${_rangeValues.start.floor()}', style: _themeData.textTheme.overline),
         Expanded(
-          child: Slider(
-            min: _min,
-            max: _max,
-            value: price,
+          child: RangeSlider(
+            min: 0,
+            max: 200,
+            values: _rangeValues,
             divisions: 10,
-            label: "\$$price",
             activeColor: _themeData.primaryColor,
             inactiveColor: _themeData.accentColor.withAlpha(50),
-            onChanged: (val) => setState(() => price = val),
+            onChanged: (RangeValues newValues) => setState(() => _rangeValues = newValues),
           ),
         ),
-        Text('\$${_max.floor()}', style: _themeData.textTheme.overline),
+        Text('\$${_rangeValues.end.floor()}', style: _themeData.textTheme.overline),
       ],
     );
   }

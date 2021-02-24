@@ -8,11 +8,12 @@ class SharedStyle {
   static const double spaceBetweenSection = 15;
   static const double sectionTitleContentSpacing = 20;
   static const Widget listItemTitleTopSpacing = SizedBox(height: 10);
+  static const EdgeInsets bottomModalSheetPadding = const EdgeInsets.all(20);
   static const Duration animationDuration = const Duration(milliseconds: 400);
   static const EdgeInsets horizontalListItemsMargin = EdgeInsets.only(right: 15);
   static const EdgeInsets contentPadding = EdgeInsets.symmetric(horizontal: 25, vertical: 25);
+  static const EdgeInsets bottomModalSheetMarginBetweenSections = const EdgeInsets.only(bottom: 10);
   static RoundedRectangleBorder dialogShape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(30));
-  static const EdgeInsets bottomModalSheetPadding = const EdgeInsets.all(20);
   static BoxShadow mainBoxShadow =
       BoxShadow(color: MTStheme.accentColor.withOpacity(0.2), spreadRadius: 4, blurRadius: 6);
 }
