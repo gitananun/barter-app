@@ -1,12 +1,14 @@
 import 'package:barter/ui/mts_theme.dart';
 import 'package:barter/ui/shared_widgets/layout_components/components/custom_fancy_floating_action_button_expanding_button.dart';
+import 'package:barter/ui/utils/dialog/rate/show_rate_dialog.dart';
+import 'package:barter/ui/utils/sheet/filter/show_products_filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomFancyFloatingActionButton extends StatefulWidget {
-  final Function() onPressed;
-  final String tooltip;
   final IconData icon;
+  final String tooltip;
+  final Function() onPressed;
 
   CustomFancyFloatingActionButton({this.onPressed, this.tooltip, this.icon});
 
@@ -17,12 +19,13 @@ class CustomFancyFloatingActionButton extends StatefulWidget {
 class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingActionButton>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
-  AnimationController _animationController;
+  double _fabHeight = 56.0;
+  Curve _curve = Curves.ease;
   Animation<Color> _buttonColor;
   Animation<double> _animateIcon;
+  Animation<Color> _buttonIconColor;
   Animation<double> _translateButton;
-  Curve _curve = Curves.easeOut;
-  double _fabHeight = 56.0;
+  AnimationController _animationController;
 
   @override
   initState() {
@@ -30,7 +33,12 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
       ..addListener(() => setState(() {}));
     _animateIcon = Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
 
-    _buttonColor = ColorTween(begin: MTStheme.primaryColor, end: MTStheme.primaryTextColor).animate(CurvedAnimation(
+    _buttonColor = ColorTween(begin: MTStheme.primaryColor, end: Colors.white).animate(CurvedAnimation(
+      parent: _animationController,
+      curve: Interval(0.00, 0.50, curve: Curves.linear),
+    ));
+
+    _buttonIconColor = ColorTween(begin: Colors.white, end: MTStheme.primaryColor).animate(CurvedAnimation(
       parent: _animationController,
       curve: Interval(0.00, 1.00, curve: Curves.linear),
     ));
@@ -55,17 +63,31 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
     isOpened = !isOpened;
   }
 
+  /// Expanding Floating Action Buttons
   Widget add() => CustomFancyFloatingActionButtonExpandingButton(icon: FontAwesomeIcons.plus);
-
-  Widget filter() => CustomFancyFloatingActionButtonExpandingButton(icon: FontAwesomeIcons.filter);
-
-  Widget card() => CustomFancyFloatingActionButtonExpandingButton(icon: FontAwesomeIcons.shoppingBasket);
+  Widget filter() => CustomFancyFloatingActionButtonExpandingButton(
+        icon: FontAwesomeIcons.filter,
+        onPressed: ProductsFilterBottomSheetUtils(context).show,
+      );
+  Widget rate() => CustomFancyFloatingActionButtonExpandingButton(
+        icon: FontAwesomeIcons.solidStar,
+        onPressed: ShowRateDialog(context).show,
+      );
 
   Widget toggle() => FloatingActionButton(
         elevation: 0,
         onPressed: animate,
+        highlightElevation: 0,
         backgroundColor: _buttonColor.value,
-        child: AnimatedIcon(icon: AnimatedIcons.menu_close, progress: _animateIcon, color: Colors.white),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: MTStheme.primaryColor, width: 2.0),
+          borderRadius: BorderRadius.all(Radius.circular(100)),
+        ),
+        child: AnimatedIcon(
+          progress: _animateIcon,
+          color: _buttonIconColor.value,
+          icon: AnimatedIcons.menu_close,
+        ),
       );
 
   @override
@@ -76,7 +98,7 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
         ///
         Transform(
           transform: Matrix4.translationValues(0.0, _translateButton.value * 3.0, 0.0),
-          child: add(),
+          child: rate(),
         ),
 
         ///
@@ -88,7 +110,7 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
         ///
         Transform(
           transform: Matrix4.translationValues(0.0, _translateButton.value, 0.0),
-          child: card(),
+          child: add(),
         ),
 
         ///

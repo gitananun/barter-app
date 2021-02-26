@@ -12,12 +12,8 @@ class CustomFancyFloatingActionButtonExpandingButton extends StatelessWidget {
     return FloatingActionButton(
       elevation: 0,
       onPressed: onPressed ?? null,
-      backgroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-        side: BorderSide(color: MTStheme.primaryTextColor, width: 1.0),
-        borderRadius: BorderRadius.all(Radius.circular(100)),
-      ),
-      child: Icon(icon, size: Theme.of(context).textTheme.caption.fontSize, color: MTStheme.primaryTextColor),
+      backgroundColor: MTStheme.primaryColor,
+      child: Icon(icon, size: Theme.of(context).textTheme.caption.fontSize, color: Colors.white),
     );
   }
 }
