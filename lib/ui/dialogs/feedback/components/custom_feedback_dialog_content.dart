@@ -1,5 +1,6 @@
+import 'package:barter/ui/dialogs/components/custom_alert_dialog_content_text.dart';
+import 'package:barter/ui/dialogs/components/custom_alert_dialog_content_wrapper.dart';
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
-import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -13,21 +14,17 @@ class CustomFeedbackDialogContent extends StatefulWidget {
 class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogContent> {
   /// Stars rating value
   int _rating = 0;
-
   void _rate(int index) => setState(() => _rating = index);
 
   @override
   Widget build(_) {
     final ThemeData _themeData = Theme.of(widget.context);
 
-    return Wrap(
-      runSpacing: SharedStyle.spaceBetweenSection,
+    return CustomAlertDialogContentWrapper(
       children: [
-        /// Content
-        Text(
+        CustomAlertDialogContentText(
+          widget.context,
           'We are always trying to improve what we do and your feedback is invaluable!',
-          style: _themeData.textTheme.overline.apply(fontWeightDelta: 1),
-          textAlign: TextAlign.center,
         ),
 
         Divider(),

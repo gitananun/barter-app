@@ -1,18 +1,18 @@
 import 'package:barter/ui/dialogs/components/custom_alert_dialog_title_with_image.dart';
-import 'package:barter/ui/dialogs/feedback/components/custom_feedback_dialog_content.dart';
+import 'package:barter/ui/dialogs/upload/components/custom_upload_success_dialog_content.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
-Widget customFeedbackAlertDialog(BuildContext context) {
+Widget customUploadSuccessAlertDialog(BuildContext context) {
   return AlertDialog(
     shape: SharedStyle.dialogShape,
     title: customAlertDialogTitleWithImage(
       context,
-      imageTitle: 'ragged_checkmark.svg',
-      title: 'Let us know how we\'re doing',
+      imageTitle: 'upload_success.svg',
+      title: 'Upload Success',
     ),
 
     /// Content with Submit button
-    content: CustomFeedbackDialogContent(context),
+    content: CustomUploadSuccessDialogContent(context),
   );
 }

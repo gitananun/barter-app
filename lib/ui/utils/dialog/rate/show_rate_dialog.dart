@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class ShowRateDialog {
   BuildContext context;
-
   ShowRateDialog(BuildContext ctx) {
     context = ctx;
   }

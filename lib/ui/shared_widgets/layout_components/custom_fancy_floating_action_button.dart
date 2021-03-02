@@ -1,6 +1,7 @@
 import 'package:barter/ui/mts_theme.dart';
 import 'package:barter/ui/shared_widgets/layout_components/components/custom_fancy_floating_action_button_expanding_button.dart';
 import 'package:barter/ui/utils/dialog/rate/show_rate_dialog.dart';
+import 'package:barter/ui/utils/dialog/upload/show_upload_dialog.dart';
 import 'package:barter/ui/utils/sheet/filter/show_products_filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -64,7 +65,10 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
   }
 
   /// Expanding Floating Action Buttons
-  Widget add() => CustomFancyFloatingActionButtonExpandingButton(icon: FontAwesomeIcons.plus);
+  Widget add() => CustomFancyFloatingActionButtonExpandingButton(
+        icon: FontAwesomeIcons.plus,
+        onPressed: ShowUploadDialog(context).show,
+      );
   Widget filter() => CustomFancyFloatingActionButtonExpandingButton(
         icon: FontAwesomeIcons.filter,
         onPressed: ProductsFilterBottomSheetUtils(context).show,

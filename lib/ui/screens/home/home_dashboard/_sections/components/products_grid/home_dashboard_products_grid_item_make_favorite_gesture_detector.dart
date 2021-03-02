@@ -1,3 +1,4 @@
+import 'package:barter/ui/shared_widgets/comfort/custom_large_clickable_gesture_detector.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -17,16 +18,16 @@ class _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
+    const double _padding = 15;
 
-    return GestureDetector(
+    return CustomLargeClickableGestureDetector(
       onTap: makeFavorite,
-      child: Padding(
-        padding: const EdgeInsets.all(15),
-        child: FaIcon(
-          isFavorite ? FontAwesomeIcons.solidHeart : FontAwesomeIcons.heart,
-          size: _themeData.textTheme.button.fontSize,
-          color: _themeData.errorColor,
-        ),
+      horizontal: _padding,
+      vertical: _padding,
+      child: FaIcon(
+        isFavorite ? FontAwesomeIcons.solidHeart : FontAwesomeIcons.heart,
+        size: _themeData.textTheme.button.fontSize,
+        color: _themeData.errorColor,
       ),
     );
   }
