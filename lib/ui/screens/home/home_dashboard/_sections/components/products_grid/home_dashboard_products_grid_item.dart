@@ -21,19 +21,22 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
     return Stack(
       alignment: Alignment.topRight,
       children: [
-        Container(
-          padding: const EdgeInsets.only(top: 10),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(25),
-            border: Border.all(color: Theme.of(context).accentColor.withOpacity(0.5)),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(child: HomeDashboardProductsGridItemImageContainer(image)),
-              HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
-            ],
+        GestureDetector(
+          onTap: () => Navigator.pushNamed(context, '/product', arguments: {'name': 'hi there'}),
+          child: Container(
+            padding: const EdgeInsets.only(top: 10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(color: Theme.of(context).accentColor.withOpacity(0.5)),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(child: HomeDashboardProductsGridItemImageContainer(image)),
+                HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
+              ],
+            ),
           ),
         ),
         HomeDashboardProductsGridItemMakeFavoriteGestureDetector(),

@@ -4,6 +4,7 @@ import 'package:barter/ui/screens/auth/password_reset/password_reset.dart';
 import 'package:barter/ui/screens/auth/signup/signup.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
 import 'package:barter/ui/screens/home/home_dashboard/home_dashboard.dart';
+import 'package:barter/ui/screens/home/store/products/single_product/single_product_screen.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,8 @@ class CustomRouter {
       );
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
-    // final dynamic _args = settings.arguments;
+    final dynamic _args = settings.arguments;
+    print(_args);
     switch (settings.name) {
       case '/':
         return _returnScreen(OnBoardingScreen());
@@ -30,6 +32,11 @@ class CustomRouter {
         return _returnScreen(PasswordResetScreen());
       case '/home_dashboard':
         return _returnScreen(HomeDashboardScreen());
+
+      /// Store routes
+      /// Products, Single Product
+      case '/product':
+        return _returnScreen(SingleProductScreen());
       default:
         return null;
     }
