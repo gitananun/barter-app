@@ -15,7 +15,7 @@ class CustomRouter {
       );
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
-    final dynamic _args = settings.arguments;
+    // final dynamic _args = settings.arguments;
 
     switch (settings.name) {
       case '/':
