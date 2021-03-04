@@ -8,7 +8,7 @@ Widget customFeedbackAlertDialog(BuildContext context) {
     shape: SharedStyle.dialogShape,
     title: customAlertDialogTitleWithImage(
       context,
-      imageTitle: 'ragged_checkmark.svg',
+      imageTitle: 'ragged_checkmark.png',
       title: 'Let us know how we\'re doing',
     ),
 

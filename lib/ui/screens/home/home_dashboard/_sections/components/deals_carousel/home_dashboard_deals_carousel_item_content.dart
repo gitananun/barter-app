@@ -59,7 +59,7 @@ class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
           ///
           CustomFlatButton(
             height: 35,
-            minWidth: 10,
+            minWidth: 80,
             color: Colors.white,
             child: Text("Let's Go", style: _themeData.textTheme.caption.apply(fontWeightDelta: 1, fontSizeDelta: -3)),
           ),

@@ -8,7 +8,7 @@ Widget customUploadSuccessAlertDialog(BuildContext context) {
     shape: SharedStyle.dialogShape,
     title: customAlertDialogTitleWithImage(
       context,
-      imageTitle: 'upload_success.svg',
+      imageTitle: 'upload_success.png',
       title: 'Upload Success',
     ),
 

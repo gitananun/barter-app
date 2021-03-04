@@ -16,7 +16,7 @@ class CustomRouter {
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
     final dynamic _args = settings.arguments;
-    print(_args);
+
     switch (settings.name) {
       case '/':
         return _returnScreen(OnBoardingScreen());

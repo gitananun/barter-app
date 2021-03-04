@@ -84,7 +84,6 @@ class MTStheme {
       accentColor: accentColor,
       splashColor: splashColor,
       buttonColor: primaryColor,
-      cursorColor: primaryColor,
       primaryColor: primaryColor,
       dividerColor: dividerColor,
       cardColor: cardBgDarkColor,

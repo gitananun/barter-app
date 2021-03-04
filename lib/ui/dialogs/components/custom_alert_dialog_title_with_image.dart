@@ -1,7 +1,6 @@
 import 'package:barter/paths.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 Widget customAlertDialogTitleWithImage(
   BuildContext context, {
@@ -14,7 +13,7 @@ Widget customAlertDialogTitleWithImage(
     runSpacing: SharedStyle.spaceBetweenSection,
     children: [
       Align(
-        child: SvgPicture.asset(
+        child: Image.asset(
           Paths.DIALOG_ASSETS + imageTitle,
           width: _themeData.textTheme.headline1.fontSize,
         ),

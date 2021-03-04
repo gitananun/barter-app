@@ -42,13 +42,23 @@ class CustomFlatButton extends StatelessWidget {
 
     Color _textColor = primary ? Colors.white : _theme.accentColor;
 
-    return FlatButton(
-      color: _bgColor,
-      minWidth: minWidth,
-      onPressed: onPressed ?? () {},
+    return SizedBox(
+      width: minWidth,
       height: height ?? CustomButtonStyle.flatButtonHeight(context),
-      child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button.apply(color: _textColor)),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30), side: BorderSide(color: _borderColor)),
+      child: TextButton(
+        onPressed: onPressed ?? () {},
+        style: ButtonStyle(
+          enableFeedback: true,
+          backgroundColor: MaterialStateProperty.all<Color>(_bgColor),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+              side: BorderSide(color: _borderColor),
+            ),
+          ),
+        ),
+        child: child ?? Text(text ?? 'my button', style: _theme.textTheme.button.apply(color: _textColor)),
+      ),
     );
   }
 }
