@@ -1,17 +1,17 @@
 import 'package:barter/app.dart';
 import 'package:barter/app/app_helper.dart';
-import 'package:barter/env.dart';
 import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:device_preview/device_preview.dart';
 
 import 'package:flutter/services.dart';
 
 void main() => runApp(
-      DevicePreview(
-        enabled: AppHelper.getDevicePreviewStatus(APP_MODE),
-        builder: (context) => AppHelper.getMainAppWidget,
-      ),
+      /// [DevicePreview] Package Runner
+      // DevicePreview(
+      //   enabled: AppHelper.getDevicePreviewStatus(APP_MODE),
+      //   builder: (context) => AppHelper.getMainAppWidget,
+      // ),
+      AppHelper.getMainAppWidget,
     );
 
 class AppOriginator extends StatefulWidget {
