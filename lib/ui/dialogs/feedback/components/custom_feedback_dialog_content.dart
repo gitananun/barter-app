@@ -31,14 +31,14 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
 
         /// Rating Stars
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
             for (int i = 1; i <= 5; i++)
               GestureDetector(
                 onTap: () => _rate(i),
                 child: Container(
                   padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.symmetric(horizontal: 5),
+                  margin: const EdgeInsets.symmetric(horizontal: 0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: i <= _rating ? _themeData.primaryColor : _themeData.accentColor,
