@@ -1,5 +1,6 @@
 import 'package:barter/ui/mts_theme.dart';
 import 'package:barter/ui/shared_widgets/layout_components/components/custom_fancy_floating_action_button_expanding_button.dart';
+import 'package:barter/ui/utils/dialog/delete/show_delete_dialog.dart';
 import 'package:barter/ui/utils/dialog/rate/show_rate_dialog.dart';
 import 'package:barter/ui/utils/dialog/upload/show_upload_dialog.dart';
 import 'package:barter/ui/utils/sheet/filter/show_products_filter_bottom_sheet.dart';
@@ -73,9 +74,14 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
         icon: FontAwesomeIcons.filter,
         onPressed: ProductsFilterBottomSheetUtils(context).show,
       );
+
   Widget rate() => CustomFancyFloatingActionButtonExpandingButton(
         icon: FontAwesomeIcons.solidStar,
         onPressed: ShowRateDialog(context).show,
+      );
+  Widget delete() => CustomFancyFloatingActionButtonExpandingButton(
+        icon: FontAwesomeIcons.trash,
+        onPressed: ShowDeleteDialog(context).show,
       );
 
   Widget toggle() => FloatingActionButton(
@@ -99,6 +105,12 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
+        ///
+        Transform(
+          transform: Matrix4.translationValues(0.0, _translateButton.value * 4.0, 0.0),
+          child: delete(),
+        ),
+
         ///
         Transform(
           transform: Matrix4.translationValues(0.0, _translateButton.value * 3.0, 0.0),
