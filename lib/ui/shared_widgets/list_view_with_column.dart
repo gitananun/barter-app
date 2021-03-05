@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomSingleChildScrollViewWithColumn extends StatelessWidget {
   const CustomSingleChildScrollViewWithColumn({
     Key? key,
-    @required this.children,
+    required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceAround,
   }) : super(key: key);
   final List<Widget>? children;

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class VerifyWithCodeLayout extends StatelessWidget {
-  const VerifyWithCodeLayout({Key? key, @required this.children}) : super(key: key);
+  const VerifyWithCodeLayout({Key? key, required this.children}) : super(key: key);
   final List<Widget>? children;
 
   @override

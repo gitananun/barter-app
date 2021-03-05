@@ -4,7 +4,7 @@ import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomFancyFloatingActionButtonExpandingButton extends StatelessWidget {
-  const CustomFancyFloatingActionButtonExpandingButton({Key? key, this.onPressed, @required this.icon})
+  const CustomFancyFloatingActionButtonExpandingButton({Key? key, this.onPressed, required this.icon})
       : super(key: key);
   final IconData? icon;
   final VoidCallback? onPressed;

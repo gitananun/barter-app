@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 class LoginLayout extends StatelessWidget {
   LoginLayout({
     Key? key,
-    @required this.section1,
-    @required this.section2,
-    @required this.section3,
+    required this.section1,
+    required this.section2,
+    required this.section3,
   }) : super(key: key);
 
   final Widget? section1;

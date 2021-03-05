@@ -5,7 +5,7 @@ class CustomProductFiltersBottomSheetSectionAlignedColumn extends StatelessWidge
   const CustomProductFiltersBottomSheetSectionAlignedColumn({
     Key? key,
     this.title,
-    @required this.body,
+    required this.body,
     this.spaceBetweenTitleAndBody = 15,
   }) : super(key: key);
   final Widget? body;

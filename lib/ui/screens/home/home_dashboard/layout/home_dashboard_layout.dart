@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class HomeDashboardLayout extends StatelessWidget {
-  HomeDashboardLayout({Key? key, @required this.children}) : super(key: key);
+  HomeDashboardLayout({Key? key, required this.children}) : super(key: key);
   final List<Widget>? children;
 
   @override

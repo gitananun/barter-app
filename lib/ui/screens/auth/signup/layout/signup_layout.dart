@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class SignupLayout extends StatelessWidget {
-  const SignupLayout({Key? key, @required this.children}) : super(key: key);
+  const SignupLayout({Key? key, required this.children}) : super(key: key);
   final List<Widget>? children;
 
   @override

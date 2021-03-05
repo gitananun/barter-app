@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class AuthMainLayout extends StatelessWidget {
-  const AuthMainLayout({Key? key, @required this.child}) : super(key: key);
+  const AuthMainLayout({Key? key, required this.child}) : super(key: key);
   final Widget? child;
 
   @override

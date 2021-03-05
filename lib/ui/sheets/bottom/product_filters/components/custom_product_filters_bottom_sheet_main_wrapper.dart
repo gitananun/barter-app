@@ -2,7 +2,7 @@ import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
-  const CustomProductFiltersBottomSheetMainWrapper({Key? key, @required this.children}) : super(key: key);
+  const CustomProductFiltersBottomSheetMainWrapper({Key? key, required this.children}) : super(key: key);
   final List<Widget>? children;
 
   @override

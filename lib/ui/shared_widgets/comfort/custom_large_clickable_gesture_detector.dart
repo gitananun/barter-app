@@ -5,8 +5,8 @@ class CustomLargeClickableGestureDetector extends StatelessWidget {
     Key? key,
     this.vertical = 20,
     this.horizontal = 10,
-    @required this.onTap,
-    @required this.child,
+    required this.onTap,
+    required this.child,
   }) : super(key: key);
   final Widget? child;
   final double vertical;

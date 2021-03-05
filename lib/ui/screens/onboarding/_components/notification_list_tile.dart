@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class NotificationListTile extends StatelessWidget {
   const NotificationListTile({
     Key? key,
-    @required this.onSwitch,
+    required this.onSwitch,
     this.switchValue,
     this.title,
     this.subtitle,

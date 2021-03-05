@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class OnBoardingLayout extends StatelessWidget {
   OnBoardingLayout({
     Key? key,
-    @required this.section1,
-    @required this.section2,
+    required this.section1,
+    required this.section2,
   }) : super(key: key);
 
   final Widget? section1;

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class CustomValidationListTile extends StatelessWidget {
   const CustomValidationListTile({
     Key? key,
-    @required this.title,
-    @required this.leadingIcon,
+    required this.title,
+    required this.leadingIcon,
     this.active,
   }) : super(key: key);
   final String? title;

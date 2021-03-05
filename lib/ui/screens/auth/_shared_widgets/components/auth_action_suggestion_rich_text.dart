@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class AuthActionSuggestionRichText extends StatelessWidget {
   const AuthActionSuggestionRichText({
     Key? key,
-    @required this.text,
-    @required this.actionNameText,
-    @required this.path,
+    required this.text,
+    required this.actionNameText,
+    required this.path,
   }) : super(key: key);
 
   final String? text;

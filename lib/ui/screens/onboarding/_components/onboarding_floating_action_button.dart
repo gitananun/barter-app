@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class OnBoardingFloatingActionButton extends StatelessWidget {
   const OnBoardingFloatingActionButton({
     Key? key,
-    @required this.isLastPage,
-    @required this.onNextPage,
+    required this.isLastPage,
+    required this.onNextPage,
   }) : super(key: key);
   final bool? isLastPage;
   final GestureTapCallback? onNextPage;

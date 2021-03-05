@@ -6,8 +6,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
   const HomeDashboardCategoryHorizontalListItem({
     Key? key,
-    @required this.icon,
-    @required this.title,
+    required this.icon,
+    required this.title,
     this.isActive = false,
   }) : super(key: key);
 

@@ -3,7 +3,7 @@ import 'package:barter/ui/shared_widgets/comfort/custom_large_clickable_gesture_
 import 'package:flutter/material.dart';
 
 class HomeDashboardAppBarAction extends StatelessWidget {
-  const HomeDashboardAppBarAction(this.icon, {Key? key, @required this.color, @required this.onTap}) : super(key: key);
+  const HomeDashboardAppBarAction(this.icon, {Key? key, required this.color, required this.onTap}) : super(key: key);
   final Color? color;
   final IconData icon;
   final GestureTapCallback? onTap;

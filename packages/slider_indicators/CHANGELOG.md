@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - TODO: 05.03.2020.
 
-* TODO: Describe initial release.
+- TODO: Slider Initial Indicators Package

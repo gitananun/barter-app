@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class AuthFormHeading extends StatelessWidget {
-  AuthFormHeading({Key? key, @required this.title, @required this.subtitle}) : super(key: key);
+  AuthFormHeading({Key? key, required this.title, required this.subtitle}) : super(key: key);
   final String? title;
   final String? subtitle;
 

@@ -18,8 +18,8 @@ class _AppState extends State<App> {
       title: 'Barter',
       theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
       initialRoute: '/home_dashboard',
-      // locale: DevicePreview.locale(context),
       // builder: DevicePreview.appBuilder,
+      // locale: DevicePreview.locale(context),
       onGenerateRoute: CustomRouter.generateRoutes,
     );
   }
