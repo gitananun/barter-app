@@ -28,7 +28,6 @@ class _CustomProductFiltersBottomSheetPriceRangeSliderState
         RangeSlider(
           min: 0,
           max: 200,
-          divisions: 20,
           values: _rangeValues,
           activeColor: _themeData.primaryColor,
           inactiveColor: _themeData.accentColor.withAlpha(50),

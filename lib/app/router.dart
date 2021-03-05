@@ -7,13 +7,12 @@ import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
 import 'package:barter/ui/screens/home/home_dashboard/home_dashboard.dart';
 import 'package:barter/ui/screens/home/store/products/single_product/single_product_screen.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
+import 'package:barter/ui/screens/system/splash.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class CustomRouter {
-  static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(
-        builder: (_) => screen,
-      );
+  static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(builder: (_) => screen);
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
     // final dynamic _args = settings.arguments;
@@ -21,6 +20,8 @@ class CustomRouter {
     switch (settings.name) {
       case '/':
         return _returnScreen(OnBoardingScreen());
+
+      /// [Auth] Routes
       case '/login':
         return _returnScreen(LoginScreen());
       case '/signup':
@@ -31,13 +32,18 @@ class CustomRouter {
         return _returnScreen(PasswordRecoverScreen());
       case '/password_reset':
         return _returnScreen(PasswordResetScreen());
+
+      /// [Home] Routes
       case '/home_dashboard':
         return _returnScreen(HomeDashboardScreen());
 
-      /// Store routes
-      /// Products, Single Product
+      /// Store Routes
       case '/product':
         return _returnScreen(SingleProductScreen());
+
+      /// System Routes
+      case '/splash':
+        return _returnScreen(SplashScreen());
       default:
         throw MissingRouteException();
     }

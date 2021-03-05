@@ -12,9 +12,7 @@ class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
       decoration: BoxDecoration(borderRadius: SharedStyle.bottomSheetBorderRadius, color: Colors.white),
       child: Wrap(
         alignment: WrapAlignment.spaceEvenly,
-        children: [
-          Column(children: children ?? []),
-        ],
+        children: [Column(children: children ?? [])],
       ),
     );
   }
