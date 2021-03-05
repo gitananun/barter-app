@@ -17,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return AuthScaffold(
       body: LoginLayout(
-        section1: BarterLogo(),
+        section1: Container(child: BarterLogo(), margin: const EdgeInsets.only(top: 20)),
         section2: LoginFormWithHeading(),
         section3: LoginButtonsList(),
       ),

@@ -3,23 +3,34 @@ import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
+class HomeDashboardSelectCategoryHorizontalListView extends StatefulWidget {
   const HomeDashboardSelectCategoryHorizontalListView({Key? key}) : super(key: key);
+  @override
+  _HomeDashboardSelectCategoryHorizontalListViewState createState() =>
+      _HomeDashboardSelectCategoryHorizontalListViewState();
+}
+
+class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDashboardSelectCategoryHorizontalListView> {
+  int _activeCategory = 0;
 
   final List<Map<String, dynamic>> icons = const [
-    {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones', 'active': true},
-    {'icon': FontAwesomeIcons.carAlt, 'title': 'Cars', 'active': false},
-    {'icon': FontAwesomeIcons.heartbeat, 'title': 'Medical', 'active': false},
-    {'icon': FontAwesomeIcons.book, 'title': 'Books', 'active': false},
-    {'icon': FontAwesomeIcons.handHoldingMedical, 'title': 'Care', 'active': false},
+    {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones'},
+    {'icon': FontAwesomeIcons.carAlt, 'title': 'Cars'},
+    {'icon': FontAwesomeIcons.heartbeat, 'title': 'Medical'},
+    {'icon': FontAwesomeIcons.book, 'title': 'Books'},
+    {'icon': FontAwesomeIcons.handHoldingMedical, 'title': 'Care'},
+    {'icon': FontAwesomeIcons.gamepad, 'title': 'Game'},
+    {'icon': FontAwesomeIcons.dumbbell, 'title': 'Fitness'},
   ];
+
+  void makeActive(int id) => setState(() => _activeCategory = id);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: HorizontalCategoriesListViewHeightResponsive.getHorizontalHeight(context),
       child: ListView.builder(
-        itemCount: 5,
+        itemCount: icons.length,
         shrinkWrap: true,
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
@@ -28,7 +39,8 @@ class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
           return HomeDashboardCategoryHorizontalListItem(
             icon: icons[index]['icon'],
             title: icons[index]['title'],
-            isActive: icons[index]['active'],
+            onTap: () => makeActive(index),
+            isActive: _activeCategory == index,
           );
         },
       ),
