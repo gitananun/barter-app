@@ -3,7 +3,7 @@ part of slider_indicators;
 class SingleIndicator extends StatelessWidget {
   const SingleIndicator(
     this.isActive, {
-    Key key,
+    Key? key,
     this.paddingBetween = 2,
     this.size = 5,
   }) : super(key: key);
