@@ -7,7 +7,7 @@ import 'package:barter/ui/screens/auth/password_reset/layout/password_reset_layo
 import 'package:flutter/material.dart';
 
 class PasswordResetScreen extends StatelessWidget {
-  const PasswordResetScreen({Key key}) : super(key: key);
+  const PasswordResetScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ import 'package:barter/ui/screens/home/home_dashboard/_sections/components/produ
 import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGrid extends StatelessWidget {
-  const HomeDashboardProductsGrid({Key key}) : super(key: key);
+  const HomeDashboardProductsGrid({Key? key}) : super(key: key);
 
   final List<Map<String, dynamic>> products = const [
     {'title': 'iPhone 12', 'state': 'New', 'image': 'iphone.png', 'location': 'Yerevan'},

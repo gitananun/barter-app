@@ -7,7 +7,7 @@ import 'package:barter/ui/screens/home/home_dashboard/layout/home_dashboard_scaf
 import 'package:flutter/material.dart';
 
 class HomeDashboardScreen extends StatefulWidget {
-  HomeDashboardScreen({Key key}) : super(key: key);
+  HomeDashboardScreen({Key? key}) : super(key: key);
 
   @override
   _HomeDashboardScreenState createState() => _HomeDashboardScreenState();

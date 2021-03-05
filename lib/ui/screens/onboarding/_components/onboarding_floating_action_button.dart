@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 
 class OnBoardingFloatingActionButton extends StatelessWidget {
   const OnBoardingFloatingActionButton({
-    Key key,
+    Key? key,
     @required this.isLastPage,
     @required this.onNextPage,
   }) : super(key: key);
-  final bool isLastPage;
-  final Function onNextPage;
+  final bool? isLastPage;
+  final GestureTapCallback? onNextPage;
 
   @override
-  Widget build(BuildContext context) =>
-      !isLastPage ? OnBoardingCustomCircularButton(onNextPage) : OnBoardingWelcomeButton(onNextPage);
+  Widget build(BuildContext context) => !(isLastPage ?? true)
+      ? OnBoardingCustomCircularButton(onNextPage ?? () {})
+      : OnBoardingWelcomeButton(onNextPage ?? () {});
 }

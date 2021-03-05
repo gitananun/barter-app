@@ -10,7 +10,7 @@ import 'package:barter/ui/screens/onboarding/layout/onboarding_layout.dart';
 
 @immutable
 class ThirdOnboarding extends StatefulWidget {
-  const ThirdOnboarding({Key key}) : super(key: key);
+  const ThirdOnboarding({Key? key}) : super(key: key);
 
   @override
   _ThirdOnboardingState createState() => _ThirdOnboardingState();

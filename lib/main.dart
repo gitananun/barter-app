@@ -15,7 +15,7 @@ void main() => runApp(
     );
 
 class AppOriginator extends StatefulWidget {
-  const AppOriginator({Key key}) : super(key: key);
+  const AppOriginator({Key? key}) : super(key: key);
   @override
   _AppOriginatorState createState() => _AppOriginatorState();
 }

@@ -4,7 +4,7 @@ import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomUploadSuccessDialogContent extends StatelessWidget {
-  const CustomUploadSuccessDialogContent(this.context, {Key key}) : super(key: key);
+  const CustomUploadSuccessDialogContent(this.context, {Key? key}) : super(key: key);
   final BuildContext context;
 
   @override

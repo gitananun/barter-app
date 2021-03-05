@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 
 class AuthActionSuggestionRichText extends StatelessWidget {
   const AuthActionSuggestionRichText({
-    Key key,
+    Key? key,
     @required this.text,
     @required this.actionNameText,
     @required this.path,
   }) : super(key: key);
 
-  final String text;
-  final String actionNameText;
-  final String path;
+  final String? text;
+  final String? actionNameText;
+  final String? path;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,13 @@ class AuthActionSuggestionRichText extends StatelessWidget {
 
     return RichText(
       text: TextSpan(
-        text: text + ' ',
+        text: text ?? '',
         style: _themeData.textTheme.caption,
         children: <TextSpan>[
           TextSpan(
             text: actionNameText,
             style: TextStyle(color: _themeData.primaryColor),
-            recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushReplacementNamed(context, path),
+            recognizer: TapGestureRecognizer()..onTap = () => Navigator.pushReplacementNamed(context, path ?? '/'),
           ),
         ],
       ),

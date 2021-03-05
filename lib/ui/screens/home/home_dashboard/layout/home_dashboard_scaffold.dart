@@ -5,8 +5,8 @@ import 'package:barter/ui/shared_widgets/layout_components/custom_fancy_floating
 import 'package:flutter/material.dart';
 
 class HomeDashboardScaffold extends StatelessWidget {
-  const HomeDashboardScaffold({Key key, @required this.body}) : super(key: key);
-  final Widget body;
+  const HomeDashboardScaffold({Key? key, @required this.body}) : super(key: key);
+  final Widget? body;
 
   @override
   Widget build(BuildContext context) {

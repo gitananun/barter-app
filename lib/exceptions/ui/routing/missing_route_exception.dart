@@ -1,0 +1,1 @@
+class MissingRouteException implements Exception {}

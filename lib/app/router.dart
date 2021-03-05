@@ -1,3 +1,4 @@
+import 'package:barter/exceptions/ui/routing/missing_route_exception.dart';
 import 'package:barter/ui/screens/auth/login/login.dart';
 import 'package:barter/ui/screens/auth/password_recover/password_recover.dart';
 import 'package:barter/ui/screens/auth/password_reset/password_reset.dart';
@@ -38,7 +39,7 @@ class CustomRouter {
       case '/product':
         return _returnScreen(SingleProductScreen());
       default:
-        return null;
+        throw MissingRouteException();
     }
   }
 }

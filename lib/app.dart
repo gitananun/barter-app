@@ -6,7 +6,7 @@ import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
-  App({Key key}) : super(key: key);
+  App({Key? key}) : super(key: key);
   @override
   _AppState createState() => _AppState();
 }

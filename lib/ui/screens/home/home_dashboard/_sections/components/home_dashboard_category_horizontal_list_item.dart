@@ -5,14 +5,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
   const HomeDashboardCategoryHorizontalListItem({
-    Key key,
+    Key? key,
     @required this.icon,
     @required this.title,
     this.isActive = false,
   }) : super(key: key);
 
-  final IconData icon;
-  final String title;
+  final IconData? icon;
+  final String? title;
   final bool isActive;
 
   @override
@@ -32,12 +32,12 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
               bgColor: isActive ? _themeData.primaryColor : Colors.white,
               child: FaIcon(
                 icon,
-                size: _themeData.textTheme.headline6.fontSize,
+                size: _themeData.textTheme.headline6?.fontSize,
                 color: isActive ? Colors.white : _themeData.accentColor,
               ),
             ),
             SharedStyle.listItemTitleTopSpacing,
-            Text(title, style: _themeData.textTheme.caption.apply(fontSizeDelta: -2)),
+            Text(title ?? '', style: _themeData.textTheme.caption?.apply(fontSizeDelta: -2)),
           ],
         ),
       ),

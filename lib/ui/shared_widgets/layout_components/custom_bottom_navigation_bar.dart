@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({Key key}) : super(key: key);
+  const CustomBottomNavigationBar({Key? key}) : super(key: key);
 
   final List<Map<String, dynamic>> navigationBarItems = const [
     {'icon': FontAwesomeIcons.home, 'label': 'Home'},

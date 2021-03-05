@@ -3,7 +3,8 @@ import 'package:barter/ui/utils/dialog/dialog_utils.dart';
 import 'package:flutter/material.dart';
 
 class ShowUploadDialog {
-  BuildContext context;
+  late BuildContext context;
+
   ShowUploadDialog(BuildContext ctx) {
     context = ctx;
   }

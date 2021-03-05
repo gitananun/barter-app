@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGridItem extends StatelessWidget {
   const HomeDashboardProductsGridItem({
-    Key key,
+    Key? key,
     this.image,
     this.title,
     this.location,
     this.state,
   }) : super(key: key);
-  final String title;
-  final String state;
-  final String image;
-  final String location;
+  final String? title;
+  final String? state;
+  final String? image;
+  final String? location;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(child: HomeDashboardProductsGridItemImageContainer(image)),
+                Expanded(child: HomeDashboardProductsGridItemImageContainer(image ?? '')),
                 HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
               ],
             ),

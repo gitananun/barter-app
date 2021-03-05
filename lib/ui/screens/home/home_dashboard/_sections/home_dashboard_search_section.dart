@@ -3,7 +3,7 @@ import 'package:barter/ui/screens/home/home_dashboard/_sections/components/searc
 import 'package:flutter/material.dart';
 
 class HomeDashboardSearchSection extends StatelessWidget {
-  const HomeDashboardSearchSection({Key key}) : super(key: key);
+  const HomeDashboardSearchSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

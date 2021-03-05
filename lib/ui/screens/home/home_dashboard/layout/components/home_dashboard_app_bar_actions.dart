@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardAppBarActions {
-  BuildContext context;
+  late BuildContext context;
 
   HomeDashboardAppBarActions(BuildContext ctx) {
     context = ctx;

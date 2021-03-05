@@ -8,11 +8,11 @@ import 'package:barter/ui/screens/onboarding/layout/onboarding_layout.dart';
 
 @immutable
 class SecondOnboarding extends StatelessWidget {
-  const SecondOnboarding({Key key}) : super(key: key);
+  const SecondOnboarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const Map<String, String> _info = {
+    const Map<String, String> _info = const {
       'title': 'Select favorite',
       'body': "Exclusively curated selection of best brands the palm of your hand..."
     };

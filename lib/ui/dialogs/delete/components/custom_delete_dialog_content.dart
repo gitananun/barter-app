@@ -5,7 +5,7 @@ import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 class CustomDeleteDialogContent extends StatelessWidget {
-  const CustomDeleteDialogContent(this.context, {Key key}) : super(key: key);
+  const CustomDeleteDialogContent(this.context, {Key? key}) : super(key: key);
   final BuildContext context;
 
   @override
@@ -29,8 +29,8 @@ class CustomDeleteDialogContent extends StatelessWidget {
                 primary: false,
                 child: Text(
                   'Let\'s keep it ',
-                  style:
-                      _themeData.textTheme.button.apply(color: _themeData.accentColor, fontSizeFactor: _fontSizeFactor),
+                  style: _themeData.textTheme.button
+                      ?.apply(color: _themeData.accentColor, fontSizeFactor: _fontSizeFactor),
                 ),
               ),
             ),
@@ -39,7 +39,7 @@ class CustomDeleteDialogContent extends StatelessWidget {
               child: CustomFlatButton(
                 child: Text(
                   'Delete',
-                  style: _themeData.textTheme.button.apply(fontSizeFactor: _fontSizeFactor),
+                  style: _themeData.textTheme.button?.apply(fontSizeFactor: _fontSizeFactor),
                 ),
               ),
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BarterLogo extends StatelessWidget {
-  const BarterLogo({Key key}) : super(key: key);
+  const BarterLogo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

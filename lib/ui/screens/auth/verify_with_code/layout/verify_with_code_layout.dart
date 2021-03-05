@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 @immutable
 class VerifyWithCodeLayout extends StatelessWidget {
-  const VerifyWithCodeLayout({Key key, @required this.children}) : super(key: key);
-  final List<Widget> children;
+  const VerifyWithCodeLayout({Key? key, @required this.children}) : super(key: key);
+  final List<Widget>? children;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class VerifyWithCodeLayout extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: children,
+          children: children ?? [],
         ),
       ),
     );

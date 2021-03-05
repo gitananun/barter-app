@@ -4,7 +4,7 @@ import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:flutter/material.dart';
 
 class PasswordResetButtons extends StatelessWidget {
-  const PasswordResetButtons({Key key}) : super(key: key);
+  const PasswordResetButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

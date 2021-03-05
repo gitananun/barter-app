@@ -4,7 +4,7 @@ import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:flutter/material.dart';
 
 class HomeDashboardDealsCarouselItemContent extends StatelessWidget {
-  const HomeDashboardDealsCarouselItemContent({Key key}) : super(key: key);
+  const HomeDashboardDealsCarouselItemContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,12 @@ class HomeDashboardDealsCarouselItemContent extends StatelessWidget {
 /// Wraps the main information about the deal
 /// [Column] > [Column]
 class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
-  const HomeDashboardDealsCarouselItemContainerLeftSide({Key key}) : super(key: key);
+  const HomeDashboardDealsCarouselItemContainerLeftSide({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
+    final TextStyle? _mainTextTheme = _themeData.textTheme.caption;
 
     return Expanded(
       flex: 4,
@@ -40,7 +41,7 @@ class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
             bgColor: _themeData.errorColor,
             child: Text(
               'Boom',
-              style: _themeData.textTheme.caption.apply(color: Colors.white, fontWeightDelta: 4, fontSizeFactor: 0.6),
+              style: _mainTextTheme?.apply(color: Colors.white, fontWeightDelta: 4, fontSizeFactor: 0.6),
             ),
           ),
 
@@ -48,10 +49,10 @@ class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Barter Now', style: _themeData.textTheme.caption.apply(color: Colors.white, fontWeightDelta: 3)),
+              Text('Barter Now', style: _mainTextTheme?.apply(color: Colors.white, fontWeightDelta: 3)),
               Text(
                 'Enjoy the best',
-                style: _themeData.textTheme.caption.apply(color: Colors.white, fontSizeDelta: -2),
+                style: _mainTextTheme?.apply(color: Colors.white, fontSizeDelta: -2),
               )
             ],
           ),
@@ -61,7 +62,7 @@ class HomeDashboardDealsCarouselItemContainerLeftSide extends StatelessWidget {
             height: 35,
             minWidth: 80,
             color: Colors.white,
-            child: Text("Let's Go", style: _themeData.textTheme.caption.apply(fontWeightDelta: 1, fontSizeDelta: -3)),
+            child: Text("Let's Go", style: _mainTextTheme?.apply(fontWeightDelta: 1, fontSizeDelta: -3)),
           ),
         ],
       ),

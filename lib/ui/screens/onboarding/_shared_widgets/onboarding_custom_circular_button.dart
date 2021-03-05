@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:barter/ui/ui_helper.dart';
 
 class OnBoardingCustomCircularButton extends StatelessWidget {
-  const OnBoardingCustomCircularButton(this.onTap, {Key key}) : super(key: key);
-  final Function onTap;
+  const OnBoardingCustomCircularButton(this.onTap, {Key? key}) : super(key: key);
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {

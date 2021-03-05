@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomAlertDialogContentText extends StatelessWidget {
-  const CustomAlertDialogContentText(this.context, this.text, {Key key}) : super(key: key);
+  const CustomAlertDialogContentText(this.context, this.text, {Key? key}) : super(key: key);
   final String text;
   final BuildContext context;
 
@@ -10,7 +10,7 @@ class CustomAlertDialogContentText extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      style: Theme.of(context).textTheme.overline.apply(fontWeightDelta: 1),
+      style: Theme.of(context).textTheme.overline?.apply(fontWeightDelta: 1),
     );
   }
 }

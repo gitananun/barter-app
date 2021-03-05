@@ -3,7 +3,7 @@ import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
 import 'package:flutter/material.dart';
 
 class VerifyWithCodeButtons extends StatelessWidget {
-  const VerifyWithCodeButtons({Key key}) : super(key: key);
+  const VerifyWithCodeButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

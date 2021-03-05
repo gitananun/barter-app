@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class NotificationListTile extends StatelessWidget {
   const NotificationListTile({
-    Key key,
+    Key? key,
     @required this.onSwitch,
     this.switchValue,
     this.title,
@@ -13,12 +13,12 @@ class NotificationListTile extends StatelessWidget {
     this.isThreeLine,
   }) : super(key: key);
 
-  final String title;
-  final String subtitle;
-  final bool switchValue;
-  final bool isThreeLine;
-  final String leadingImgPath;
-  final ValueChanged<bool> onSwitch;
+  final String? title;
+  final String? subtitle;
+  final bool? switchValue;
+  final bool? isThreeLine;
+  final String? leadingImgPath;
+  final ValueChanged<bool>? onSwitch;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,10 @@ class NotificationListTile extends StatelessWidget {
       dense: true,
       isThreeLine: isThreeLine ?? true,
       visualDensity: VisualDensity.compact,
-      trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch),
-      title: title != null ? Text(title, style: _textTheme.subtitle2) : Text('title'),
-      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath) : FlutterLogo(),
-      subtitle: subtitle != null ? Text(subtitle, style: _textTheme.overline) : Text('subtitle'),
+      trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch ?? (_) {}),
+      title: title != null ? Text(title ?? '', style: _textTheme.subtitle2) : Text('title'),
+      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath ?? '') : FlutterLogo(),
+      subtitle: subtitle != null ? Text(subtitle ?? '', style: _textTheme.overline) : Text('subtitle'),
     );
   }
 }

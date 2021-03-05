@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomFancyFloatingActionButton extends StatefulWidget {
-  final IconData icon;
-  final String tooltip;
-  final Function() onPressed;
+  final IconData? icon;
+  final String? tooltip;
+  final Function()? onPressed;
 
   CustomFancyFloatingActionButton({this.onPressed, this.tooltip, this.icon});
 
@@ -23,11 +23,11 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
   bool isOpened = false;
   double _fabHeight = 56.0;
   Curve _curve = Curves.ease;
-  Animation<Color> _buttonColor;
-  Animation<double> _animateIcon;
-  Animation<Color> _buttonIconColor;
-  Animation<double> _translateButton;
-  AnimationController _animationController;
+  Animation<Color?>? _buttonColor;
+  Animation<Color?>? _buttonIconColor;
+  late Animation<double> _animateIcon;
+  late Animation<double> _translateButton;
+  late AnimationController _animationController;
 
   @override
   initState() {
@@ -88,14 +88,14 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
         elevation: 0,
         onPressed: animate,
         highlightElevation: 0,
-        backgroundColor: _buttonColor.value,
+        backgroundColor: _buttonColor?.value,
         shape: RoundedRectangleBorder(
           side: BorderSide(color: MTStheme.primaryColor, width: 2.0),
           borderRadius: BorderRadius.all(Radius.circular(100)),
         ),
         child: AnimatedIcon(
           progress: _animateIcon,
-          color: _buttonIconColor.value,
+          color: _buttonIconColor?.value,
           icon: AnimatedIcons.menu_close,
         ),
       );

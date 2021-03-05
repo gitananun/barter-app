@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OnBoardingContentImage extends StatelessWidget {
-  const OnBoardingContentImage(this.imgTitle, {Key key}) : super(key: key);
+  const OnBoardingContentImage(this.imgTitle, {Key? key}) : super(key: key);
   final String imgTitle;
 
   @override

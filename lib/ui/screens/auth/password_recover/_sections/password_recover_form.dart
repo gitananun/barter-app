@@ -2,7 +2,7 @@ import 'package:barter/ui/screens/auth/_shared_widgets/inputs/custom_email_phone
 import 'package:flutter/material.dart';
 
 class PasswordRecoverForm extends StatelessWidget {
-  const PasswordRecoverForm({Key key}) : super(key: key);
+  const PasswordRecoverForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => CustomEmailPhoneInput();

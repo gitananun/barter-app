@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 @immutable
 class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const OnBoardingAppBar({Key key}) : super(key: key);
+  const OnBoardingAppBar({Key? key}) : super(key: key);
   Size get preferredSize => const Size.fromHeight(OnBoardingStyle.topAppBarHeight);
 
   @override

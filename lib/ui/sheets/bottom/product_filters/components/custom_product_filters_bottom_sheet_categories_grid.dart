@@ -2,7 +2,7 @@ import 'package:barter/ui/sheets/bottom/product_filters/components/_includes/cus
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetCategoriesGrid extends StatelessWidget {
-  const CustomProductFiltersBottomSheetCategoriesGrid(this.categories, {Key key}) : super(key: key);
+  const CustomProductFiltersBottomSheetCategoriesGrid(this.categories, {Key? key}) : super(key: key);
   final List<String> categories;
 
   @override

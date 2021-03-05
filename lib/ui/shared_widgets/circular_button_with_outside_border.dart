@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 class CustomCircularButtonWithOutsideBorder extends StatelessWidget {
   const CustomCircularButtonWithOutsideBorder({
-    Key key,
+    Key? key,
+    this.onTap,
     this.child = const SizedBox(),
     this.color = Colors.blueGrey,
     this.splashColor,
     this.borderPadding = 5,
     this.borderWidth = 1,
-    this.onTap,
   }) : super(key: key);
-  final Widget child;
   final Color color;
-  final Color splashColor;
-  final double borderPadding;
+  final Widget child;
+  final Color? splashColor;
   final double borderWidth;
-  final Function onTap;
+  final double borderPadding;
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {

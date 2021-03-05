@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class OnBoardingNotificationsSection extends StatefulWidget {
-  const OnBoardingNotificationsSection({Key key}) : super(key: key);
+  const OnBoardingNotificationsSection({Key? key}) : super(key: key);
   @override
   _OnBoardingNotificationsSectionState createState() => _OnBoardingNotificationsSectionState();
 }

@@ -5,7 +5,7 @@ import 'package:barter/ui/shared_widgets/list_view_with_column.dart';
 import 'package:flutter/material.dart';
 
 class LoginFormWithHeading extends StatelessWidget {
-  const LoginFormWithHeading({Key key}) : super(key: key);
+  const LoginFormWithHeading({Key? key}) : super(key: key);
 
   final Map<String, String> _headingInfo = const {
     'title': 'Welcome Back!',

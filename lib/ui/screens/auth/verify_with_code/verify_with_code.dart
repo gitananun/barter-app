@@ -7,7 +7,7 @@ import 'package:barter/ui/screens/auth/verify_with_code/layout/verify_with_code_
 import 'package:flutter/material.dart';
 
 class VerifyWithCodeScreen extends StatelessWidget {
-  const VerifyWithCodeScreen({Key key}) : super(key: key);
+  const VerifyWithCodeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

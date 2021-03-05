@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetPriceRangeSlider extends StatefulWidget {
-  CustomProductFiltersBottomSheetPriceRangeSlider({Key key}) : super(key: key);
+  CustomProductFiltersBottomSheetPriceRangeSlider({Key? key}) : super(key: key);
 
   @override
   _CustomProductFiltersBottomSheetPriceRangeSliderState createState() =>

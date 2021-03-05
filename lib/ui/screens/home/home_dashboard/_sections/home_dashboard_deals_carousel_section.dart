@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeDashboardDealsCarouselSection extends StatelessWidget {
-  const HomeDashboardDealsCarouselSection({Key key}) : super(key: key);
+  const HomeDashboardDealsCarouselSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

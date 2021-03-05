@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 @immutable
 class HomeDashboardLayout extends StatelessWidget {
-  HomeDashboardLayout({Key key, @required this.children}) : super(key: key);
-  final List<Widget> children;
+  HomeDashboardLayout({Key? key, @required this.children}) : super(key: key);
+  final List<Widget>? children;
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
@@ -15,7 +15,7 @@ class HomeDashboardLayout extends StatelessWidget {
           child: Wrap(
             runSpacing: SharedStyle.spaceBetweenSection,
             runAlignment: WrapAlignment.start,
-            children: children,
+            children: children ?? [],
           ),
         ),
       );

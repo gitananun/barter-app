@@ -4,19 +4,14 @@ import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.
 import 'package:flutter/material.dart';
 
 class SignupForm extends StatefulWidget {
-  SignupForm({Key key}) : super(key: key);
+  SignupForm({Key? key}) : super(key: key);
 
   @override
   _SignupFormState createState() => _SignupFormState();
 }
 
 class _SignupFormState extends State<SignupForm> {
-  GlobalKey<FormState> _formKey;
-  @override
-  void initState() {
-    super.initState();
-    setState(() => _formKey = GlobalKey<FormState>());
-  }
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {

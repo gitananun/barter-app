@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardProductsGridItemMakeFavoriteGestureDetector extends StatefulWidget {
-  const HomeDashboardProductsGridItemMakeFavoriteGestureDetector({Key key}) : super(key: key);
+  const HomeDashboardProductsGridItemMakeFavoriteGestureDetector({Key? key}) : super(key: key);
   @override
   _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState createState() =>
       _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState();
@@ -26,7 +26,7 @@ class _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState
       vertical: _padding,
       child: FaIcon(
         isFavorite ? FontAwesomeIcons.solidHeart : FontAwesomeIcons.heart,
-        size: _themeData.textTheme.button.fontSize,
+        size: _themeData.textTheme.button?.fontSize,
         color: _themeData.errorColor,
       ),
     );

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
-    Key key,
+    Key? key,
     this.validator,
     this.controller,
     this.inputDecoration,
@@ -26,20 +26,20 @@ class CustomTextFormField extends StatelessWidget {
   final bool readOnly;
   final bool isDense;
   final bool obscureText;
-  final double width;
-  final double height;
-  final int maxLength;
-  final String hintText;
-  final String helperText;
+  final double? width;
+  final double? height;
+  final int? maxLength;
+  final String? hintText;
+  final String? helperText;
   final String counterText;
-  final IconData suffixIcon;
-  final IconData prefixIcon;
+  final IconData? suffixIcon;
+  final IconData? prefixIcon;
   final double borderRadius;
   final TextAlign textAlign;
-  final Function suffixOnPressed;
-  final String Function(String) validator;
-  final TextEditingController controller;
-  final InputDecoration inputDecoration;
+  final VoidCallback? suffixOnPressed;
+  final String Function(String?)? validator;
+  final TextEditingController? controller;
+  final InputDecoration? inputDecoration;
 
   @override
   Widget build(BuildContext context) {

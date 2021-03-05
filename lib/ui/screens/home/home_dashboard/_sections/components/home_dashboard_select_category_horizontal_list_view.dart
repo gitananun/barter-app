@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardSelectCategoryHorizontalListView extends StatelessWidget {
-  const HomeDashboardSelectCategoryHorizontalListView({Key key}) : super(key: key);
+  const HomeDashboardSelectCategoryHorizontalListView({Key? key}) : super(key: key);
 
   final List<Map<String, dynamic>> icons = const [
     {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones', 'active': true},

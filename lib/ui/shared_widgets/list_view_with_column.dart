@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomSingleChildScrollViewWithColumn extends StatelessWidget {
   const CustomSingleChildScrollViewWithColumn({
-    Key key,
+    Key? key,
     @required this.children,
     this.mainAxisAlignment = MainAxisAlignment.spaceAround,
   }) : super(key: key);
-  final List<Widget> children;
+  final List<Widget>? children;
   final MainAxisAlignment mainAxisAlignment;
 
   @override
@@ -19,7 +19,7 @@ class CustomSingleChildScrollViewWithColumn extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: mainAxisAlignment,
-            children: children,
+            children: children ?? [],
           ),
         ),
       ),

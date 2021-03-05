@@ -96,7 +96,7 @@ class MTStheme {
         trackHeight: 8,
         valueIndicatorColor: primaryColor,
         tickMarkShape: SliderTickMarkShape.noTickMark,
-        valueIndicatorTextStyle: _textTheme.overline.apply(color: Colors.white),
+        valueIndicatorTextStyle: _textTheme.overline?.apply(color: Colors.white),
       ),
       pageTransitionsTheme: PageTransitionsTheme(builders: {
         TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),

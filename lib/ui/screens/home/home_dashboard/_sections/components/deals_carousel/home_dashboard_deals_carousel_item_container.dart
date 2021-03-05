@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeDashboardDealsCarouselItemContainer extends StatelessWidget {
-  const HomeDashboardDealsCarouselItemContainer({Key key, @required this.child}) : super(key: key);
-  final Widget child;
+  const HomeDashboardDealsCarouselItemContainer({Key? key, @required this.child}) : super(key: key);
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {

@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:barter/ui/screens/onboarding/_screens/first_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/second_onboarding.dart';
 import 'package:barter/ui/screens/onboarding/_screens/third_onboarding.dart';
-import 'package:flutter/services.dart';
 import 'package:slider_indicators/slider_indicators.dart';
+import 'package:flutter/services.dart';
 
 @immutable
 class OnBoardingScreen extends StatefulWidget {
-  OnBoardingScreen({Key key}) : super(key: key);
+  OnBoardingScreen({Key? key}) : super(key: key);
   @override
   _OnBoardingScreenState createState() => _OnBoardingScreenState();
 }
@@ -19,7 +19,7 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final PageController _controller = PageController(initialPage: 0);
   final int _totalPages = 3;
-  int _currentPage;
+  int _currentPage = 0;
 
   @override
   void initState() {

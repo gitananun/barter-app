@@ -3,7 +3,7 @@ import 'package:barter/ui/utils/sheet/sheet_utils.dart';
 import 'package:flutter/material.dart';
 
 class ProductsFilterBottomSheetUtils {
-  BuildContext context;
+  late BuildContext context;
 
   ProductsFilterBottomSheetUtils(BuildContext ctx) {
     context = ctx;

@@ -8,7 +8,7 @@ import 'package:barter/ui/sheets/bottom/product_filters/components/custom_produc
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheet extends StatelessWidget {
-  const CustomProductFiltersBottomSheet({Key key}) : super(key: key);
+  const CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
 
   final List<String> _categories = const ['All', 'Computer', 'Books', 'Cars', 'Medical'];
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomSocialFlatButton extends StatelessWidget {
   const CustomSocialFlatButton({
-    Key key,
+    Key? key,
     this.child,
     this.icon,
     this.text,
@@ -12,19 +12,19 @@ class CustomSocialFlatButton extends StatelessWidget {
     this.onPressed,
   }) : super(key: key);
 
-  final Color color;
-  final String text;
-  final Widget child;
-  final IconData icon;
-  final double minWidth;
-  final Function onPressed;
+  final Color? color;
+  final String? text;
+  final Widget? child;
+  final IconData? icon;
+  final double? minWidth;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return CustomFlatButton(
-      color: color,
-      minWidth: minWidth,
       onPressed: onPressed,
+      minWidth: minWidth ?? 150,
+      color: color ?? Colors.red,
       child: child ??
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

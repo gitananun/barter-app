@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SingleProductScaffold extends StatelessWidget {
-  const SingleProductScaffold({Key key, @required this.body}) : super(key: key);
-  final Widget body;
+  const SingleProductScaffold({Key? key, @required this.body}) : super(key: key);
+  final Widget? body;
 
   @override
   Widget build(BuildContext context) {

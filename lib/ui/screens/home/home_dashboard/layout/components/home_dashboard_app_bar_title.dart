@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardAppBarTitle extends StatelessWidget {
-  const HomeDashboardAppBarTitle({Key key}) : super(key: key);
+  const HomeDashboardAppBarTitle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

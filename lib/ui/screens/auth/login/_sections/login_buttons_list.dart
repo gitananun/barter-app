@@ -6,7 +6,7 @@ import 'package:barter/ui/shared_widgets/list_view_with_column.dart';
 import 'package:flutter/material.dart';
 
 class LoginButtonsList extends StatelessWidget {
-  const LoginButtonsList({Key key}) : super(key: key);
+  const LoginButtonsList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

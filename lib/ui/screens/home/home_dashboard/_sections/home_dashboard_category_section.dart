@@ -4,7 +4,7 @@ import 'package:barter/ui/screens/home/home_dashboard/_shared_widgets/home_dashb
 import 'package:flutter/material.dart';
 
 class HomeDashboardCategorySection extends StatelessWidget {
-  const HomeDashboardCategorySection({Key key}) : super(key: key);
+  const HomeDashboardCategorySection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
