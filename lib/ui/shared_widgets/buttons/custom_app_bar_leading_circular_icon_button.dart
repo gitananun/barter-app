@@ -26,7 +26,7 @@ class CustomAppBarLeadingCircularIconButton extends StatelessWidget {
         padding: EdgeInsets.zero,
         onPressed: onPressed ?? () {},
         highlightColor: Colors.transparent,
-        icon: Icon(icon, size: Theme.of(context).textTheme.subtitle1?.fontSize),
+        icon: Icon(icon, size: Theme.of(context).textTheme.caption?.fontSize),
       ),
       decoration: BoxDecoration(color: color ?? MTStheme.primaryTextColor, shape: BoxShape.circle),
     );
