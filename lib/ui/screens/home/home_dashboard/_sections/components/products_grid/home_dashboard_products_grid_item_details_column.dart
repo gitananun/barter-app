@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
-  const HomeDashboardProductsGridItemDetailsColumn({Key? key, this.title, this.location, this.state}) : super(key: key);
-  final String? title;
-  final String? state;
-  final String? location;
+  const HomeDashboardProductsGridItemDetailsColumn({
+    Key? key,
+    required this.title,
+    required this.state,
+    required this.country,
+  }) : super(key: key);
+  final String title;
+  final String state;
+  final String country;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            title ?? '',
+            title,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: _themeData.textTheme.caption?.apply(fontWeightDelta: 3),
@@ -27,11 +32,11 @@ class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             text: TextSpan(
-              text: (state ?? '') + ' ',
+              text: state + ' ',
               style: _themeData.textTheme.overline?.apply(fontSizeFactor: 0.8),
               children: <TextSpan>[
                 TextSpan(text: 'in', style: TextStyle(fontWeight: FontWeight.bold)),
-                TextSpan(text: ' ' + (location ?? '')),
+                TextSpan(text: ' ' + (country)),
               ],
             ),
           )

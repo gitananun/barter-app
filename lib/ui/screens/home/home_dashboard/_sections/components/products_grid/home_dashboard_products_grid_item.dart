@@ -1,20 +1,12 @@
+import 'package:barter/models/store/product/product.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_details_column.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_image_container.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item_make_favorite_gesture_detector.dart';
 import 'package:flutter/material.dart';
 
 class HomeDashboardProductsGridItem extends StatelessWidget {
-  const HomeDashboardProductsGridItem({
-    Key? key,
-    this.image,
-    this.title,
-    this.location,
-    this.state,
-  }) : super(key: key);
-  final String? title;
-  final String? state;
-  final String? image;
-  final String? location;
+  const HomeDashboardProductsGridItem({Key? key, required this.product}) : super(key: key);
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +25,12 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(child: HomeDashboardProductsGridItemImageContainer(image ?? '')),
-                HomeDashboardProductsGridItemDetailsColumn(title: title, state: state, location: location),
+                Expanded(child: HomeDashboardProductsGridItemImageContainer(product.images[0] ?? '')),
+                HomeDashboardProductsGridItemDetailsColumn(
+                  title: product.title,
+                  country: product.location.country,
+                  state: product.specificatiions.condition.condition,
+                ),
               ],
             ),
           ),
