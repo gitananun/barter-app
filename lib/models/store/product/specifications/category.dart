@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Category {
-  final IconData? icon;
   final String title;
+  final IconData? icon;
+  final String? description;
 
   Category({
     this.icon,
+    this.description,
     required this.title,
   });
 }

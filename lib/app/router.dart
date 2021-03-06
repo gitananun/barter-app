@@ -15,7 +15,7 @@ class CustomRouter {
   static Route<dynamic> _returnScreen(Widget screen) => MaterialPageRoute(builder: (_) => screen);
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
-    // final dynamic _args = settings.arguments;
+    final dynamic _arguments = settings.arguments;
 
     switch (settings.name) {
       case '/':
@@ -39,7 +39,7 @@ class CustomRouter {
 
       /// Store Routes
       case '/product':
-        return _returnScreen(SingleProductScreen());
+        return _returnScreen(SingleProductScreen(_arguments));
 
       /// System Routes
       case '/splash':

@@ -14,7 +14,7 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, '/product', arguments: {'name': 'hi there'}),
+          onTap: () => Navigator.pushNamed(context, '/product', arguments: product),
           child: Container(
             padding: const EdgeInsets.only(top: 10),
             decoration: BoxDecoration(

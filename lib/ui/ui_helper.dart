@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 @immutable
 class SharedStyle {
   static const double commonRadius = 30;
+  static const double appBarLeadingWidth = 60;
   static const double spaceBetweenSection = 15;
   static const double sectionTitleContentSpacing = 20;
   static const Widget buttonsRowMarginBetween = SizedBox(width: 10);
