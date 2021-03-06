@@ -12,7 +12,7 @@ final List<Product> products = [
     images: ['iphone.png'],
     description: 'One of the best Apple Products',
     location: Location(zipCode: 0054, city: 'Yerevan', country: 'Armenia'),
-    specificatiions: Specifications(category: Category(title: 'dsa'), condition: Condition(condition: 'New')),
+    specificatiions: Specifications(category: Category(title: 'phones'), condition: Condition(condition: 'New')),
   ),
 
   ///

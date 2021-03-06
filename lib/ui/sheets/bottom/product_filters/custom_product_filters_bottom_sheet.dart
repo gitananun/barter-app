@@ -1,3 +1,5 @@
+import 'package:barter/data/mock/categories.dart';
+import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:barter/ui/shared_widgets/buttons_groups/custom_cancel_apply_buttons_row.dart';
 import 'package:barter/ui/sheets/bottom/components/custom_bottom_sheet_title_body_divider.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_categories_grid.dart';
@@ -8,9 +10,9 @@ import 'package:barter/ui/sheets/bottom/product_filters/components/custom_produc
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheet extends StatelessWidget {
-  const CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
+  CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
 
-  final List<String> _categories = const ['All', 'Computer', 'Books', 'Cars', 'Medical'];
+  final List<Category> _categories = categories;
 
   @override
   Widget build(BuildContext context) {

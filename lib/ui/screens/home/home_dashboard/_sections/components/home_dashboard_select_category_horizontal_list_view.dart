@@ -1,7 +1,8 @@
+import 'package:barter/data/mock/categories.dart';
+import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/home_dashboard_category_horizontal_list_item.dart';
 import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDashboardSelectCategoryHorizontalListView extends StatefulWidget {
   const HomeDashboardSelectCategoryHorizontalListView({Key? key}) : super(key: key);
@@ -13,15 +14,7 @@ class HomeDashboardSelectCategoryHorizontalListView extends StatefulWidget {
 class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDashboardSelectCategoryHorizontalListView> {
   int _activeCategory = 0;
 
-  final List<Map<String, dynamic>> icons = const [
-    {'icon': FontAwesomeIcons.mobileAlt, 'title': 'Phones'},
-    {'icon': FontAwesomeIcons.carAlt, 'title': 'Cars'},
-    {'icon': FontAwesomeIcons.heartbeat, 'title': 'Medical'},
-    {'icon': FontAwesomeIcons.book, 'title': 'Books'},
-    {'icon': FontAwesomeIcons.handHoldingMedical, 'title': 'Care'},
-    {'icon': FontAwesomeIcons.gamepad, 'title': 'Game'},
-    {'icon': FontAwesomeIcons.dumbbell, 'title': 'Fitness'},
-  ];
+  final List<Category> _categories = categories;
 
   void makeActive(int id) => setState(() => _activeCategory = id);
 
@@ -30,17 +23,16 @@ class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDash
     return Container(
       height: HorizontalCategoriesListViewHeightResponsive.getHorizontalHeight(context),
       child: ListView.builder(
-        itemCount: icons.length,
+        itemCount: _categories.length,
         shrinkWrap: true,
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.all(5),
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (BuildContext context, int i) {
           return HomeDashboardCategoryHorizontalListItem(
-            icon: icons[index]['icon'],
-            title: icons[index]['title'],
-            onTap: () => makeActive(index),
-            isActive: _activeCategory == index,
+            category: _categories[i],
+            onTap: () => makeActive(i),
+            isActive: _activeCategory == i,
           );
         },
       ),

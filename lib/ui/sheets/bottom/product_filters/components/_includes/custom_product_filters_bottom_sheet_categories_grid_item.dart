@@ -1,9 +1,10 @@
+import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetCategoriesGridItem extends StatelessWidget {
-  const CustomProductFiltersBottomSheetCategoriesGridItem(this.title, {Key? key, this.active = false})
+  const CustomProductFiltersBottomSheetCategoriesGridItem(this.category, {Key? key, this.active = false})
       : super(key: key);
-  final String title;
+  final Category category;
   final bool active;
 
   @override
@@ -22,7 +23,7 @@ class CustomProductFiltersBottomSheetCategoriesGridItem extends StatelessWidget 
         color: active ? _themeData.primaryColor : Colors.transparent,
       ),
       child: Text(
-        title,
+        category.title,
         maxLines: 1,
         style: _themeData.textTheme.overline?.apply(fontSizeFactor: 0.8, color: active ? Colors.white : null),
         overflow: TextOverflow.ellipsis,

@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
+
 class Category {
-  final String? icon;
+  final IconData? icon;
   final String title;
 
   Category({
