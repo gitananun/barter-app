@@ -1,4 +1,5 @@
 import 'package:barter/ui/screens/home/home_dashboard/_shared_widgets/home_dashboard_section_title_row.dart';
+import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_circular_icon.dart';
 import 'package:barter/ui/shared_widgets/buttons_groups/custom_primary_buttons_row.dart';
 import 'package:barter/ui/styles/single_product/style.dart';
 import 'package:barter/ui/ui_helper.dart';
@@ -31,57 +32,62 @@ class SingleProductDetailsContainer extends StatelessWidget {
                     Wrap(
                       spacing: 5,
                       children: [
-                        Icon(
-                          FontAwesomeIcons.solidStar,
-                          size: Theme.of(context).textTheme.subtitle2?.fontSize,
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.solidStar,
-                          size: Theme.of(context).textTheme.subtitle2?.fontSize,
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.solidStar,
-                          size: Theme.of(context).textTheme.subtitle2?.fontSize,
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.solidStar,
-                          size: Theme.of(context).textTheme.subtitle2?.fontSize,
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.solidStar,
-                          size: Theme.of(context).textTheme.subtitle2?.fontSize,
-                          color: Theme.of(context).primaryColor,
-                        ),
+                        for (int i = 0; i < 5; i++)
+                          Icon(
+                            FontAwesomeIcons.solidStar,
+                            size: Theme.of(context).textTheme.subtitle2?.fontSize,
+                            color: Theme.of(context).primaryColor,
+                          ),
                       ],
                     ),
                   ],
                 ),
-                Text('favorite'),
+                SingleProductDetailsCircularIcon(FontAwesomeIcons.solidHeart)
               ],
             ),
           ),
-          Container(
-            child: Text('Details different menus'),
-            color: Colors.green,
-          ),
+          Container(child: Text('Details different menus')),
           Column(
             children: [
               HomeDashboardSectionTitleRow(title: 'Description', moreText: 'see more'),
               _space,
-              Text(
-                'Your recipe has been uploaded, you can see it on your profile. Your recipe has been uploaded, you can see it on your',
-                style: Theme.of(context).textTheme.overline,
+              SingleChildScrollView(
+                child: Text(
+                  'Your recipe has been uploaded, you can see it on your profile. Your recipe has been uploaded, you can see it on your',
+                  style: Theme.of(context).textTheme.overline,
+                ),
               ),
             ],
           ),
           Row(
             children: [
-              Text('refurbished '),
-              Text(' likes'),
+              Row(
+                children: [
+                  SingleProductDetailsCircularIcon(
+                    FontAwesomeIcons.check,
+                    padding: 5,
+                    iconColor: Theme.of(context).primaryColor,
+                    background: Theme.of(context).primaryColor.withOpacity(0.2),
+                    size: Theme.of(context).textTheme.button?.apply(fontSizeDelta: -5).fontSize,
+                  ),
+                  SizedBox(width: 5),
+                  Text('refurbished', style: Theme.of(context).textTheme.subtitle2),
+                ],
+              ),
+              SizedBox(width: 10),
+              Row(
+                children: [
+                  SingleProductDetailsCircularIcon(
+                    FontAwesomeIcons.solidHeart,
+                    padding: 5,
+                    iconColor: Theme.of(context).errorColor,
+                    background: Theme.of(context).errorColor.withOpacity(0.2),
+                    size: Theme.of(context).textTheme.button?.apply(fontSizeDelta: -5).fontSize,
+                  ),
+                  SizedBox(width: 5),
+                  Text('273 likes', style: Theme.of(context).textTheme.subtitle2),
+                ],
+              ),
             ],
           ),
           CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
