@@ -16,15 +16,15 @@ class HomeDashboardDealsCarouselSection extends StatelessWidget {
         HomeDashboardSectionTitleRow(title: 'Hot suggestions', moreText: 'see more'),
         CarouselSlider(
           options: homeDashboardDealsCarouselOptions,
-          items: [1, 2, 3].map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return HomeDashboardDealsCarouselItemContainer(
-                  child: HomeDashboardDealsCarouselItemContent(),
-                );
-              },
-            );
-          }).toList(),
+          items: [1, 2, 3]
+              .map(
+                (i) => Builder(
+                  builder: (BuildContext context) => HomeDashboardDealsCarouselItemContainer(
+                    child: HomeDashboardDealsCarouselItemContent(),
+                  ),
+                ),
+              )
+              .toList(),
         ),
       ],
     );

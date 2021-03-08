@@ -5,8 +5,8 @@ import 'package:barter/ui/screens/auth/password_reset/password_reset.dart';
 import 'package:barter/ui/screens/auth/signup/signup.dart';
 import 'package:barter/ui/screens/auth/verify_with_code/verify_with_code.dart';
 import 'package:barter/ui/screens/home/home_dashboard/home_dashboard.dart';
-import 'package:barter/ui/screens/home/store/products/single_product/single_product_screen.dart';
 import 'package:barter/ui/screens/onboarding/onboarding.dart';
+import 'package:barter/ui/screens/store/products/single_product/single_product_screen.dart';
 import 'package:barter/ui/screens/system/splash.dart';
 import 'package:flutter/material.dart';
 
