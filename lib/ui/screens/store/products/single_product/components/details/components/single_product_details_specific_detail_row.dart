@@ -8,12 +8,14 @@ class SingleProductDetailsSpecificDetailRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        icon,
-        SingleProductStyle.commonHorizontalSpace,
-        text,
-      ],
+    return SingleChildScrollView(
+      child: Row(
+        children: [
+          icon,
+          SingleProductStyle.commonHorizontalSpace,
+          text,
+        ],
+      ),
     );
   }
 }

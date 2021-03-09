@@ -24,6 +24,7 @@ class SingleProductScreen extends StatelessWidget {
             likes: product.likes,
             title: product.title,
             rating: product.rating,
+            location: product.location,
             description: product.description,
             condition: product.specifications.condition.condition,
           ),

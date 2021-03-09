@@ -10,7 +10,8 @@ final List<Product> products = [
     rating: 4,
     title: 'iPhone 12',
     images: ['iphone.png', 'iphone1.png', 'iphone2.png'],
-    description: 'One of the best Apple Products',
+    description:
+        'One of the best Apple Products. Apple IPhone 12 Pro is one of the costly phones in the world which has the powerful OS names as IOS',
     location: Location(zipCode: 0054, city: 'Yerevan', country: 'Armenia'),
     specifications: Specifications(category: Category(title: 'phones'), condition: Condition(condition: 'New')),
   ),

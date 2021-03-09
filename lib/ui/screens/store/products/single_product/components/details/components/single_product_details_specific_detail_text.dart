@@ -5,5 +5,10 @@ class SingleProductDetailsSpecificDetailText extends StatelessWidget {
   final String text;
 
   @override
-  Widget build(BuildContext context) => Text(text, style: Theme.of(context).textTheme.caption);
+  Widget build(BuildContext context) => Text(
+        text,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: Theme.of(context).textTheme.caption,
+      );
 }

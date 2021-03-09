@@ -1,3 +1,5 @@
+import 'package:barter/models/shared/location.dart';
+import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_location.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_description.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_title_stars_favorite_row.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_specific_details_row.dart';
@@ -12,6 +14,7 @@ class SingleProductDetailsContainer extends StatelessWidget {
     required this.likes,
     required this.title,
     required this.rating,
+    required this.location,
     required this.condition,
     required this.description,
   }) : super(key: key);
@@ -19,6 +22,7 @@ class SingleProductDetailsContainer extends StatelessWidget {
   final String title;
   final double rating;
   final String condition;
+  final Location location;
   final String description;
 
   final Radius _radius = Radius.circular(SingleProductStyle.commonBorderRadius);
@@ -31,6 +35,7 @@ class SingleProductDetailsContainer extends StatelessWidget {
         children: [
           SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
           SingleProductDetailsDescription(description),
+          SingleProductDetailsLocation(location),
           SingleProductSpecificDetailsRow(likes: likes, condition: condition),
           CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
         ],
