@@ -8,26 +8,23 @@ import 'package:barter/ui/screens/store/products/single_product/components/layou
 import 'package:flutter/material.dart';
 
 class SingleProductScreen extends StatelessWidget {
-  const SingleProductScreen(this.product, {Key? key}) : super(key: key);
+  SingleProductScreen(this.product, {Key? key}) : super(key: key);
   final Product product;
 
   @override
   Widget build(BuildContext context) {
     return SingleProductScaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: SingleProductContentLayout(
-          section1: product.images!.length != 1
-              ? SingleProductImagesCarousel(product.images)
-              : SingleProductSingleImage(product.images![0]),
-          section2: SingleProductDetailsContainer(
-            likes: product.likes,
-            title: product.title,
-            rating: product.rating,
-            location: product.location,
-            description: product.description,
-            condition: product.specifications.condition.condition,
-          ),
+      body: SingleProductContentLayout(
+        section1: product.images!.length != 1
+            ? SingleProductImagesCarousel(product.images)
+            : SingleProductSingleImage(product.images![0]),
+        section2: SingleProductDetailsContainer(
+          likes: product.likes,
+          title: product.title,
+          rating: product.rating,
+          location: product.location,
+          description: product.description,
+          condition: product.specifications.condition.condition,
         ),
       ),
     );

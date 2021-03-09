@@ -1,4 +1,5 @@
 import 'package:barter/models/shared/location.dart';
+import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_draggable_scrollable_sheet.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_location.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_description.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_title_stars_favorite_row.dart';
@@ -29,24 +30,26 @@ class SingleProductDetailsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Wrap(
-        runAlignment: WrapAlignment.spaceEvenly,
-        children: [
-          SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
-          SingleProductDetailsDescription(description),
-          SingleProductDetailsLocation(location),
-          SingleProductSpecificDetailsRow(likes: likes, condition: condition),
-          CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
-        ],
-      ),
+    return SingleProductDetailsDraggableScrollableSheet(
+      Container(
+        child: Wrap(
+          runAlignment: WrapAlignment.spaceEvenly,
+          children: [
+            SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
+            SingleProductDetailsDescription(description),
+            SingleProductDetailsLocation(location),
+            SingleProductSpecificDetailsRow(likes: likes, condition: condition),
+            CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
+          ],
+        ),
 
-      ///
-      padding: SharedStyle.contentPadding.copyWith(top: 15, bottom: 15),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [SharedStyle.mainBoxShadow],
-        borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
+        ///
+        padding: SharedStyle.contentPadding.copyWith(top: 15, bottom: 15),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [SharedStyle.mainBoxShadow],
+          borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
+        ),
       ),
     );
   }

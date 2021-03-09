@@ -15,7 +15,7 @@ class SingleProductCarouselImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
+      width: SingleProductStyle.imageWidth,
       child: Padding(
         padding: const EdgeInsets.all(15),
         child: Image.asset(Paths.PRODUCTS_ASSETS + image, fit: BoxFit.contain),

@@ -11,23 +11,16 @@ class SingleProductContentLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: [
-        Expanded(
-          flex: 3,
-          child: Container(
-            child: section1,
-            width: double.infinity,
-          ),
+        Column(
+          children: [
+            Expanded(flex: 4, child: Container(child: section1, width: double.infinity)),
+            Expanded(flex: 6, child: SizedBox()),
+          ],
         ),
-        SizedBox(height: 20),
-        Expanded(
-          flex: 7,
-          child: Container(
-            child: section2,
-            width: double.infinity,
-          ),
-        ),
+        SizedBox(height: 10),
+        Container(child: section2),
       ],
     );
   }
