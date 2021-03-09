@@ -9,10 +9,7 @@ class SingleProductSingleImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: SingleProductCarouselImage(
-        image: image,
-        active: false,
-      ),
+      child: SingleProductCarouselImage(image: image, active: false),
     );
   }
 }

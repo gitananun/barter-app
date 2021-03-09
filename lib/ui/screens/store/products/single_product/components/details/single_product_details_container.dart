@@ -30,7 +30,6 @@ class SingleProductDetailsContainer extends StatelessWidget {
         runAlignment: WrapAlignment.spaceEvenly,
         children: [
           SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
-          Container(child: Text('Details different menus')),
           SingleProductDetailsDescription(description),
           SingleProductSpecificDetailsRow(likes: likes, condition: condition),
           CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
