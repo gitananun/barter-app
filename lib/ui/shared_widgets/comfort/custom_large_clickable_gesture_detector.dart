@@ -4,9 +4,9 @@ class CustomLargeClickableGestureDetector extends StatelessWidget {
   const CustomLargeClickableGestureDetector({
     Key? key,
     this.vertical = 20,
-    this.horizontal = 10,
-    required this.onTap,
     required this.child,
+    required this.onTap,
+    this.horizontal = 10,
   }) : super(key: key);
   final Widget? child;
   final double vertical;
@@ -18,9 +18,9 @@ class CustomLargeClickableGestureDetector extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ?? () {},
       child: Container(
+        child: child,
         color: Colors.transparent,
         padding: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
-        child: child,
       ),
     );
   }

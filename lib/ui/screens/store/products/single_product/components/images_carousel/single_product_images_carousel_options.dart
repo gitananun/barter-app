@@ -1,7 +1,13 @@
 import 'package:carousel_slider/carousel_options.dart';
 
-final CarouselOptions singleProductImagesCarouselOptions = CarouselOptions(
-  autoPlay: true,
-  viewportFraction: 0.5,
-  enableInfiniteScroll: true,
-);
+CarouselOptions singleProductImagesCarouselOptions(
+  Function(int index, CarouselPageChangedReason reason)? onPageChanged,
+) =>
+    CarouselOptions(
+      autoPlay: true,
+      initialPage: 0,
+      viewportFraction: 0.5,
+      enlargeCenterPage: true,
+      enableInfiniteScroll: true,
+      onPageChanged: onPageChanged,
+    );

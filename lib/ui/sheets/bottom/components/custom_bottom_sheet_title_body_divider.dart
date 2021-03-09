@@ -4,7 +4,5 @@ class CustomBottomSheetTitleBodyDivider extends StatelessWidget {
   const CustomBottomSheetTitleBodyDivider({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(child: Divider(), width: 50);
-  }
+  Widget build(BuildContext context) => SizedBox(child: Divider(), width: 50);
 }

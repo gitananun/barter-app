@@ -4,18 +4,25 @@ import 'package:barter/ui/styles/single_product/style.dart';
 import 'package:flutter/material.dart';
 
 class SingleProductCarouselImage extends StatelessWidget {
-  const SingleProductCarouselImage({Key? key, required this.image}) : super(key: key);
+  const SingleProductCarouselImage({
+    Key? key,
+    required this.image,
+    required this.active,
+  }) : super(key: key);
   final String image;
+  final bool active;
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 500,
       child: Padding(
         padding: const EdgeInsets.all(15),
         child: Image.asset(Paths.PRODUCTS_ASSETS + image, fit: BoxFit.contain),
       ),
       decoration: BoxDecoration(
-        border: Border.all(color: MTStheme.errorColor),
         borderRadius: BorderRadius.circular(SingleProductStyle.commonBorderRadius),
+        border: Border.all(color: active ? MTStheme.errorColor : Theme.of(context).accentColor),
       ),
     );
   }

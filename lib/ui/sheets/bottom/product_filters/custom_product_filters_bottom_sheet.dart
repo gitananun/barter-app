@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheet extends StatelessWidget {
   CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
-
+  final Widget _space = SizedBox(height: 20);
   final List<Category> _categories = categories;
 
   @override
@@ -24,6 +24,7 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
           title: 'Category',
           body: CustomProductFiltersBottomSheetCategoriesGrid(_categories),
         ),
+        _space,
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
           body: CustomProductFiltersBottomSheetPriceRangeSlider(),
