@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SingleProductDetailsCondition extends StatelessWidget {
-  const SingleProductDetailsCondition({Key? key}) : super(key: key);
+  const SingleProductDetailsCondition(this.condition, {Key? key}) : super(key: key);
+  final String condition;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SingleProductDetailsCondition extends StatelessWidget {
         background: Theme.of(context).primaryColor.withOpacity(0.2),
         size: Theme.of(context).textTheme.button?.apply(fontSizeDelta: -5).fontSize,
       ),
-      text: SingleProductDetailsSpecificDetailText('refurbished'),
+      text: SingleProductDetailsSpecificDetailText(condition),
     );
   }
 }

@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SingleProductDetailsTitleStarsFavoriteRow extends StatelessWidget {
-  SingleProductDetailsTitleStarsFavoriteRow({Key? key}) : super(key: key);
+  SingleProductDetailsTitleStarsFavoriteRow({Key? key, required this.title, required this.rating}) : super(key: key);
+  final String title;
+  final double rating;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +19,9 @@ class SingleProductDetailsTitleStarsFavoriteRow extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SingleProductDetailsTitle(),
+            SingleProductDetailsTitle(title),
             SingleProductStyle.commonVerticalSpace,
-            SingleProductDetailsStars(),
+            SingleProductDetailsStars(rating),
           ],
         ),
         SingleProductDetailsCircularIcon(FontAwesomeIcons.solidHeart)

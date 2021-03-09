@@ -25,11 +25,11 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(child: HomeDashboardProductsGridItemImageContainer(product.images[0] ?? '')),
+                Expanded(child: HomeDashboardProductsGridItemImageContainer(product.images?[0] ?? '')),
                 HomeDashboardProductsGridItemDetailsColumn(
                   title: product.title,
                   country: product.location.country,
-                  state: product.specificatiions.condition.condition,
+                  state: product.specifications.condition.condition,
                 ),
               ],
             ),

@@ -7,7 +7,20 @@ import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
 class SingleProductDetailsContainer extends StatelessWidget {
-  SingleProductDetailsContainer({Key? key}) : super(key: key);
+  SingleProductDetailsContainer({
+    Key? key,
+    required this.likes,
+    required this.title,
+    required this.rating,
+    required this.condition,
+    required this.description,
+  }) : super(key: key);
+  final int likes;
+  final String title;
+  final double rating;
+  final String condition;
+  final String description;
+
   final Radius _radius = Radius.circular(SingleProductStyle.commonBorderRadius);
 
   @override
@@ -16,10 +29,10 @@ class SingleProductDetailsContainer extends StatelessWidget {
       child: Wrap(
         runAlignment: WrapAlignment.spaceEvenly,
         children: [
-          SingleProductDetailsTitleStarsFavoriteRow(),
+          SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
           Container(child: Text('Details different menus')),
-          SingleProductDetailsDescription(),
-          SingleProductSpecificDetailsRow(),
+          SingleProductDetailsDescription(description),
+          SingleProductSpecificDetailsRow(likes: likes, condition: condition),
           CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
         ],
       ),

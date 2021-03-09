@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SinlgeProductDetailsLikes extends StatelessWidget {
-  const SinlgeProductDetailsLikes({Key? key}) : super(key: key);
+  const SinlgeProductDetailsLikes(this.likes, {Key? key}) : super(key: key);
+  final int likes;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SinlgeProductDetailsLikes extends StatelessWidget {
         background: Theme.of(context).errorColor.withOpacity(0.2),
         size: Theme.of(context).textTheme.button?.apply(fontSizeDelta: -5).fontSize,
       ),
-      text: SingleProductDetailsSpecificDetailText('273 likes'),
+      text: SingleProductDetailsSpecificDetailText('${likes.toString()} likes'),
     );
   }
 }
