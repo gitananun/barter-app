@@ -67,7 +67,7 @@ class HorizontalCategoriesListViewHeightResponsive {
         height = _screenHeight * 0.10;
         break;
       case DeviceScreenSize.Medium:
-        height = _screenHeight * 0.12;
+        height = _screenHeight * 0.11;
         break;
       default:
         height = _screenHeight * 0.15;

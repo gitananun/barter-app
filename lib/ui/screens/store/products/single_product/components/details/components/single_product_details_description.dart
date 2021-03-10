@@ -15,8 +15,6 @@ class _SingleProductDetailsDescriptionState extends State<SingleProductDetailsDe
 
   void _onMore() => setState(() {
         _withMaxLines = !_withMaxLines;
-
-        /// Show proper text for functionality
         _moreText = _withMaxLines ? 'see more' : 'see less';
       });
 
@@ -27,11 +25,12 @@ class _SingleProductDetailsDescriptionState extends State<SingleProductDetailsDe
       children: [
         HomeDashboardSectionTitleRow(title: 'Description', moreText: _moreText, onMore: _onMore),
         SingleProductStyle.commonVerticalSpace,
-        SingleChildScrollView(
+        GestureDetector(
+          onTap: _onMore,
           child: _withMaxLines
               ? Text(
                   widget.description,
-                  maxLines: 5,
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.overline,
                 )

@@ -23,8 +23,8 @@ class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDash
     return Container(
       height: HorizontalCategoriesListViewHeightResponsive.getHorizontalHeight(context),
       child: ListView.builder(
-        itemCount: _categories.length,
         shrinkWrap: true,
+        itemCount: _categories.length,
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.all(5),
