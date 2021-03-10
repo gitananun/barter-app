@@ -34,7 +34,7 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
             SizedBox(child: Divider(), width: SharedStyle.sheetDividerWidth),
             Expanded(
               child: Wrap(
-                runSpacing: 20,
+                runSpacing: 10,
                 children: children,
                 runAlignment: runAlignment,
               ),
