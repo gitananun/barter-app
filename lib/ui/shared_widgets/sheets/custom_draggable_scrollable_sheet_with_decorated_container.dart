@@ -28,8 +28,19 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
       maxChildSize: maxChildSize,
       child: Container(
         margin: EdgeInsets.only(top: 5),
-        padding: SharedStyle.contentPadding.copyWith(top: 15, bottom: 15),
-        child: Wrap(runSpacing: 20, children: children, runAlignment: runAlignment),
+        padding: SharedStyle.contentPadding.copyWith(top: 5, bottom: 15),
+        child: Column(
+          children: [
+            SizedBox(child: Divider(), width: SharedStyle.sheetDividerWidth),
+            Expanded(
+              child: Wrap(
+                runSpacing: 20,
+                children: children,
+                runAlignment: runAlignment,
+              ),
+            )
+          ],
+        ),
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [SharedStyle.mainBoxShadow],
