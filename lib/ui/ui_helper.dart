@@ -56,27 +56,6 @@ class CustomButtonStyle {
   }
 }
 
-@immutable
-class HorizontalCategoriesListViewHeightResponsive {
-  static getHorizontalHeight(BuildContext context) {
-    double height;
-    double _screenHeight = MediaQuery.of(context).size.height;
-
-    switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
-      case DeviceScreenSize.Large:
-        height = _screenHeight * 0.10;
-        break;
-      case DeviceScreenSize.Medium:
-        height = _screenHeight * 0.11;
-        break;
-      default:
-        height = _screenHeight * 0.15;
-        break;
-    }
-    return height;
-  }
-}
-
 class FormStyle {
   static const EdgeInsets contentPadding = const EdgeInsets.symmetric(horizontal: 5, vertical: 20);
 

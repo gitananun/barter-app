@@ -29,7 +29,6 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
           child: Column(
             children: [
               CustomCircularContainer(
-                width: 60,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(15),
                 boxShadow: [SharedStyle.mainBoxShadow],
