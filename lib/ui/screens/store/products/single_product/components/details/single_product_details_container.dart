@@ -1,12 +1,11 @@
 import 'package:barter/models/shared/location.dart';
-import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_draggable_scrollable_sheet.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_location.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_description.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_title_stars_favorite_row.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_specific_details_row.dart';
 import 'package:barter/ui/shared_widgets/buttons_groups/custom_primary_buttons_row.dart';
-import 'package:barter/ui/styles/single_product/style.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/shared_widgets/sheets/custom_draggable_scrollable_sheet_with_decorated_container.dart';
+
 import 'package:flutter/material.dart';
 
 class SingleProductDetailsContainer extends StatelessWidget {
@@ -26,31 +25,19 @@ class SingleProductDetailsContainer extends StatelessWidget {
   final Location location;
   final String description;
 
-  final Radius _radius = Radius.circular(SingleProductStyle.commonBorderRadius);
-
   @override
   Widget build(BuildContext context) {
-    return SingleProductDetailsDraggableScrollableSheet(
-      Container(
-        child: Wrap(
-          runAlignment: WrapAlignment.spaceEvenly,
-          children: [
-            SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
-            SingleProductDetailsDescription(description),
-            SingleProductDetailsLocation(location),
-            SingleProductSpecificDetailsRow(likes: likes, condition: condition),
-            CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
-          ],
-        ),
-
-        ///
-        padding: SharedStyle.contentPadding.copyWith(top: 15, bottom: 15),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [SharedStyle.mainBoxShadow],
-          borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
-        ),
-      ),
+    return CustomDraggableScrollableSheetWithDecoratedContainer(
+      minChildSize: 0.6,
+      maxChildSize: 1.0,
+      initialChildSize: 0.6,
+      children: [
+        SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),
+        SingleProductDetailsDescription(description),
+        SingleProductDetailsLocation(location),
+        SingleProductSpecificDetailsRow(likes: likes, condition: condition),
+        CustomPrimaryButtonsRow(text1: 'Chat', text2: 'Barter'),
+      ],
     );
   }
 }

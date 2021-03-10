@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomeDashboardSectionTitleRow extends StatelessWidget {
-  const HomeDashboardSectionTitleRow({Key? key, this.title = '', this.moreText = ''}) : super(key: key);
+  const HomeDashboardSectionTitleRow({
+    Key? key,
+    this.title = '',
+    this.moreText = '',
+    this.onMore,
+  }) : super(key: key);
   final String title;
   final String moreText;
+  final GestureTapCallback? onMore;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +19,12 @@ class HomeDashboardSectionTitleRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title, style: _themeData.textTheme.subtitle2?.apply(fontWeightDelta: 2)),
-        Text(
-          moreText,
-          style: _themeData.textTheme.caption?.apply(color: _themeData.primaryColor),
+        GestureDetector(
+          onTap: onMore,
+          child: Text(
+            moreText,
+            style: _themeData.textTheme.caption?.apply(color: _themeData.primaryColor),
+          ),
         ),
       ],
     );

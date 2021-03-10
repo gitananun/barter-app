@@ -15,9 +15,12 @@ class SingleProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleProductScaffold(
       body: SingleProductContentLayout(
+        ///
         section1: product.images!.length != 1
             ? SingleProductImagesCarousel(product.images)
             : SingleProductSingleImage(product.images![0]),
+
+        ///
         section2: SingleProductDetailsContainer(
           likes: product.likes,
           title: product.title,
