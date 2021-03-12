@@ -1,5 +1,5 @@
 import 'package:barter/ui/styles/home_dashboard/style.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class HomeDashboardLayout extends StatelessWidget {
         child: Padding(
           padding: HomeDashboardStyle.contentPadding,
           child: Wrap(
-            runSpacing: SharedStyle.spaceBetweenSection,
+            runSpacing: DoubleStyle.spaceBetweenSection,
             runAlignment: WrapAlignment.start,
             children: children ?? [],
           ),

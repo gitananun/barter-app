@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -15,7 +15,7 @@ class OnBoardingLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: SharedStyle.contentPadding,
+      padding: EdgeInsetsStyle.contentPadding,
       child: Column(
         children: [
           Expanded(flex: 4, child: section1 ?? SizedBox()),

@@ -1,5 +1,5 @@
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/widget/widget_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomPrimaryButtonsRow extends StatelessWidget {
@@ -12,7 +12,7 @@ class CustomPrimaryButtonsRow extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: CustomFlatButton(text: text1)),
-        SharedStyle.buttonsRowMarginBetween,
+        WidgetStyle.buttonsRowMarginBetween,
         Expanded(child: CustomFlatButton(text: text2)),
       ],
     );

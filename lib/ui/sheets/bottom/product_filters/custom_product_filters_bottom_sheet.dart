@@ -2,7 +2,7 @@ import 'package:barter/data/mock/categories.dart';
 import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:barter/ui/shared_widgets/buttons_groups/custom_cancel_apply_buttons_row.dart';
 import 'package:barter/ui/sheets/bottom/components/custom_bottom_sheet_title_body_divider.dart';
-import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_categories_grid.dart';
+import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_categories_horizontal_list.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_main_wrapper.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_price_range_slider.dart';
 import 'package:barter/ui/sheets/bottom/product_filters/components/custom_product_filters_bottom_sheet_section_aligned_column.dart';
@@ -22,7 +22,7 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
         CustomBottomSheetTitleBodyDivider(),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Category',
-          body: CustomProductFiltersBottomSheetCategoriesGrid(_categories),
+          body: CustomProductFiltersBottomSheetCategoriesHorizontalList(_categories),
         ),
         _space,
         CustomProductFiltersBottomSheetSectionAlignedColumn(

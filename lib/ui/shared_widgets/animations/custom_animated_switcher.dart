@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/duration/duration_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomAnimatedSwitcher extends StatelessWidget {
@@ -15,6 +15,6 @@ class CustomAnimatedSwitcher extends StatelessWidget {
   @override
   Widget build(BuildContext context) => AnimatedSwitcher(
         child: (condition ?? false) ? child1 : child2,
-        duration: SharedStyle.animationDuration,
+        duration: DurationStyle.animationDuration,
       );
 }

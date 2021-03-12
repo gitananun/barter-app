@@ -1,5 +1,5 @@
 import 'package:barter/ui/shared_widgets/form_components/input_icon_padding.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/form/style.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {

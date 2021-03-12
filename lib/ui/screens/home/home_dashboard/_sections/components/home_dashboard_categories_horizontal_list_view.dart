@@ -1,16 +1,16 @@
 import 'package:barter/data/mock/categories.dart';
 import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/home_dashboard_category_horizontal_list_item.dart';
+import 'package:barter/ui/ui_helper.dart';
 import 'package:flutter/material.dart';
 
-class HomeDashboardSelectCategoryHorizontalListView extends StatefulWidget {
-  const HomeDashboardSelectCategoryHorizontalListView({Key? key}) : super(key: key);
+class HomeDashboardCategoriesHorizontalListView extends StatefulWidget {
+  const HomeDashboardCategoriesHorizontalListView({Key? key}) : super(key: key);
   @override
-  _HomeDashboardSelectCategoryHorizontalListViewState createState() =>
-      _HomeDashboardSelectCategoryHorizontalListViewState();
+  _HomeDashboardCategoriesHorizontalListViewState createState() => _HomeDashboardCategoriesHorizontalListViewState();
 }
 
-class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDashboardSelectCategoryHorizontalListView> {
+class _HomeDashboardCategoriesHorizontalListViewState extends State<HomeDashboardCategoriesHorizontalListView> {
   int _activeCategory = 0;
 
   final List<Category> _categories = categories;
@@ -20,7 +20,7 @@ class _HomeDashboardSelectCategoryHorizontalListViewState extends State<HomeDash
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.11,
+      height: HorizontalCategoriesListViewHeightResponsive.getHorizontalHeight(context),
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: _categories.length,

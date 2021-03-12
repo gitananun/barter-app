@@ -1,7 +1,9 @@
 import 'package:barter/models/store/product/specifications/category.dart';
 import 'package:barter/ui/shared_widgets/custom_circular_container.dart';
 import 'package:barter/ui/shared_widgets/gestures/custom_gesture_detector_with_feedback.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/box_shadow/box_shadow_style.dart';
+import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
+import 'package:barter/ui/styles/types/widget/widget_style.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -25,13 +27,13 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
       onTap: onTap,
       child: SingleChildScrollView(
         child: Container(
-          margin: SharedStyle.horizontalListItemsMargin,
+          margin: EdgeInsetsStyle.horizontalListItemsMargin,
           child: Column(
             children: [
               CustomCircularContainer(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(15),
-                boxShadow: [SharedStyle.mainBoxShadow],
+                boxShadow: [BoxShadowStyle.mainBoxShadow],
                 bgColor: isActive ? _themeData.primaryColor : Colors.white,
                 child: FaIcon(
                   category.icon,
@@ -39,7 +41,7 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
                   color: isActive ? Colors.white : _themeData.accentColor,
                 ),
               ),
-              SharedStyle.listItemTitleTopSpacing,
+              WidgetStyle.listItemTitleTopSpacing,
               Text(category.title, style: _themeData.textTheme.caption?.apply(fontSizeDelta: -2)),
             ],
           ),

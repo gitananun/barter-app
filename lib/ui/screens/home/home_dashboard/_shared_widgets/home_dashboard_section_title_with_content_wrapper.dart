@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:flutter/material.dart';
 
 class HomeDashboardSectionTitleWithContentWrapper extends StatelessWidget {
@@ -9,7 +9,7 @@ class HomeDashboardSectionTitleWithContentWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       runAlignment: WrapAlignment.spaceEvenly,
-      runSpacing: SharedStyle.sectionTitleContentSpacing,
+      runSpacing: DoubleStyle.sectionTitleContentSpacing,
       children: children ?? [],
     );
   }

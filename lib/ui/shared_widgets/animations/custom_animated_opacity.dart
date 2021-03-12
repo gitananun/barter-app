@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/duration/duration_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomAnimatedOpacity extends StatelessWidget {
@@ -11,7 +11,7 @@ class CustomAnimatedOpacity extends StatelessWidget {
     return AnimatedOpacity(
       child: child,
       opacity: condition ? 0 : 1,
-      duration: SharedStyle.animationDuration,
+      duration: DurationStyle.animationDuration,
     );
   }
 }

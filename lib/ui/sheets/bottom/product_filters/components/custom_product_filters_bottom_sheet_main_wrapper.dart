@@ -1,4 +1,5 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/border_radius/border_radius_style.dart';
+import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
@@ -8,8 +9,8 @@ class CustomProductFiltersBottomSheetMainWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: SharedStyle.bottomModalSheetPadding,
-      decoration: BoxDecoration(borderRadius: SharedStyle.bottomSheetBorderRadius, color: Colors.white),
+      padding: EdgeInsetsStyle.bottomModalSheetPadding,
+      decoration: BoxDecoration(borderRadius: BorderRadiusStyle.bottomSheetBorderRadius, color: Colors.white),
       child: Wrap(
         children: [
           Column(

@@ -1,5 +1,5 @@
 import 'package:barter/paths.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:flutter/material.dart';
 
 Widget customAlertDialogTitleWithImage(
@@ -10,7 +10,7 @@ Widget customAlertDialogTitleWithImage(
   final ThemeData _themeData = Theme.of(context);
 
   return Wrap(
-    runSpacing: SharedStyle.spaceBetweenSection,
+    runSpacing: DoubleStyle.spaceBetweenSection,
     children: [
       Align(
         child: Image.asset(

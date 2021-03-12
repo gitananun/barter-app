@@ -1,5 +1,5 @@
 import 'package:barter/ui/shared_widgets/custom_flat_button.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/widget/widget_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomCancelApplyButtonsRow extends StatelessWidget {
@@ -12,7 +12,7 @@ class CustomCancelApplyButtonsRow extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: CustomFlatButton(text: cancelText, primary: false)),
-        SharedStyle.buttonsRowMarginBetween,
+        WidgetStyle.buttonsRowMarginBetween,
         Expanded(child: CustomFlatButton(text: applyText)),
       ],
     );

@@ -1,5 +1,7 @@
 import 'package:barter/ui/shared_widgets/sheets/custom_draggable_scrollable_sheet.dart';
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/box_shadow/box_shadow_style.dart';
+import 'package:barter/ui/styles/types/double/double_style.dart';
+import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidget {
@@ -28,10 +30,10 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
       maxChildSize: maxChildSize,
       child: Container(
         margin: EdgeInsets.only(top: 5),
-        padding: SharedStyle.contentPadding.copyWith(top: 5, bottom: 15),
+        padding: EdgeInsetsStyle.contentPadding.copyWith(top: 5, bottom: 15),
         child: Column(
           children: [
-            SizedBox(child: Divider(), width: SharedStyle.sheetDividerWidth),
+            SizedBox(child: Divider(), width: DoubleStyle.sheetDividerWidth),
             Expanded(
               child: Wrap(
                 runSpacing: 10,
@@ -43,7 +45,7 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
         ),
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [SharedStyle.mainBoxShadow],
+          boxShadow: [BoxShadowStyle.mainBoxShadow],
           borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
         ),
       ),

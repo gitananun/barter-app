@@ -1,4 +1,4 @@
-import 'package:barter/ui/ui_helper.dart';
+import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomAlertDialogContentWrapper extends StatelessWidget {
@@ -8,7 +8,7 @@ class CustomAlertDialogContentWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      runSpacing: SharedStyle.spaceBetweenSection,
+      runSpacing: DoubleStyle.spaceBetweenSection,
       children: children ?? [],
     );
   }
