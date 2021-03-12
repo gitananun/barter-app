@@ -45,7 +45,7 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
         ),
         decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [BoxShadowStyle.mainBoxShadow],
+          boxShadow: [BoxShadowStyle.draggableBottomSheetBoxShadow],
           borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
         ),
       ),
