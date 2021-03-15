@@ -36,22 +36,22 @@ _Design Pattern_
 
 4.  **Repository**
 
-Implements from RepositoryInterface. Use methods referring necessary
+> Implements from RepositoryInterface. Use methods referring necessary
 methods of ServiceInterface
 
 5.  **ServiceInterface**
 
-Defines all of the methods to work with by simply implementation of
+> Defines all of the methods to work with by simply implementation of
 classes
 
 6.  **Service**
 
-Implements from ServiceInterface. Use methods referring necessary
+> Implements from ServiceInterface. Use methods referring necessary
 methods of ServiceInterface
 
 7.  **Data Access Layer / API**
 
-External layer of Data
+> External layer of Data
 
 _File structure and modularization_
 
@@ -73,52 +73,6 @@ that application. For example, one component could handle user
 authentication and another component could be responsible for data
 visualization and so on.
 
-+---------------+-----------------------------------------------------+
-| **File Name** | **Purpose** |
-+===============+=====================================================+
-| Localization | Holds the _Localization Delegate_ and _Translation_ |
-| | class that are responsible for the localization of |
-| | texts in this project. |
-+---------------+-----------------------------------------------------+
-| MTS Theme | Holds Custom theme data. Defines primary colours, |
-| | fonts etc. |
-+---------------+-----------------------------------------------------+
-| Router | Responsible for the navigation in-between the pages |
-| | of the application. |
-+---------------+-----------------------------------------------------+
-| UI Helper | Holds a set of static constant values for margins |
-| | between widgets. |
-+---------------+-----------------------------------------------------+
-| Annotation | Defines custom annotations \[42\] for the |
-| | application so that it is easier to find classes |
-| | that serve the same purpose or are in similar |
-| | stages of development. |
-+---------------+-----------------------------------------------------+
-| Configuration | Holds a set of static constant values that make up |
-| | a list of global configurations for the application |
-| | as shown in the following snippet: |
-| | |
-| | \@immutable |
-| | |
-| | class Configuration { |
-| | |
-| | > static final String baseURL = |
-| | > <http://lacalhost:3000>; |
-| | > |
-| | > static final bool useMockData = false; |
-| | > |
-| | > static final bool logging = true; |
-| | > |
-| | > static final int defaultTimeOut = 5; |
-| | |
-| | } |
-+---------------+-----------------------------------------------------+
-| | |
-+---------------+-----------------------------------------------------+
-| Main | Defines the root of the widget tree and the |
-| | starting point of the application. |
-+---------------+-----------------------------------------------------+
-
 **Advantages of Modularization**
 
 1.  Smaller components are easier to maintain
@@ -136,36 +90,16 @@ _Form Validation_
 
 - BLoC Validation Package
 
-+----------------------------------+----------------------------------+
+
 | **Pros** | **Cons** |
-+==================================+==================================+
-| 1\. Validation no longer takes | More complex than Flutter's |
-| place in UI. | inbuilt version |
-| | |
-| 2\. Form Field BloCs can easily | |
-| be reused for multiple From | |
-| Fields. | |
-| | |
-| 3\. This approach adheres the | |
-| architecture described above as | |
-| state changes and business logic | |
-| are now contained inside of | |
-| BLoCs. | |
-+----------------------------------+----------------------------------+
+
+1\. Validation no longer takes | More complex than Flutter's |
+| place in UI. | inbuilt version 
+
+| 2\. Form Field BloCs can easily be reused for multiple From Fields.
+| 3\. This approach adheres the architecture described above as state changes and business logic are now contained inside of  BLoCs. 
+
 
 _Localization_
 
-- Flutter inbuilt approac
-
-_IoC Container (inversion of control)_
-
-- barterApplication.dart
-
-- main.dart
-
-BarterApplication app = new BarterApplication(new IocContaiiner);
-
-app.run(MainWidgetProvider)
-
-+----------------------------------+----------------------------------+
-pybuild - run the app
+- Flutter built-in approach
