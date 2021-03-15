@@ -1,4 +1,4 @@
-import 'package:barter/ui/shared_widgets/sheets/custom_draggable_scrollable_sheet.dart';
+import 'package:barter/ui/shared_widgets/sheets/draggable/custom_draggable_scrollable_sheet.dart';
 import 'package:barter/ui/styles/types/box_shadow/box_shadow_style.dart';
 import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';

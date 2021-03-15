@@ -18,7 +18,10 @@ class CustomRouter {
     final dynamic _arguments = settings.arguments;
 
     switch (settings.name) {
-      case '/':
+      case "/":
+        return _returnScreen(HomeDashboardScreen());
+
+      case '/onboarding':
         return _returnScreen(OnBoardingScreen());
 
       /// [Auth] Routes

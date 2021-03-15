@@ -3,7 +3,7 @@ import 'package:barter/ui/screens/store/products/single_product/components/detai
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_description.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_title_stars_favorite_row.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_specific_details_row.dart';
-import 'package:barter/ui/shared_widgets/sheets/custom_draggable_scrollable_sheet_with_decorated_container.dart';
+import 'package:barter/ui/shared_widgets/sheets/draggable/custom_draggable_scrollable_sheet_with_decorated_container.dart';
 
 import 'package:flutter/material.dart';
 

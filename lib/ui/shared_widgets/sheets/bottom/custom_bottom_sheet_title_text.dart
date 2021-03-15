@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomProductFiltersBottomSheetTitle extends StatelessWidget {
-  const CustomProductFiltersBottomSheetTitle(this.title, {Key? key}) : super(key: key);
+class CustomBottomSheetTitleText extends StatelessWidget {
+  const CustomBottomSheetTitleText(this.title, {Key? key}) : super(key: key);
   final String title;
 
   @override
