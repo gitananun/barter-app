@@ -18,9 +18,9 @@ class CustomLargeClickableGestureDetector extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ?? () {},
       child: Container(
-        child: child,
         color: Colors.transparent,
         padding: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
+        child: child,
       ),
     );
   }

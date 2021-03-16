@@ -11,7 +11,7 @@ class PasswordResetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthScaffold(
+    return const AuthScaffold(
       body: PasswordResetLayout(
         children: [
           AuthFormHeading(title: 'Reset your password', subtitle: 'Please enter your new password'),

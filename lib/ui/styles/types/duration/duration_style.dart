@@ -1,3 +1,3 @@
 class DurationStyle {
-  static const Duration animationDuration = const Duration(milliseconds: 400);
+  static const Duration animationDuration = Duration(milliseconds: 400);
 }

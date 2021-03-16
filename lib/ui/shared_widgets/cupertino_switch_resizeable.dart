@@ -2,7 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomCupertinoSwitchResizeable extends StatelessWidget {
-  const CustomCupertinoSwitchResizeable(this.value, this.onChanged, {Key? key, this.sizeScale}) : super(key: key);
+  const CustomCupertinoSwitchResizeable(
+    this.onChanged, {
+    Key? key,
+    this.sizeScale,
+    required this.value,
+  }) : super(key: key);
   final bool value;
   final double? sizeScale;
   final ValueChanged<bool> onChanged;

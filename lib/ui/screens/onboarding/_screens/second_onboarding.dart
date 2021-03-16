@@ -12,13 +12,13 @@ class SecondOnboarding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Map<String, String> _info = const {
+    const Map<String, String> _info = {
       'title': 'Select favorite',
-      'body': "Exclusively curated selection of best brands the palm of your hand..."
+      'body': 'Exclusively curated selection of best brands the palm of your hand...'
     };
 
     return OnBoardingLayout(
-      section1: OnBoardingContentImage('2nd_onboarding_illustration.svg'),
+      section1: const OnBoardingContentImage('2nd_onboarding_illustration.svg'),
       section2: Column(
         children: [
           OnBoardingContentTitle(_info['title']),

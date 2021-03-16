@@ -5,5 +5,5 @@ class OnBoardingBottomNavBar extends StatelessWidget {
   const OnBoardingBottomNavBar({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => SizedBox(height: OnBoardingStyle.bottomAppBarHeight);
+  Widget build(BuildContext context) => const SizedBox(height: OnBoardingStyle.bottomAppBarHeight);
 }

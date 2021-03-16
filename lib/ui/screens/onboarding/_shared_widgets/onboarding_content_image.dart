@@ -8,9 +8,6 @@ class OnBoardingContentImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      Paths.ONBOARDING_ASSETS + imgTitle,
-      fit: BoxFit.contain,
-    );
+    return SvgPicture.asset(Paths.ONBOARDING_ASSETS + imgTitle);
   }
 }

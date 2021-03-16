@@ -30,8 +30,8 @@ class CustomSocialFlatButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(icon, color: Colors.white),
-              SizedBox(width: 10),
-              Text(text ?? 'social', style: TextStyle(color: Colors.white)),
+              const SizedBox(width: 10),
+              Text(text ?? 'social', style: const TextStyle(color: Colors.white)),
             ],
           ),
     );

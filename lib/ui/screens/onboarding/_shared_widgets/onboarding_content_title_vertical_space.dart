@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-Widget onBoardingContentVerticalSpace = SizedBox(height: 10);
+Widget onBoardingContentVerticalSpace = const SizedBox(height: 10);

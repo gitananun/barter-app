@@ -8,7 +8,7 @@ class CustomUploadSuccessDialogContent extends StatelessWidget {
   final BuildContext context;
 
   @override
-  Widget build(_) {
+  Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
     return CustomAlertDialogContentWrapper(
@@ -17,7 +17,7 @@ class CustomUploadSuccessDialogContent extends StatelessWidget {
           context,
           'Your product has been uploaded, you can see it on your profile',
         ),
-        Divider(),
+        const Divider(),
         CustomFlatButton(
           onPressed: () {},
           minWidth: double.infinity,

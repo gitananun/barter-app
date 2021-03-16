@@ -12,18 +12,17 @@ class SingleProductScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: body,
-      bottomNavigationBar: CustomBottomNavigationAppBarWithButtonsRow(
+      bottomNavigationBar: const CustomBottomNavigationAppBarWithButtonsRow(
         text1: 'Chat',
         text2: 'Barter',
       ),
       appBar: AppBar(
         elevation: 0,
-        primary: true,
         centerTitle: true,
-        title: SingleProductAppBarTitle(),
+        title: const SingleProductAppBarTitle(),
         backgroundColor: Colors.transparent,
-        leading: CustomAppBarLeadingBackButton(),
-        actions: [CustomAppBarLeadingShoppingBasketButton()],
+        leading: const CustomAppBarLeadingBackButton(),
+        actions: const [CustomAppBarLeadingShoppingBasketButton()],
       ),
     );
   }

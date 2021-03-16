@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class CustomButtonStyle {
-  static flatButtonHeight(BuildContext context) {
+  static double flatButtonHeight(BuildContext context) {
     double height;
     switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
       case DeviceScreenSize.Large:
@@ -23,9 +23,9 @@ class CustomButtonStyle {
 
 @immutable
 class HorizontalCategoriesListViewHeightResponsive {
-  static getHorizontalHeight(BuildContext context) {
+  static double getHorizontalHeight(BuildContext context) {
     double height;
-    double _screenHeight = MediaQuery.of(context).size.height;
+    final _screenHeight = MediaQuery.of(context).size.height;
 
     switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
       case DeviceScreenSize.Large:

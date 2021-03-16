@@ -11,7 +11,7 @@ class CustomBottomSheetTitleWithDivider extends StatelessWidget {
     return Column(
       children: [
         CustomBottomSheetTitleText(title),
-        CustomBottomSheetTitleDivider(),
+        const CustomBottomSheetTitleDivider(),
       ],
     );
   }

@@ -9,15 +9,15 @@ class CustomDeleteDialogContent extends StatelessWidget {
   final BuildContext context;
 
   @override
-  Widget build(_) {
+  Widget build(BuildContext context) {
     return CustomAlertDialogContentWrapper(
       children: [
         CustomAlertDialogContentText(
           context,
           'Deleting your product is about destroying all related to it such as the chat, details and images.',
         ),
-        Divider(),
-        CustomCancelApplyButtonsRow(applyText: 'Delete')
+        const Divider(),
+        const CustomCancelApplyButtonsRow(applyText: 'Delete')
       ],
     );
   }

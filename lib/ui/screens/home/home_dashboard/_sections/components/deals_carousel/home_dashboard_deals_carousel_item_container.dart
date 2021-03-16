@@ -9,10 +9,10 @@ class HomeDashboardDealsCarouselItemContainer extends StatelessWidget {
     final ThemeData _themeData = Theme.of(context);
 
     return Container(
-      child: child,
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(color: _themeData.cardColor, borderRadius: BorderRadius.circular(25)),
+      child: child,
     );
   }
 }

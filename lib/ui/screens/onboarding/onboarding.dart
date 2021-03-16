@@ -11,13 +11,13 @@ import 'package:flutter/services.dart';
 
 @immutable
 class OnBoardingScreen extends StatefulWidget {
-  OnBoardingScreen({Key? key}) : super(key: key);
+  const OnBoardingScreen({Key? key}) : super(key: key);
   @override
   _OnBoardingScreenState createState() => _OnBoardingScreenState();
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  final PageController _controller = PageController(initialPage: 0);
+  final PageController _controller = PageController();
   final int _totalPages = 3;
   int _currentPage = 0;
 
@@ -35,25 +35,24 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final bool _isLastPage = (_currentPage == _totalPages - 1);
+    final bool _isLastPage = _currentPage == _totalPages - 1;
 
     void _onNextPage() => _isLastPage
         ? Navigator.pushReplacementNamed(context, '/login')
-        : _controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOutSine);
+        : _controller.nextPage(duration: const Duration(milliseconds: 400), curve: Curves.easeInOutSine);
 
     return Scaffold(
-      appBar: OnBoardingAppBar(),
-      bottomNavigationBar: OnBoardingBottomNavBar(),
+      appBar: const OnBoardingAppBar(),
+      bottomNavigationBar: const OnBoardingBottomNavBar(),
       floatingActionButton: OnBoardingFloatingActionButton(isLastPage: _isLastPage, onNextPage: _onNextPage),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Stack(
         children: [
           PageView(
-            onPageChanged: (int page) => _onPageChanged(page),
+            onPageChanged: _onPageChanged,
             controller: _controller,
-            physics: BouncingScrollPhysics(),
-            scrollDirection: Axis.horizontal,
-            children: [
+            physics: const BouncingScrollPhysics(),
+            children: const [
               FirstOnboarding(),
               SecondOnboarding(),
               ThirdOnboarding(),

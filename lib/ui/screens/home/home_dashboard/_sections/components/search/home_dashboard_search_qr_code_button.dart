@@ -14,7 +14,7 @@ class HomeDashboardSearchQrCodeButton extends StatelessWidget {
       child: CustomCircularContainer(
         alignment: Alignment.center,
         bgColor: _themeData.primaryColor,
-        child: FaIcon(FontAwesomeIcons.qrcode, color: Colors.white),
+        child: const FaIcon(FontAwesomeIcons.qrcode, color: Colors.white),
       ),
     );
   }

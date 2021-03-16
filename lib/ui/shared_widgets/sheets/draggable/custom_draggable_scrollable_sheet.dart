@@ -24,7 +24,7 @@ class CustomDraggableScrollableSheet extends StatelessWidget {
       initialChildSize: initialChildSize,
       builder: (BuildContext context, ScrollController scrollController) => CustomScrollView(
         controller: scrollController,
-        slivers: [SliverFillRemaining(child: child, hasScrollBody: false)],
+        slivers: [SliverFillRemaining(hasScrollBody: false, child: child)],
       ),
     );
   }

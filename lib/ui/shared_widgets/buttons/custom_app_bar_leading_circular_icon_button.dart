@@ -21,6 +21,7 @@ class CustomAppBarLeadingCircularIconButton extends StatelessWidget {
     return Container(
       width: width,
       margin: margin,
+      decoration: BoxDecoration(color: color ?? MTStheme.primaryTextColor, shape: BoxShape.circle),
       child: IconButton(
         color: Colors.white,
         padding: EdgeInsets.zero,
@@ -28,7 +29,6 @@ class CustomAppBarLeadingCircularIconButton extends StatelessWidget {
         highlightColor: Colors.transparent,
         icon: Icon(icon, size: Theme.of(context).textTheme.caption?.fontSize),
       ),
-      decoration: BoxDecoration(color: color ?? MTStheme.primaryTextColor, shape: BoxShape.circle),
     );
   }
 }

@@ -20,14 +20,14 @@ class SingleProductDetailsCircularIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(padding ?? 10),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: background ?? MTStheme.primaryTextColor,
+      ),
       child: Icon(
         icon,
         color: iconColor ?? Colors.white,
         size: size ?? Theme.of(context).textTheme.button?.fontSize,
-      ),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: background ?? MTStheme.primaryTextColor,
       ),
     );
   }

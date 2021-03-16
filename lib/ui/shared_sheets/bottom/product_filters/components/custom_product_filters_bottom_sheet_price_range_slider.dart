@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetPriceRangeSlider extends StatefulWidget {
-  CustomProductFiltersBottomSheetPriceRangeSlider({Key? key}) : super(key: key);
+  const CustomProductFiltersBottomSheetPriceRangeSlider({Key? key}) : super(key: key);
 
   @override
   _CustomProductFiltersBottomSheetPriceRangeSliderState createState() =>
@@ -10,7 +10,7 @@ class CustomProductFiltersBottomSheetPriceRangeSlider extends StatefulWidget {
 
 class _CustomProductFiltersBottomSheetPriceRangeSliderState
     extends State<CustomProductFiltersBottomSheetPriceRangeSlider> {
-  RangeValues _rangeValues = RangeValues(50, 100);
+  RangeValues _rangeValues = const RangeValues(50, 100);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,6 @@ class _CustomProductFiltersBottomSheetPriceRangeSliderState
           ],
         ),
         RangeSlider(
-          min: 0,
           max: 200,
           values: _rangeValues,
           activeColor: _themeData.primaryColor,

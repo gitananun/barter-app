@@ -16,7 +16,7 @@ class SingleProductDetailsLocation extends StatelessWidget {
 
     return Wrap(
       children: [
-        Divider(),
+        const Divider(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -33,7 +33,7 @@ class SingleProductDetailsLocation extends StatelessWidget {
             Icon(FontAwesomeIcons.chevronRight, size: _iconSize, color: MTStheme.primaryTextColor),
           ],
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }

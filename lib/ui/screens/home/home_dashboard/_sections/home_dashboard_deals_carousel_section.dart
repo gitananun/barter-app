@@ -13,13 +13,13 @@ class HomeDashboardDealsCarouselSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return HomeDashboardSectionTitleWithContentWrapper(
       children: [
-        HomeDashboardSectionTitleRow(title: 'Hot suggestions', moreText: 'see more'),
+        const HomeDashboardSectionTitleRow(title: 'Hot suggestions', moreText: 'see more'),
         CarouselSlider(
           options: homeDashboardDealsCarouselOptions,
           items: [1, 2, 3]
               .map(
                 (i) => Builder(
-                  builder: (BuildContext context) => HomeDashboardDealsCarouselItemContainer(
+                  builder: (BuildContext context) => const HomeDashboardDealsCarouselItemContainer(
                     child: HomeDashboardDealsCarouselItemContent(),
                   ),
                 ),

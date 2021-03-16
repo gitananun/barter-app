@@ -13,15 +13,14 @@ class LoginButtonsList extends StatelessWidget {
     return CustomSingleChildScrollViewWithColumn(
       children: <Widget>[
         CustomFlatButton(
-          primary: true,
           text: 'Login',
           minWidth: double.infinity,
           onPressed: () => Navigator.pushReplacementNamed(context, '/home_dashboard'),
         ),
-        ContinueWithSocialText(),
+        const ContinueWithSocialText(),
         ...SocialButtonsList.getButtonsIterable(context),
-        AuthActionSuggestionRichText(
-          text: 'Don\'t have any account yet? ',
+        const AuthActionSuggestionRichText(
+          text: "Don't have any account yet? ",
           actionNameText: 'Sign Up',
           path: '/signup',
         ),

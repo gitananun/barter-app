@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({Key? key}) : super(key: key);
 
-  final List<Map<String, dynamic>> navigationBarItems = const [
+  final navigationBarItems = const [
     {'icon': FontAwesomeIcons.home, 'label': 'Home'},
     {'icon': FontAwesomeIcons.solidHeart, 'label': 'Favorites'},
     {'icon': FontAwesomeIcons.comments, 'label': 'Chat'},
@@ -22,12 +22,12 @@ class CustomBottomNavigationBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       selectedItemColor: _themeData.primaryColor,
       unselectedItemColor: _themeData.accentColor,
-      onTap: (index) => NavigationUtils.navigateToScreen(context, SizedBox()),
+      onTap: (index) => NavigationUtils.navigateToScreen(context, const SizedBox()),
       items: [
         for (int i = 0; i < navigationBarItems.length; i++)
           BottomNavigationBarItem(
-            icon: CustomBottomNavigationBarIcon(icon: navigationBarItems[i]['icon']),
-            label: navigationBarItems[i]['label'],
+            label: navigationBarItems[i]['label'] as String,
+            icon: CustomBottomNavigationBarIcon(icon: navigationBarItems[i]['icon'] as IconData),
           ),
       ],
     );

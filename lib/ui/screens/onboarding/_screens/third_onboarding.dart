@@ -20,12 +20,12 @@ class _ThirdOnboardingState extends State<ThirdOnboarding> {
   @override
   Widget build(BuildContext context) {
     return OnBoardingLayout(
-      section1: OnBoardingContentImage('3rd_onboarding_illustration.svg'),
+      section1: const OnBoardingContentImage('3rd_onboarding_illustration.svg'),
       section2: CustomWrapWithRunSpacing(
         children: [
-          OnBoardingContentTitle('Be notified ✌🏻'),
+          const OnBoardingContentTitle('Be notified ✌🏻'),
           onBoardingContentVerticalSpace,
-          OnBoardingNotificationsSection(),
+          const OnBoardingNotificationsSection(),
         ],
       ),
     );

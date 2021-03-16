@@ -16,13 +16,13 @@ class SingleProductCarouselImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: SingleProductStyle.imageWidth,
-      child: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Image.asset(Paths.PRODUCTS_ASSETS + image, fit: BoxFit.contain),
-      ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(SingleProductStyle.commonBorderRadius),
         border: Border.all(color: active ? MTStheme.errorColor : Theme.of(context).accentColor),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Image.asset(Paths.PRODUCTS_ASSETS + image, fit: BoxFit.contain),
       ),
     );
   }

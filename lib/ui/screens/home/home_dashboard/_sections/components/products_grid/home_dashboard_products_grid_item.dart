@@ -35,7 +35,7 @@ class HomeDashboardProductsGridItem extends StatelessWidget {
             ),
           ),
         ),
-        HomeDashboardProductsGridItemMakeFavoriteGestureDetector(),
+        const HomeDashboardProductsGridItemMakeFavoriteGestureDetector(),
       ],
     );
   }

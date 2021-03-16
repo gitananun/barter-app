@@ -15,7 +15,7 @@ class HomeDashboardProductsGrid extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       children: List.generate(
         _products.length,
         (i) => HomeDashboardProductsGridItem(

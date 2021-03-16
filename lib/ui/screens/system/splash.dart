@@ -25,13 +25,13 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Expanded(
               child: SvgPicture.asset(
-                Paths.ASSETS_IMAGES + 'logo.svg',
+                '${Paths.ASSETS_IMAGES}logo.svg',
                 width: MediaQuery.of(context).size.width - 250,
               ),
             ),
             Container(
               width: double.infinity,
-              child: SvgPicture.asset(Paths.SPLASH_ASSETS + 'waves.svg'),
+              child: SvgPicture.asset('${Paths.SPLASH_ASSETS}waves.svg'),
             ),
           ],
         ),

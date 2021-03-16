@@ -15,7 +15,7 @@ class CustomProductFiltersBottomSheetCategoriesHorizontalList extends StatelessW
         shrinkWrap: true,
         itemCount: categories.length,
         scrollDirection: Axis.horizontal,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (BuildContext context, int i) => CustomProductFiltersBottomSheetCategoriesGridItem(
           categories[i],
           active: i == 0,

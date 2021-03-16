@@ -22,7 +22,7 @@ class LoginFormWithHeading extends StatelessWidget {
         AuthFormHeading(title: _headingInfo['title'], subtitle: _headingInfo['subtitle']),
         CustomWrapWithRunSpacing(
           children: [
-            LoginForm(),
+            const LoginForm(),
             Align(
               alignment: Alignment.centerRight,
               child: GestureDetector(

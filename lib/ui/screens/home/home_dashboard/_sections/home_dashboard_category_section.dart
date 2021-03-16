@@ -8,7 +8,7 @@ class HomeDashboardCategorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeDashboardSectionTitleWithContentWrapper(
+    return const HomeDashboardSectionTitleWithContentWrapper(
       children: [
         HomeDashboardSectionTitleRow(title: 'Select Category', moreText: 'view all'),
         HomeDashboardCategoriesHorizontalListView(),

@@ -9,11 +9,11 @@ class CustomGestureDetectorWithFeedback extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: child,
       onTap: () {
         HapticFeedback.selectionClick();
         onTap();
       },
+      child: child,
     );
   }
 }

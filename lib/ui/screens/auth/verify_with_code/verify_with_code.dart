@@ -11,7 +11,7 @@ class VerifyWithCodeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthScaffold(
+    return const AuthScaffold(
       body: VerifyWithCodeLayout(
         children: [
           AuthFormHeading(

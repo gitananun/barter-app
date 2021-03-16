@@ -10,24 +10,24 @@ import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheet extends StatelessWidget {
   CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
-  final Widget _space = SizedBox(height: 20);
+  final Widget _space = const SizedBox(height: 20);
   final List<Category> _categories = categories;
 
   @override
   Widget build(BuildContext context) {
     return CustomBottomSheetMainWrapper(
       children: [
-        CustomBottomSheetTitleWithDivider(title: 'add filter'),
+        const CustomBottomSheetTitleWithDivider(title: 'add filter'),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Category',
           body: CustomProductFiltersBottomSheetCategoriesHorizontalList(_categories),
         ),
         _space,
-        CustomProductFiltersBottomSheetSectionAlignedColumn(
+        const CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
           body: CustomProductFiltersBottomSheetPriceRangeSlider(),
         ),
-        CustomProductFiltersBottomSheetSectionAlignedColumn(
+        const CustomProductFiltersBottomSheetSectionAlignedColumn(
           body: CustomCancelApplyButtonsRow(applyText: 'Filter'),
         ),
       ],

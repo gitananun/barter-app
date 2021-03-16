@@ -15,7 +15,7 @@ class PasswordRecoverButtons extends StatelessWidget {
           minWidth: double.infinity,
           onPressed: () => Navigator.pushReplacementNamed(context, '/password_reset'),
         ),
-        BackToLoginButton(),
+        const BackToLoginButton(),
       ],
     );
   }

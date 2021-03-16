@@ -7,9 +7,13 @@ class HomeDashboardSearchInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return const Expanded(
       flex: 8,
-      child: CustomTextFormField(hintText: 'Search', prefixIcon: FontAwesomeIcons.search, height: 50),
+      child: CustomTextFormField(
+        hintText: 'Search',
+        prefixIcon: FontAwesomeIcons.search,
+        height: 50,
+      ),
     );
   }
 }

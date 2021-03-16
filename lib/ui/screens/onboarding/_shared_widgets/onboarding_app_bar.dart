@@ -6,6 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 @immutable
 class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
   const OnBoardingAppBar({Key? key}) : super(key: key);
+
+  @override
   Size get preferredSize => const Size.fromHeight(OnBoardingStyle.topAppBarHeight);
 
   @override
@@ -15,12 +17,7 @@ class OnBoardingAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: const SizedBox(),
-      title: Container(
-        child: SvgPicture.asset(
-          Paths.ONBOARDING_ASSETS + 'welcome_top.svg',
-          fit: BoxFit.contain,
-        ),
-      ),
+      title: SvgPicture.asset('${Paths.ONBOARDING_ASSETS}welcome_top.svg'),
     );
   }
 }

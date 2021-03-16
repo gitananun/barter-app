@@ -5,9 +5,7 @@ CarouselOptions singleProductImagesCarouselOptions(
 ) =>
     CarouselOptions(
       autoPlay: true,
-      initialPage: 0,
       viewportFraction: 0.5,
       enlargeCenterPage: true,
-      enableInfiniteScroll: true,
       onPageChanged: onPageChanged,
     );

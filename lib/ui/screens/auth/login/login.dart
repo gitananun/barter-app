@@ -6,7 +6,7 @@ import 'package:barter/ui/shared_widgets/barter_logo.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -17,9 +17,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return AuthScaffold(
       body: LoginLayout(
-        section1: Container(child: BarterLogo(), margin: const EdgeInsets.only(top: 20)),
-        section2: LoginFormWithHeading(),
-        section3: LoginButtonsList(),
+        section1: Container(
+          margin: const EdgeInsets.only(top: 20),
+          child: const BarterLogo(),
+        ),
+        section2: const LoginFormWithHeading(),
+        section3: const LoginButtonsList(),
       ),
     );
   }

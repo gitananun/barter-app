@@ -11,9 +11,9 @@ class HomeDashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomeDashboardScaffold(
+    return const HomeDashboardScaffold(
       body: HomeDashboardLayout(
-        children: [
+        children:  [
           HomeDashboardCategorySection(),
           HomeDashboardSearchSection(),
           HomeDashboardDealsCarouselSection(),

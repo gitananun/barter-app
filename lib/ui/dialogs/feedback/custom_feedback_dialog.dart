@@ -9,7 +9,7 @@ Widget customFeedbackAlertDialog(BuildContext context) {
     title: customAlertDialogTitleWithImage(
       context,
       imageTitle: 'ragged_checkmark.png',
-      title: 'Let us know how we\'re doing',
+      title: "Let us know how we're doing",
     ),
 
     /// Content with Submit button

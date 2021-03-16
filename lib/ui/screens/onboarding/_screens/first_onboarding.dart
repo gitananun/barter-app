@@ -14,11 +14,11 @@ class FirstOnboarding extends StatelessWidget {
   Widget build(BuildContext context) {
     const Map<String, String> _info = {
       'title': 'What you have?',
-      'body': "Let\'s estimate the overall cost of the things, that are not important for you"
+      'body': "Let's estimate the overall cost of the things, that are not important for you"
     };
 
     return OnBoardingLayout(
-      section1: OnBoardingContentImage('1st_onboarding_illustration.svg'),
+      section1: const OnBoardingContentImage('1st_onboarding_illustration.svg'),
       section2: Column(
         children: [
           OnBoardingContentTitle(_info['title'] ?? ''),

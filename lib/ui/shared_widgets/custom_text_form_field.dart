@@ -52,7 +52,7 @@ class CustomTextFormField extends StatelessWidget {
       width: width,
       height: height,
       child: TextFormField(
-        maxLength: maxLength ?? null,
+        maxLength: maxLength,
         validator: validator,
         controller: controller,
         readOnly: readOnly,

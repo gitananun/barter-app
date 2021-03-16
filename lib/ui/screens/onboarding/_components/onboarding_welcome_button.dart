@@ -8,8 +8,7 @@ class OnBoardingWelcomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomFlatButton(
-      primary: true,
-      text: "Get started",
+      text: 'Get started',
       minWidth: MediaQuery.of(context).size.width - 80,
       onPressed: onPressed,
     );

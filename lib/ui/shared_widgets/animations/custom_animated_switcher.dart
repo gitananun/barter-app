@@ -14,7 +14,7 @@ class CustomAnimatedSwitcher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => AnimatedSwitcher(
-        child: (condition ?? false) ? child1 : child2,
         duration: DurationStyle.animationDuration,
+        child: (condition ?? false) ? child1 : child2,
       );
 }

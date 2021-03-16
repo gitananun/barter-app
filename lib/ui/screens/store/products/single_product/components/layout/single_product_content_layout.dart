@@ -18,11 +18,11 @@ class SingleProductContentLayout extends StatelessWidget {
             Expanded(
                 flex: 4,
                 child: Container(
-                  child: section1,
                   width: double.infinity,
                   color: Colors.transparent,
+                  child: section1,
                 )),
-            Expanded(flex: 7, child: SizedBox()),
+            const Expanded(flex: 7, child: SizedBox()),
           ],
         ),
         Container(child: section2),

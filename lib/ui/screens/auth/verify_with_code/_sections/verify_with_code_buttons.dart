@@ -9,7 +9,7 @@ class VerifyWithCodeButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomWrapWithRunSpacing(
       children: [
-        CustomFlatButton(text: 'Verify', minWidth: double.infinity),
+        const CustomFlatButton(text: 'Verify', minWidth: double.infinity),
         CustomFlatButton(
           text: 'Send again',
           primary: false,

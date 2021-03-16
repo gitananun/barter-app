@@ -5,5 +5,5 @@ class PasswordResetForm extends StatelessWidget {
   const PasswordResetForm({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => CustomPasswordInput();
+  Widget build(BuildContext context) => const CustomPasswordInput();
 }

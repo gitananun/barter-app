@@ -8,7 +8,7 @@ import 'package:barter/ui/screens/store/products/single_product/components/layou
 import 'package:flutter/material.dart';
 
 class SingleProductScreen extends StatelessWidget {
-  SingleProductScreen(this.product, {Key? key}) : super(key: key);
+  const SingleProductScreen(this.product, {Key? key}) : super(key: key);
   final Product product;
 
   @override

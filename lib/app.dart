@@ -6,7 +6,7 @@ import 'package:barter/ui/mts_theme.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
-  App({Key? key}) : super(key: key);
+  const App({Key? key}) : super(key: key);
   @override
   _AppState createState() => _AppState();
 }
@@ -17,7 +17,7 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: 'Barter',
       theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
-      initialRoute: '/splash',
+      initialRoute: '/login',
       // builder: DevicePreview.appBuilder,
       // locale: DevicePreview.locale(context),
       onGenerateRoute: CustomRouter.generateRoutes,

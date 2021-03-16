@@ -3,11 +3,8 @@ import 'package:barter/ui/utils/dialog/dialog_utils.dart';
 import 'package:flutter/material.dart';
 
 class ShowDeleteDialog {
+  ShowDeleteDialog(this.context);
   late BuildContext context;
-
-  ShowDeleteDialog(BuildContext ctx) {
-    context = ctx;
-  }
 
   void show() => DialogUtils.show(context, customDeleteAlertDialog(context));
 }

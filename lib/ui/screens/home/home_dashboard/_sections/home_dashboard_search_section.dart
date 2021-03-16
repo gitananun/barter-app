@@ -9,7 +9,7 @@ class HomeDashboardSearchSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         HomeDashboardSearchInput(),
         HomeDashboardSearchQrCodeButton(),
       ],

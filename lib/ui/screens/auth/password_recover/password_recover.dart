@@ -10,7 +10,7 @@ class PasswordRecoverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AuthScaffold(
+    return const AuthScaffold(
       body: PasswordRecoverLayout(
         children: [
           AuthFormHeading(title: 'Password recovery', subtitle: 'Enter your email to recover your password'),

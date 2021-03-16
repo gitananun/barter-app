@@ -6,7 +6,7 @@ class CustomAlertDialogContentText extends StatelessWidget {
   final BuildContext context;
 
   @override
-  Widget build(_) {
+  Widget build(BuildContext context) {
     return Text(
       text,
       textAlign: TextAlign.center,

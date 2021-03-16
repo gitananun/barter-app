@@ -8,11 +8,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomFancyFloatingActionButton extends StatefulWidget {
+  const CustomFancyFloatingActionButton({this.onPressed, this.tooltip, this.icon, Key? key}) : super(key: key);
+
   final IconData? icon;
   final String? tooltip;
   final Function()? onPressed;
-
-  CustomFancyFloatingActionButton({this.onPressed, this.tooltip, this.icon});
 
   @override
   _CustomFancyFloatingActionButtonState createState() => _CustomFancyFloatingActionButtonState();
@@ -21,8 +21,8 @@ class CustomFancyFloatingActionButton extends StatefulWidget {
 class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingActionButton>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
-  double _fabHeight = 56.0;
-  Curve _curve = Curves.ease;
+  final double _fabHeight = 56;
+  final Curve _curve = Curves.ease;
   Animation<Color?>? _buttonColor;
   Animation<Color?>? _buttonIconColor;
   late Animation<double> _animateIcon;
@@ -30,37 +30,37 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
   late AnimationController _animationController;
 
   @override
-  initState() {
-    _animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 400))
+  void initState() {
+    _animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 300))
       ..addListener(() => setState(() {}));
-    _animateIcon = Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
+    _animateIcon = Tween<double>(begin: 0, end: 1).animate(_animationController);
 
     _buttonColor = ColorTween(begin: MTStheme.primaryColor, end: Colors.white).animate(CurvedAnimation(
       parent: _animationController,
-      curve: Interval(0.00, 0.50, curve: Curves.linear),
+      curve: const Interval(0, 0.50),
     ));
 
     _buttonIconColor = ColorTween(begin: Colors.white, end: MTStheme.primaryColor).animate(CurvedAnimation(
       parent: _animationController,
-      curve: Interval(0.00, 1.00, curve: Curves.linear),
+      curve: const Interval(0, 1),
     ));
 
-    _translateButton = Tween<double>(begin: _fabHeight, end: -14.0).animate(
+    _translateButton = Tween<double>(begin: _fabHeight, end: -14).animate(
       CurvedAnimation(
         parent: _animationController,
-        curve: Interval(0.0, 0.75, curve: _curve),
+        curve: Interval(0, 0.75, curve: _curve),
       ),
     );
     super.initState();
   }
 
   @override
-  dispose() {
+  void dispose() {
     _animationController.dispose();
     super.dispose();
   }
 
-  animate() {
+  void animate() {
     !isOpened ? _animationController.forward() : _animationController.reverse();
     isOpened = !isOpened;
   }
@@ -89,8 +89,8 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
         onPressed: animate,
         highlightElevation: 0,
         backgroundColor: _buttonColor?.value,
-        shape: RoundedRectangleBorder(
-          side: BorderSide(color: MTStheme.primaryColor, width: 2.0),
+        shape: const RoundedRectangleBorder(
+          side: BorderSide(color: MTStheme.primaryColor, width: 2),
           borderRadius: BorderRadius.all(Radius.circular(100)),
         ),
         child: AnimatedIcon(
@@ -107,25 +107,25 @@ class _CustomFancyFloatingActionButtonState extends State<CustomFancyFloatingAct
       children: <Widget>[
         ///
         Transform(
-          transform: Matrix4.translationValues(0.0, _translateButton.value * 4.0, 0.0),
+          transform: Matrix4.translationValues(0, _translateButton.value * 4.0, 0),
           child: delete(),
         ),
 
         ///
         Transform(
-          transform: Matrix4.translationValues(0.0, _translateButton.value * 3.0, 0.0),
+          transform: Matrix4.translationValues(0, _translateButton.value * 3.0, 0),
           child: rate(),
         ),
 
         ///
         Transform(
-          transform: Matrix4.translationValues(0.0, _translateButton.value * 2.0, 0.0),
+          transform: Matrix4.translationValues(0, _translateButton.value * 2.0, 0),
           child: filter(),
         ),
 
         ///
         Transform(
-          transform: Matrix4.translationValues(0.0, _translateButton.value, 0.0),
+          transform: Matrix4.translationValues(0, _translateButton.value, 0),
           child: add(),
         ),
 

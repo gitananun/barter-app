@@ -14,7 +14,7 @@ class SliderIndicators extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [for (int i = 0; i < totalPages; i++) singleIndicator ?? SingleIndicator(page == i)],
+      children: [for (int i = 0; i < totalPages; i++) singleIndicator ?? SingleIndicator(isActive: page == i)],
     );
   }
 }

@@ -5,5 +5,5 @@ class PasswordRecoverForm extends StatelessWidget {
   const PasswordRecoverForm({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => CustomEmailPhoneInput();
+  Widget build(BuildContext context) => const CustomEmailPhoneInput();
 }

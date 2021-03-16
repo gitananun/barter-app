@@ -21,7 +21,7 @@ class OnBoardingCustomCircularButton extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: _btnPadding,
-        child: Icon(
+        child: const Icon(
           Icons.navigate_next,
           size: OnBoardingStyle.nextBtnIconSize,
           color: Colors.white,

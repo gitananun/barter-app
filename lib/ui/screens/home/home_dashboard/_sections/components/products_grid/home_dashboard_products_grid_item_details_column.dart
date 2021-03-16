@@ -32,11 +32,11 @@ class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             text: TextSpan(
-              text: state + ' ',
+              text: '$state ',
               style: _themeData.textTheme.overline?.apply(fontSizeFactor: 0.8),
               children: <TextSpan>[
-                TextSpan(text: 'in', style: TextStyle(fontWeight: FontWeight.bold)),
-                TextSpan(text: ' ' + (country)),
+                const TextSpan(text: 'in', style: TextStyle(fontWeight: FontWeight.bold)),
+                TextSpan(text: ' $country'),
               ],
             ),
           )

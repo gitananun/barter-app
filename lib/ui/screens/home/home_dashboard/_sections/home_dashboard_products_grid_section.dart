@@ -10,7 +10,7 @@ class HomeDashboardProductsGridSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return HomeDashboardSectionTitleWithContentWrapper(
       children: [
-        HomeDashboardSectionTitleRow(title: 'Best Offers', moreText: 'see more'),
+        const HomeDashboardSectionTitleRow(title: 'Best Offers', moreText: 'see more'),
         HomeDashboardProductsGrid(),
       ],
     );

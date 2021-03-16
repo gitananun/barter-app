@@ -28,10 +28,13 @@ class NotificationListTile extends StatelessWidget {
       dense: true,
       isThreeLine: isThreeLine ?? true,
       visualDensity: VisualDensity.compact,
-      trailing: CustomCupertinoSwitchResizeable(switchValue ?? true, onSwitch ?? (_) {}),
-      title: title != null ? Text(title ?? '', style: _textTheme.subtitle2) : Text('title'),
-      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath ?? '') : FlutterLogo(),
-      subtitle: subtitle != null ? Text(subtitle ?? '', style: _textTheme.overline) : Text('subtitle'),
+      trailing: CustomCupertinoSwitchResizeable(
+        onSwitch ?? (_) {},
+        value: switchValue ?? true,
+      ),
+      title: title != null ? Text(title ?? '', style: _textTheme.subtitle2) : const Text('title'),
+      leading: leadingImgPath != null ? SvgPicture.asset(leadingImgPath ?? '') : const FlutterLogo(),
+      subtitle: subtitle != null ? Text(subtitle ?? '', style: _textTheme.overline) : const Text('subtitle'),
     );
   }
 }

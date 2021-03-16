@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomPasswordInput extends StatefulWidget {
-  CustomPasswordInput({Key? key, this.controller}) : super(key: key);
+  const CustomPasswordInput({Key? key, this.controller}) : super(key: key);
   final TextEditingController? controller;
 
   @override

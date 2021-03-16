@@ -12,7 +12,6 @@ class PasswordRecoverLayout extends StatelessWidget {
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: children ?? [],
         ),
       ),

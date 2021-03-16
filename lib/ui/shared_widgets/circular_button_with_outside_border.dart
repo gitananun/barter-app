@@ -30,9 +30,9 @@ class CustomCircularButtonWithOutsideBorder extends StatelessWidget {
         child: Material(
           color: color,
           child: InkWell(
-            splashColor: splashColor ?? null,
-            child: child,
+            splashColor: splashColor,
             onTap: onTap ?? () {},
+            child: child,
           ),
         ),
       ),

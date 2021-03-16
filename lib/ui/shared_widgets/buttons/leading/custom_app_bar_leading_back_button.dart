@@ -8,8 +8,8 @@ class CustomAppBarLeadingBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Icon(FontAwesomeIcons.chevronLeft, color: MTStheme.primaryTextColor),
       onTap: () => Navigator.pop(context),
+      child: const Icon(FontAwesomeIcons.chevronLeft, color: MTStheme.primaryTextColor),
     );
   }
 }

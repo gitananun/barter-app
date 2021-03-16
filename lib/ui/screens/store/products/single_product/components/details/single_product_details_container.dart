@@ -8,7 +8,7 @@ import 'package:barter/ui/shared_widgets/sheets/draggable/custom_draggable_scrol
 import 'package:flutter/material.dart';
 
 class SingleProductDetailsContainer extends StatelessWidget {
-  SingleProductDetailsContainer({
+  const SingleProductDetailsContainer({
     Key? key,
     required this.likes,
     required this.title,
@@ -28,7 +28,7 @@ class SingleProductDetailsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomDraggableScrollableSheetWithDecoratedContainer(
       minChildSize: 0.6,
-      maxChildSize: 1.0,
+      maxChildSize: 1,
       initialChildSize: 0.6,
       children: [
         SingleProductDetailsTitleStarsFavoriteRow(title: title, rating: rating),

@@ -16,12 +16,12 @@ class SignupScreen extends StatelessWidget {
     return AuthScaffold(
       body: SignupLayout(
         children: [
-          AuthFormHeading(title: 'Welcome!', subtitle: 'Please enter your account here'),
-          SignupForm(),
-          CustomFlatButton(text: 'Sign Up', minWidth: double.infinity),
-          ContinueWithSocialText(),
+          const AuthFormHeading(title: 'Welcome!', subtitle: 'Please enter your account here'),
+          const SignupForm(),
+          const CustomFlatButton(text: 'Sign Up', minWidth: double.infinity),
+          const ContinueWithSocialText(),
           ...SocialButtonsList.getButtonsIterable(context),
-          AuthActionSuggestionRichText(
+          const AuthActionSuggestionRichText(
             text: 'Already have an account? ',
             actionNameText: 'Sign In',
             path: '/login',

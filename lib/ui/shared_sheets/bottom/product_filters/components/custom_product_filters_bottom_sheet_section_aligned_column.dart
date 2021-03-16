@@ -20,7 +20,7 @@ class CustomProductFiltersBottomSheetSectionAlignedColumn extends StatelessWidge
         children: [
           Text(title ?? '', style: Theme.of(context).textTheme.bodyText2?.apply(fontWeightDelta: 1)),
           SizedBox(height: spaceBetweenTitleAndBody),
-          body ?? SizedBox(),
+          body ?? const SizedBox(),
         ],
       ),
     );

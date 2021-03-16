@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class LoginLayout extends StatelessWidget {
-  LoginLayout({
+  const LoginLayout({
     Key? key,
     required this.section1,
     required this.section2,
@@ -19,9 +19,9 @@ class LoginLayout extends StatelessWidget {
     return AuthMainLayout(
       child: Column(
         children: [
-          Expanded(flex: 1, child: section1 ?? SizedBox()),
-          Expanded(flex: 5, child: section2 ?? SizedBox()),
-          Expanded(flex: 4, child: section3 ?? SizedBox()),
+          Expanded(child: section1 ?? const SizedBox()),
+          Expanded(flex: 5, child: section2 ?? const SizedBox()),
+          Expanded(flex: 4, child: section3 ?? const SizedBox()),
         ],
       ),
     );

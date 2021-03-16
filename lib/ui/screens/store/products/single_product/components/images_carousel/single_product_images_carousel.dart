@@ -4,7 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class SingleProductImagesCarousel extends StatefulWidget {
-  SingleProductImagesCarousel(this.images, {Key? key}) : super(key: key);
+  const SingleProductImagesCarousel(this.images, {Key? key}) : super(key: key);
   final List<String>? images;
 
   @override
@@ -22,7 +22,7 @@ class _SingleProductImagesCarouselState extends State<SingleProductImagesCarouse
     _imagesMap = widget.images!.asMap();
   }
 
-  void _onPageChanged(int id, _) => setState(() => _activePage = id);
+  void _onPageChanged(int id, dynamic _) => setState(() => _activePage = id);
 
   @override
   Widget build(BuildContext context) {

@@ -24,7 +24,7 @@ class _AppOriginatorState extends State<AppOriginator> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: MTStheme.primaryColor,
     ));
@@ -34,6 +34,6 @@ class _AppOriginatorState extends State<AppOriginator> {
       DeviceOrientation.portraitDown,
     ]);
 
-    return MaterialApp(home: App());
+    return const MaterialApp(home: App());
   }
 }

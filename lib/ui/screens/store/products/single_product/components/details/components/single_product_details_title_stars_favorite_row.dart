@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SingleProductDetailsTitleStarsFavoriteRow extends StatelessWidget {
-  SingleProductDetailsTitleStarsFavoriteRow({Key? key, required this.title, required this.rating}) : super(key: key);
+  const SingleProductDetailsTitleStarsFavoriteRow({Key? key, required this.title, required this.rating})
+      : super(key: key);
   final String title;
   final double rating;
 
@@ -24,7 +25,7 @@ class SingleProductDetailsTitleStarsFavoriteRow extends StatelessWidget {
             SingleProductDetailsStars(rating),
           ],
         ),
-        SingleProductDetailsCircularIcon(FontAwesomeIcons.solidHeart)
+        const SingleProductDetailsCircularIcon(FontAwesomeIcons.solidHeart)
       ],
     );
   }

@@ -10,10 +10,10 @@ class PasswordValidationColumn extends StatelessWidget {
     return Wrap(
       runSpacing: 10,
       children: [
-        Text('Your password must contain'),
+        const Text('Your password must contain'),
         Wrap(
           runSpacing: 3,
-          children: [
+          children: const [
             CustomValidationListTile(
               title: 'At least 6 characters',
               leadingIcon: FontAwesomeIcons.check,

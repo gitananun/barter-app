@@ -24,7 +24,7 @@ class _HomeDashboardCategoriesHorizontalListViewState extends State<HomeDashboar
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: _categories.length,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.all(5),
         itemBuilder: (BuildContext context, int i) {

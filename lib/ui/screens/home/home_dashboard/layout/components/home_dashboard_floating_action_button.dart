@@ -11,11 +11,11 @@ class HomeDashboardFloatingActionButton extends StatelessWidget {
     final ThemeData _themeData = Theme.of(context);
 
     return FloatingActionButton(
-      child: FaIcon(FontAwesomeIcons.plus, color: Colors.white),
       elevation: 0,
       onPressed: () => DialogUtils.show(context, customFeedbackAlertDialog(context)),
       highlightElevation: 0,
       backgroundColor: _themeData.primaryColor,
+      child: const FaIcon(FontAwesomeIcons.plus, color: Colors.white),
     );
   }
 }

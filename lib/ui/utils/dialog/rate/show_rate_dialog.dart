@@ -3,11 +3,8 @@ import 'package:barter/ui/utils/dialog/dialog_utils.dart';
 import 'package:flutter/material.dart';
 
 class ShowRateDialog {
-  late BuildContext context;
-
-  ShowRateDialog(BuildContext ctx) {
-    context = ctx;
-  }
+  ShowRateDialog(this.context);
+  BuildContext context;
 
   void show() => DialogUtils.show(context, customFeedbackAlertDialog(context));
 }

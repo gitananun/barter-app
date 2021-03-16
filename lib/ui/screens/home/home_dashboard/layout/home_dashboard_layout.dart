@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 @immutable
 class HomeDashboardLayout extends StatelessWidget {
-  HomeDashboardLayout({Key? key, required this.children}) : super(key: key);
+  const HomeDashboardLayout({Key? key, required this.children}) : super(key: key);
   final List<Widget>? children;
 
   @override
@@ -14,7 +14,6 @@ class HomeDashboardLayout extends StatelessWidget {
           padding: HomeDashboardStyle.contentPadding,
           child: Wrap(
             runSpacing: DoubleStyle.spaceBetweenSection,
-            runAlignment: WrapAlignment.start,
             children: children ?? [],
           ),
         ),

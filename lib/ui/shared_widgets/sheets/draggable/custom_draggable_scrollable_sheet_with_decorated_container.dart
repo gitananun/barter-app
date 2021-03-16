@@ -5,7 +5,7 @@ import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidget {
-  CustomDraggableScrollableSheetWithDecoratedContainer({
+  const CustomDraggableScrollableSheetWithDecoratedContainer({
     Key? key,
     required this.children,
     required this.minChildSize,
@@ -29,24 +29,24 @@ class CustomDraggableScrollableSheetWithDecoratedContainer extends StatelessWidg
       initialChildSize: initialChildSize,
       maxChildSize: maxChildSize,
       child: Container(
-        margin: EdgeInsets.only(top: 5),
+        margin: const EdgeInsets.only(top: 5),
         padding: EdgeInsetsStyle.contentPadding.copyWith(top: 5, bottom: 15),
-        child: Column(
-          children: [
-            SizedBox(child: Divider(), width: DoubleStyle.sheetDividerWidth),
-            Expanded(
-              child: Wrap(
-                runSpacing: 10,
-                children: children,
-                runAlignment: runAlignment,
-              ),
-            )
-          ],
-        ),
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [BoxShadowStyle.draggableBottomSheetBoxShadow],
           borderRadius: BorderRadius.only(topLeft: _radius, topRight: _radius),
+        ),
+        child: Column(
+          children: [
+            const SizedBox(width: DoubleStyle.sheetDividerWidth, child: Divider()),
+            Expanded(
+              child: Wrap(
+                runSpacing: 10,
+                runAlignment: runAlignment,
+                children: children,
+              ),
+            )
+          ],
         ),
       ),
     );

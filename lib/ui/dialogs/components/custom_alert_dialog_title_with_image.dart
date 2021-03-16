@@ -14,7 +14,7 @@ Widget customAlertDialogTitleWithImage(
     children: [
       Align(
         child: Image.asset(
-          Paths.DIALOG_ASSETS + (imageTitle),
+          Paths.DIALOG_ASSETS + imageTitle,
           width: _themeData.textTheme.headline1?.fontSize,
         ),
       ),

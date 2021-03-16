@@ -9,9 +9,9 @@ class CustomAnimatedOpacity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
-      child: child,
       opacity: condition ? 0 : 1,
       duration: DurationStyle.animationDuration,
+      child: child,
     );
   }
 }

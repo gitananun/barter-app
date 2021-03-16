@@ -8,7 +8,7 @@ class PasswordResetButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomWrapWithRunSpacing(
+    return const CustomWrapWithRunSpacing(
       children: [
         CustomFlatButton(text: 'Save new password', minWidth: double.infinity),
         BackToLoginButton(),

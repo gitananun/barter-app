@@ -4,7 +4,7 @@ import 'package:barter/ui/shared_widgets/containers/custom_wrap_with_runspacing.
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
-  LoginForm({Key? key}) : super(key: key);
+  const LoginForm({Key? key}) : super(key: key);
 
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -17,7 +17,7 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: CustomWrapWithRunSpacing(
+      child: const CustomWrapWithRunSpacing(
         children: [
           CustomEmailPhoneInput(),
           CustomPasswordInput(),

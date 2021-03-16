@@ -12,14 +12,13 @@ class HomeDashboardScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: body,
-      bottomNavigationBar: CustomBottomNavigationBar(),
-      floatingActionButton: CustomFancyFloatingActionButton(),
+      bottomNavigationBar: const CustomBottomNavigationBar(),
+      floatingActionButton: const CustomFancyFloatingActionButton(),
       appBar: AppBar(
         elevation: 0,
-        primary: true,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: HomeDashboardAppBarTitle(),
+        title: const HomeDashboardAppBarTitle(),
         backgroundColor: Colors.transparent,
         actions: HomeDashboardAppBarActions(context).getActions(),
       ),

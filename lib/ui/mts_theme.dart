@@ -91,14 +91,14 @@ class MTStheme {
       indicatorColor: primaryTextColor,
       disabledColor: secondaryTextColor,
       scaffoldBackgroundColor: canvasColor,
-      buttonTheme: ButtonThemeData(buttonColor: primaryColor),
+      buttonTheme: const ButtonThemeData(buttonColor: primaryColor),
       sliderTheme: SliderThemeData(
         trackHeight: 8,
         valueIndicatorColor: primaryColor,
         tickMarkShape: SliderTickMarkShape.noTickMark,
         valueIndicatorTextStyle: _textTheme.overline?.apply(color: Colors.white),
       ),
-      pageTransitionsTheme: PageTransitionsTheme(builders: {
+      pageTransitionsTheme: const PageTransitionsTheme(builders: {
         TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
         TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
       }),

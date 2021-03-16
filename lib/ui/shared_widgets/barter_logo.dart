@@ -7,9 +7,6 @@ class BarterLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      Paths.ASSETS_IMAGES + 'logo.svg',
-      fit: BoxFit.contain,
-    );
+    return SvgPicture.asset('${Paths.ASSETS_IMAGES}logo.svg');
   }
 }

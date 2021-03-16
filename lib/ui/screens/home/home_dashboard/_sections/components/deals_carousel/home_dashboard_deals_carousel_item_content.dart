@@ -12,8 +12,8 @@ class HomeDashboardDealsCarouselItemContent extends StatelessWidget {
       padding: const EdgeInsets.all(15),
       child: Row(
         children: [
-          HomeDashboardDealsCarouselItemContainerLeftSide(),
-          Expanded(flex: 6, child: Image.asset(Paths.DEALS_CAROUSEL_ASSETS + 'watches.png', fit: BoxFit.contain)),
+          const HomeDashboardDealsCarouselItemContainerLeftSide(),
+          Expanded(flex: 6, child: Image.asset('${Paths.DEALS_CAROUSEL_ASSETS}watches.png', fit: BoxFit.contain)),
         ],
       ),
     );

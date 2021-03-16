@@ -27,7 +27,7 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
           'We are always trying to improve what we do and your feedback is invaluable!',
         ),
 
-        Divider(),
+        const Divider(),
 
         /// Rating Stars
         Row(
@@ -38,7 +38,7 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
                 onTap: () => _rate(i),
                 child: Container(
                   padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.symmetric(horizontal: 0),
+                  margin: const EdgeInsets.symmetric(),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: i <= _rating ? _themeData.primaryColor : _themeData.accentColor,
@@ -53,12 +53,12 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
           ],
         ),
 
-        Divider(),
+        const Divider(),
 
         /// Submit Button using [context] passed as an argument
         /// [AnimatedCrossFade] as disabled and enabled
         AnimatedCrossFade(
-          duration: Duration(milliseconds: 100),
+          duration: const Duration(milliseconds: 100),
           crossFadeState: _rating > 0 ? CrossFadeState.showFirst : CrossFadeState.showSecond,
           firstChild: Center(
             child: CustomFlatButton(
