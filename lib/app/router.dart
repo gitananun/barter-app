@@ -22,8 +22,6 @@ class CustomRouter {
 
     switch (settings.name) {
       case '/':
-        return _returnScreen(const HomeDashboardScreen());
-
       case '/onboarding':
         return _returnScreen(const OnBoardingScreen());
 
