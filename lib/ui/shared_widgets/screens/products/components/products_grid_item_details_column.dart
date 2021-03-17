@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeDashboardProductsGridItemDetailsColumn extends StatelessWidget {
-  const HomeDashboardProductsGridItemDetailsColumn({
+class ProductsGridItemDetailsColumn extends StatelessWidget {
+  const ProductsGridItemDetailsColumn({
     Key? key,
     required this.title,
     required this.state,

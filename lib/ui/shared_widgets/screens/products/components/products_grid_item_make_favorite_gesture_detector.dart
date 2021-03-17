@@ -2,15 +2,14 @@ import 'package:barter/ui/shared_widgets/comfort/custom_large_clickable_gesture_
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeDashboardProductsGridItemMakeFavoriteGestureDetector extends StatefulWidget {
-  const HomeDashboardProductsGridItemMakeFavoriteGestureDetector({Key? key}) : super(key: key);
+class ProductsGridItemMakeFavoriteGestureDetector extends StatefulWidget {
+  const ProductsGridItemMakeFavoriteGestureDetector({Key? key}) : super(key: key);
   @override
-  _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState createState() =>
-      _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState();
+  _ProductsGridItemMakeFavoriteGestureDetectorState createState() =>
+      _ProductsGridItemMakeFavoriteGestureDetectorState();
 }
 
-class _HomeDashboardProductsGridItemMakeFavoriteGestureDetectorState
-    extends State<HomeDashboardProductsGridItemMakeFavoriteGestureDetector> {
+class _ProductsGridItemMakeFavoriteGestureDetectorState extends State<ProductsGridItemMakeFavoriteGestureDetector> {
   bool isFavorite = false;
 
   void makeFavorite() => setState(() => isFavorite = !isFavorite);
