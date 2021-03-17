@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:barter/models/store/product/product.dart';
 
-import 'components/products_grid_item_details_column.dart';
-import 'components/products_grid_item_image_container.dart';
-import 'components/products_grid_item_make_favorite_gesture_detector.dart';
+import '../components/products_grid_item_details_column.dart';
+import '../components/products_grid_item_image_container.dart';
+import '../components/products_grid_item_make_favorite_gesture_detector.dart';
 
 class ProductsGridSingleItem extends StatelessWidget {
   const ProductsGridSingleItem({Key? key, required this.product}) : super(key: key);
