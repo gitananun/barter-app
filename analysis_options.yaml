@@ -92,8 +92,12 @@ linter:
     # Dart does not have two possible type declarations for the same object
     implicit_dynamic_map_literal: false
 
+    # If TRUE, it will block to create a simple data inside the widget
     avoid_field_initializers_in_const_classes: false
 
+    # Helps to have cleaner ui inside the build method mainly.
+    # Local variables such as private properties in classes, we use only inside the same block functions.
+    # So, simple dynamic type feature of Dart is enough
     omit_local_variable_types: false
 
     # It is just convenient to clearly see that the value is a constant one
