@@ -1,9 +1,11 @@
+import 'package:barter/app/assertions/routing/assertions.dart';
+import 'package:barter/app/middleware/single_product_middleware.dart';
+import 'package:barter/repositories/store/memory_product_repository.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/system/splash.dart';
 
 import 'package:barter/exceptions/ui/routing/missing_route_exception.dart';
-import 'package:barter/models/store/product/product.dart';
 import 'package:barter/ui/screens/auth/login/login.dart';
 import 'package:barter/ui/screens/auth/password_recover/password_recover.dart';
 import 'package:barter/ui/screens/auth/password_reset/password_reset.dart';
@@ -43,7 +45,8 @@ class CustomRouter {
 
       /// Store Routes
       case '/product':
-        return _returnScreen(SingleProductScreen(_arguments as Product));
+        RoutingAssertions.assertArguments(SingleProductMiddleware.isValid(_arguments));
+        return _returnScreen(SingleProductScreen(MemoryProductRepository().findByUuid(_arguments as int)));
 
       /// System Routes
       case '/splash':

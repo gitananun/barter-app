@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 Widget customAlertDialogTitleWithImage(
   BuildContext context, {
-  required String imageTitle,
   required String title,
+  required String imageTitle,
+  String assetsPath = Paths.DIALOG_ASSETS,
 }) {
   final ThemeData _themeData = Theme.of(context);
 
@@ -14,7 +15,7 @@ Widget customAlertDialogTitleWithImage(
     children: [
       Align(
         child: Image.asset(
-          Paths.DIALOG_ASSETS + imageTitle,
+          assetsPath + imageTitle,
           width: _themeData.textTheme.headline1?.fontSize,
         ),
       ),

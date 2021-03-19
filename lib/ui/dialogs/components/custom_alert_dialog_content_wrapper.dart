@@ -9,6 +9,7 @@ class CustomAlertDialogContentWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       runSpacing: DoubleStyle.spaceBetweenSection,
+      alignment: WrapAlignment.center,
       children: children ?? [],
     );
   }

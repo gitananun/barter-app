@@ -10,7 +10,7 @@ class ProductsGridSingleItemWithGestureDetector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPress: () => ShowProductDialog(context).show(),
+      onLongPress: () => ShowProductDialog(context).show(product),
       child: ProductsGridSingleItem(product: product),
     );
   }

@@ -2,6 +2,8 @@ import 'package:barter/ui/enums/device_screen_size.dart';
 import 'package:flutter/material.dart';
 
 class MTStheme {
+  static const double _height = 1.6;
+
   static const Color canvasColor = Colors.white;
   static const Color hintColor = secondaryTextColor;
   static const Color errorColor = Color(0xFFe02a1f);
@@ -26,7 +28,13 @@ class MTStheme {
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 14),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 14),
     caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 12),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 12),
+    overline: TextStyle(
+      color: secondaryTextColor,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
+      fontSize: 12,
+      height: _height,
+    ),
   );
 
   static const TextTheme customMediumTextTheme = TextTheme(
@@ -42,7 +50,13 @@ class MTStheme {
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 22),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 22),
     caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 18),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 18),
+    overline: TextStyle(
+      color: secondaryTextColor,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
+      fontSize: 18,
+      height: _height,
+    ),
   );
 
   static const TextTheme customLargeTextTheme = TextTheme(
@@ -58,7 +72,13 @@ class MTStheme {
     bodyText2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 34),
     button: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 34),
     caption: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 32),
-    overline: TextStyle(color: secondaryTextColor, fontWeight: FontWeight.w400, letterSpacing: 0, fontSize: 32),
+    overline: TextStyle(
+      color: secondaryTextColor,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
+      fontSize: 32,
+      height: _height,
+    ),
   );
 
   static ThemeData customThemeData(DeviceScreenSize screenSize) {

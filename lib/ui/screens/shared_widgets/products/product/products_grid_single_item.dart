@@ -1,3 +1,4 @@
+import 'package:barter/ui/navigators/custom_navigators.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/models/store/product/product.dart';
@@ -16,7 +17,7 @@ class ProductsGridSingleItem extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, '/product', arguments: product),
+          onTap: () => CustomNavigators.singleProduct(context, product.id),
           child: Container(
             padding: const EdgeInsets.only(top: 10),
             decoration: BoxDecoration(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SingleProductDetailsStars extends StatelessWidget {
-  const SingleProductDetailsStars(this.rating, {Key? key}) : super(key: key);
+class RatingStarsRow extends StatelessWidget {
+  const RatingStarsRow(this.rating, {Key? key}) : super(key: key);
   final double rating;
 
   @override

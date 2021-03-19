@@ -9,7 +9,9 @@ class CustomAlertDialogContentText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      maxLines: 4,
       textAlign: TextAlign.center,
+      overflow: TextOverflow.ellipsis,
       style: Theme.of(context).textTheme.overline?.apply(fontWeightDelta: 1),
     );
   }

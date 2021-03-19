@@ -105,3 +105,5 @@ linter:
 
     # Outside of lib folder there are always widgets that must have the same naming conventions for me
     lowercase_with_underscores: false
+
+    avoid_positional_boolean_parameters: false
