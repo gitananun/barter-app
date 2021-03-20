@@ -18,7 +18,7 @@ final List<Product> products = [
 
   ///
   Product(
-    id: 1,
+    id: 2,
     rating: 3,
     title: 'Harry Potter',
     images: ['potter.png'],
@@ -31,7 +31,7 @@ final List<Product> products = [
 
   ///
   Product(
-    id: 1,
+    id: 3,
     rating: 1,
     likes: 900,
     title: 'Tesla',
@@ -45,7 +45,7 @@ final List<Product> products = [
 
   ///
   Product(
-    id: 1,
+    id: 4,
     rating: 5,
     likes: 935,
     modelName: '4',
