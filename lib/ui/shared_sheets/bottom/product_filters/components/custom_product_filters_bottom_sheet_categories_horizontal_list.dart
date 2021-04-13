@@ -8,18 +8,16 @@ class CustomProductFiltersBottomSheetCategoriesHorizontalList extends StatelessW
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 45,
-      padding: const EdgeInsets.symmetric(vertical: 5),
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: categories.length,
-        scrollDirection: Axis.horizontal,
-        physics: const BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int i) => CustomProductFiltersBottomSheetCategoriesGridItem(
-          categories[i],
-          active: i == 0,
-        ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          for (int i = 0; i < categories.length; i++)
+            CustomProductFiltersBottomSheetCategoriesGridItem(
+              categories[i],
+              active: i == 0,
+            ),
+        ],
       ),
     );
   }

@@ -20,24 +20,3 @@ class CustomButtonStyle {
     return height;
   }
 }
-
-@immutable
-class HorizontalCategoriesListViewHeightResponsive {
-  static double getHorizontalHeight(BuildContext context) {
-    double height;
-    final _screenHeight = MediaQuery.of(context).size.height;
-
-    switch (DeviceScreenHelper.getDeviceScreenSize(context)) {
-      case DeviceScreenSize.Large:
-        height = _screenHeight * 0.10;
-        break;
-      case DeviceScreenSize.Medium:
-        height = _screenHeight * 0.12;
-        break;
-      default:
-        height = _screenHeight * 0.15;
-        break;
-    }
-    return height;
-  }
-}

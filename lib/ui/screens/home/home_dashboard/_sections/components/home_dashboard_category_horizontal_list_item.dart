@@ -27,6 +27,7 @@ class HomeDashboardCategoryHorizontalListItem extends StatelessWidget {
       onTap: onTap,
       child: SingleChildScrollView(
         child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 8),
           margin: EdgeInsetsStyle.horizontalListItemsMargin,
           child: Column(
             children: [
