@@ -18,7 +18,7 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
       children: [
         const CustomBottomSheetTitleWithDivider(title: 'add filter'),
         CustomProductFiltersBottomSheetSectionAlignedColumn(
-          title: 'Category',
+          title: 'Categories',
           body: CustomProductFiltersBottomSheetCategoriesHorizontalList(_categories),
         ),
         const CustomProductFiltersBottomSheetSectionAlignedColumn(
