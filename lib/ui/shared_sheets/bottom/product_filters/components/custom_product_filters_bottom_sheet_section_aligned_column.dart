@@ -5,7 +5,7 @@ class CustomProductFiltersBottomSheetSectionAlignedColumn extends StatelessWidge
     Key? key,
     this.title,
     required this.body,
-    this.spaceBetweenTitleAndBody = 15,
+    this.spaceBetweenTitleAndBody = 10,
   }) : super(key: key);
   final Widget? body;
   final String? title;

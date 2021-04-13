@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheet extends StatelessWidget {
   CustomProductFiltersBottomSheet({Key? key}) : super(key: key);
-  final Widget _space = const SizedBox(height: 20);
   final List<Category> _categories = categories;
 
   @override
@@ -22,14 +21,11 @@ class CustomProductFiltersBottomSheet extends StatelessWidget {
           title: 'Category',
           body: CustomProductFiltersBottomSheetCategoriesHorizontalList(_categories),
         ),
-        _space,
         const CustomProductFiltersBottomSheetSectionAlignedColumn(
           title: 'Price Estimation',
           body: CustomProductFiltersBottomSheetPriceRangeSlider(),
         ),
-        const CustomProductFiltersBottomSheetSectionAlignedColumn(
-          body: CustomCancelApplyButtonsRow(applyText: 'Filter'),
-        ),
+        const CustomCancelApplyButtonsRow(applyText: 'Filter'),
       ],
     );
   }

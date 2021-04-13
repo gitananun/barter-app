@@ -3,8 +3,8 @@ import 'package:barter/ui/styles/types/edge_insets/edge_insets_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomSheetMainWrapper extends StatelessWidget {
-  const CustomBottomSheetMainWrapper({Key? key, this.children}) : super(key: key);
-  final List<Widget>? children;
+  const CustomBottomSheetMainWrapper({Key? key, required this.children}) : super(key: key);
+  final List<Widget> children;
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,9 @@ class CustomBottomSheetMainWrapper extends StatelessWidget {
       padding: EdgeInsetsStyle.bottomModalSheetPadding,
       decoration: BoxDecoration(borderRadius: BorderRadiusStyle.bottomSheetBorderRadius, color: Colors.white),
       child: Wrap(
-        children: [
-          Column(
-            children: children ?? [],
-          )
-        ],
+        alignment: WrapAlignment.center,
+        runSpacing: 30,
+        children: children,
       ),
     );
   }
