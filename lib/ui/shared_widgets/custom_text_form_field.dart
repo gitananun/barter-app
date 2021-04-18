@@ -5,23 +5,24 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     Key? key,
-    this.validator,
-    this.controller,
-    this.inputDecoration,
-    this.suffixIcon,
-    this.prefixIcon,
-    this.helperText,
-    this.hintText,
     this.width,
     this.height,
+    this.hintText,
+    this.validator,
     this.maxLength,
-    this.suffixOnPressed,
-    this.counterText = '',
-    this.textAlign = TextAlign.start,
-    this.readOnly = false,
-    this.obscureText = false,
+    this.helperText,
+    this.suffixIcon,
+    this.prefixIcon,
+    this.controller,
     this.isDense = true,
+    this.inputDecoration,
+    this.suffixOnPressed,
+    this.readOnly = false,
+    this.counterText = '',
     this.borderRadius = 30,
+    this.obscureText = false,
+    this.verticalContentPadding,
+    this.textAlign = TextAlign.start,
   }) : super(key: key);
   final bool readOnly;
   final bool isDense;
@@ -37,6 +38,7 @@ class CustomTextFormField extends StatelessWidget {
   final double borderRadius;
   final TextAlign textAlign;
   final VoidCallback? suffixOnPressed;
+  final double? verticalContentPadding;
   final String Function(String?)? validator;
   final TextEditingController? controller;
   final InputDecoration? inputDecoration;
@@ -77,16 +79,25 @@ class CustomTextFormField extends StatelessWidget {
                   : null,
 
               ///
-              prefixIcon:
-                  _isPrefix ? InputIconPadding(child: Icon(prefixIcon, color: _themeData.indicatorColor)) : null,
+              prefixIcon: _isPrefix
+                  ? InputIconPadding(
+                      child: Icon(
+                        prefixIcon,
+                        color: _themeData.indicatorColor,
+                      ),
+                    )
+                  : null,
 
               ///
               hintText: hintText,
-              hintStyle: _themeData.textTheme.overline,
               helperText: helperText,
-              contentPadding: FormStyle.contentPadding,
+              hintStyle: _themeData.textTheme.overline,
               border: FormStyle.inputBorder(borderRadius: borderRadius),
               enabledBorder: FormStyle.inputBorder(color: _themeData.accentColor, borderRadius: borderRadius),
+              contentPadding: FormStyle.contentPadding.copyWith(
+                top: verticalContentPadding,
+                bottom: verticalContentPadding,
+              ),
             ),
       ),
     );

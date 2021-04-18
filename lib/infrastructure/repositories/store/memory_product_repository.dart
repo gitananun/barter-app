@@ -1,6 +1,6 @@
 import 'package:barter/data/mock/products.dart';
-import 'package:barter/models/store/product/product.dart';
-import 'package:barter/repositories/store/product_repository_interface.dart';
+import 'package:barter/infrastructure/repositories/store/product_repository_interface.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 
 class MemoryProductRepository implements ProductRepositoryInterface {
   MemoryProductRepository() {

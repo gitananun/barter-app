@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/product.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 import 'package:barter/ui/screens/shared_widgets/products/product/products_grid_single_item_with_gesture_detector.dart';
 import 'package:flutter/material.dart';
 

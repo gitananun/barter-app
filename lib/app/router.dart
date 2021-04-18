@@ -1,6 +1,7 @@
 import 'package:barter/app/assertions/routing/assertions.dart';
 import 'package:barter/app/middleware/single_product_middleware.dart';
-import 'package:barter/repositories/store/memory_product_repository.dart';
+import 'package:barter/infrastructure/repositories/store/memory_product_repository.dart';
+import 'package:barter/ui/screens/search/search.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/system/splash.dart';
@@ -43,12 +44,14 @@ class CustomRouter {
       case '/home_dashboard':
         return _returnScreen(const HomeDashboardScreen());
 
-      /// Store Routes
+      /// [Store] Routes
       case '/product':
         RoutingAssertions.assertArguments(SingleProductMiddleware.isValid(_arguments));
         return _returnScreen(SingleProductScreen(MemoryProductRepository().findByUuid(_arguments as int)));
+      case '/search':
+        return _returnScreen(const SearchScreen());
 
-      /// System Routes
+      /// [System] Routes
       case '/splash':
         return _returnScreen(const SplashScreen());
       default:

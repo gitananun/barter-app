@@ -2,15 +2,16 @@ import 'package:barter/ui/shared_widgets/custom_circular_container.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeDashboardSearchQrCodeButton extends StatelessWidget {
-  const HomeDashboardSearchQrCodeButton({Key? key}) : super(key: key);
+class CustomSearchQrCodeButton extends StatelessWidget {
+  const CustomSearchQrCodeButton({Key? key, required this.onTap}) : super(key: key);
+  final GestureTapCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    return Expanded(
-      flex: 2,
+    return GestureDetector(
+      onTap: onTap,
       child: CustomCircularContainer(
         alignment: Alignment.center,
         bgColor: _themeData.primaryColor,

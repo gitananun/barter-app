@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/product.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/single_product_details_container.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/images_carousel/components/single_product_single_image.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/images_carousel/single_product_images_carousel.dart';

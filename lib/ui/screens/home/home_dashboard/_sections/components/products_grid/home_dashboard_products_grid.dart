@@ -1,5 +1,5 @@
 import 'package:barter/data/mock/products.dart';
-import 'package:barter/models/store/product/product.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/products_grid/home_dashboard_products_grid_item.dart';
 import 'package:flutter/material.dart';
 

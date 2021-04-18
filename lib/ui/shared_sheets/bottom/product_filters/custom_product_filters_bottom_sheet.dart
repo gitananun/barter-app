@@ -1,5 +1,5 @@
 import 'package:barter/data/mock/categories.dart';
-import 'package:barter/models/store/product/specifications/category.dart';
+import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/ui/shared_widgets/buttons_groups/custom_cancel_apply_buttons_row.dart';
 import 'package:barter/ui/shared_widgets/sheets/bottom/custom_bottom_sheet_main_wrapper.dart';
 import 'package:barter/ui/shared_widgets/sheets/bottom/custom_bottom_sheet_title_with_divider.dart';

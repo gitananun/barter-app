@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/product.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 import 'package:barter/paths.dart';
 import 'package:barter/ui/dialogs/components/custom_alert_dialog_title_with_image.dart';
 import 'package:barter/ui/dialogs/product/components/custom_product_dialog_content.dart';

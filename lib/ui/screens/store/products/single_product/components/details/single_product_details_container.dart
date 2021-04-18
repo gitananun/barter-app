@@ -1,4 +1,4 @@
-import 'package:barter/models/shared/location.dart';
+import 'package:barter/domain/models/shared/location.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_location.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_description.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_title_stars_favorite_row.dart';

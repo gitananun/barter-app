@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/specifications/category.dart';
+import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<Category> categories = [

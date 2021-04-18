@@ -9,13 +9,15 @@ class HomeDashboardLayout extends StatelessWidget {
   final List<Widget>? children;
 
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-        child: Padding(
-          padding: HomeDashboardStyle.contentPadding,
-          child: Wrap(
-            runSpacing: DoubleStyle.spaceBetweenSection,
-            children: children ?? [],
-          ),
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: HomeDashboardStyle.contentPadding,
+        child: Wrap(
+          runSpacing: DoubleStyle.spaceBetweenSection,
+          children: children ?? [],
         ),
-      );
+      ),
+    );
+  }
 }

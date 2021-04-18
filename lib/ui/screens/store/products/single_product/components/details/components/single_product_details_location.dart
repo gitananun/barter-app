@@ -1,4 +1,4 @@
-import 'package:barter/models/shared/location.dart';
+import 'package:barter/domain/models/shared/location.dart';
 import 'package:barter/ui/mts_theme.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_specific_detail_row.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/components/single_product_details_specific_detail_text.dart';
@@ -16,7 +16,7 @@ class SingleProductDetailsLocation extends StatelessWidget {
 
     return Wrap(
       children: [
-        const Divider(),
+        const Divider(thickness: 1),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -33,7 +33,7 @@ class SingleProductDetailsLocation extends StatelessWidget {
             Icon(FontAwesomeIcons.chevronRight, size: _iconSize, color: MTStheme.primaryTextColor),
           ],
         ),
-        const Divider(),
+        const Divider(thickness: 1),
       ],
     );
   }

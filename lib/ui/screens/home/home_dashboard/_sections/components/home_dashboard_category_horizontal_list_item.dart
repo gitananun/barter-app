@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/specifications/category.dart';
+import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/ui/shared_widgets/custom_circular_container.dart';
 import 'package:barter/ui/shared_widgets/gestures/custom_gesture_detector_with_feedback.dart';
 import 'package:barter/ui/styles/types/box_shadow/box_shadow_style.dart';

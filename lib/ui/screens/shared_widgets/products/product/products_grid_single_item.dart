@@ -1,7 +1,7 @@
 import 'package:barter/ui/navigators/custom_navigators.dart';
 import 'package:flutter/material.dart';
 
-import 'package:barter/models/store/product/product.dart';
+import 'package:barter/domain/models/store/product/product.dart';
 
 import '../components/products_grid_item_details_column.dart';
 import '../components/products_grid_item_image_container.dart';

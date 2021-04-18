@@ -1,4 +1,4 @@
-import 'package:barter/models/store/product/specifications/category.dart';
+import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductFiltersBottomSheetCategoriesGridItem extends StatelessWidget {
