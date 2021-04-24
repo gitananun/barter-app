@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeDashboardSectionTitleRow extends StatelessWidget {
-  const HomeDashboardSectionTitleRow({
+class DashboardSectionTitleRow extends StatelessWidget {
+  const DashboardSectionTitleRow({
     Key? key,
     this.title = '',
     this.moreText = '',

@@ -1,4 +1,4 @@
-import 'package:barter/ui/screens/home/home_dashboard/_shared_widgets/home_dashboard_section_title_row.dart';
+import 'package:barter/ui/screens/shared_widgets/sections/dashboard_section_title_row.dart';
 import 'package:barter/ui/styles/single_product/style.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class _SingleProductDetailsDescriptionState extends State<SingleProductDetailsDe
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        HomeDashboardSectionTitleRow(title: 'Description', moreText: _moreText, onMore: _onMore),
+        DashboardSectionTitleRow(title: 'Description', moreText: _moreText, onMore: _onMore),
         SingleProductStyle.commonVerticalSpace,
         GestureDetector(
           onTap: _onMore,
