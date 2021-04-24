@@ -15,6 +15,8 @@ class MTStheme {
   static const Color primaryTextColor = Color(0xFF3e5481);
   static const Color secondaryTextColor = Color(0xFF9fa5c0);
 
+  static const EdgeInsetsGeometry contentPadding = EdgeInsets.symmetric(horizontal: 20, vertical: 10);
+
   static const TextTheme customSmallTextTheme = TextTheme(
     headline1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 96),
     headline2: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 60),

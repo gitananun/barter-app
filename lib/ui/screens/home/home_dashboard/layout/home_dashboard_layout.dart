@@ -1,4 +1,4 @@
-import 'package:barter/ui/styles/home_dashboard/style.dart';
+import 'package:barter/ui/shared_widgets/layout_components/custom_main_layout_padding.dart';
 import 'package:barter/ui/styles/types/double/double_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +11,7 @@ class HomeDashboardLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: HomeDashboardStyle.contentPadding,
+      child: CustomMainLayoutPadding(
         child: Wrap(
           runSpacing: DoubleStyle.spaceBetweenSection,
           children: children ?? [],

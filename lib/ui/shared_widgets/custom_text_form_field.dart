@@ -54,12 +54,13 @@ class CustomTextFormField extends StatelessWidget {
       width: width,
       height: height,
       child: TextFormField(
+        readOnly: readOnly,
         maxLength: maxLength,
         validator: validator,
-        controller: controller,
-        readOnly: readOnly,
-        obscureText: obscureText,
         textAlign: textAlign,
+        controller: controller,
+        obscureText: obscureText,
+        style: _themeData.textTheme.caption,
         decoration: inputDecoration ??
             InputDecoration(
               isDense: true,
