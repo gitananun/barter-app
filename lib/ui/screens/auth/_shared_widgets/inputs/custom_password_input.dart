@@ -17,9 +17,9 @@ class _CustomPasswordInputState extends State<CustomPasswordInput> {
   Widget build(BuildContext context) {
     return CustomTextFormField(
       hintText: 'Password',
+      controller: widget.controller,
       obscureText: _obscurePassword,
       prefixIcon: FontAwesomeIcons.lock,
-      controller: widget.controller ?? TextEditingController(),
       suffixIcon: _obscurePassword ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
       suffixOnPressed: () => setState(() => _obscurePassword = !_obscurePassword),
     );

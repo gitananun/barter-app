@@ -15,6 +15,7 @@ class VerifyWithCodeForm extends StatelessWidget {
           CustomTextFormField(
             maxLength: 1,
             borderRadius: 15,
+            withSuffix: false,
             width: _inputWidth,
             textAlign: TextAlign.center,
           ),

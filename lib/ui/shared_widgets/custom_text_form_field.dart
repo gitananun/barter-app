@@ -19,6 +19,7 @@ class CustomTextFormField extends StatefulWidget {
     this.suffixOnPressed,
     this.readOnly = false,
     this.counterText = '',
+    this.withSuffix = true,
     this.borderRadius = 30,
     this.obscureText = false,
     this.verticalContentPadding,
@@ -30,6 +31,7 @@ class CustomTextFormField extends StatefulWidget {
   final double? width;
   final double? height;
   final int? maxLength;
+  final bool withSuffix;
   final String? hintText;
   final String? helperText;
   final String counterText;
@@ -101,7 +103,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                         onPressed: widget.suffixOnPressed,
                       ),
                     )
-                  : _controller.text.isNotEmpty
+                  : widget.withSuffix && _controller.text.isNotEmpty
                       ? InputIconPadding(
                           left: 0,
                           right: 10,
