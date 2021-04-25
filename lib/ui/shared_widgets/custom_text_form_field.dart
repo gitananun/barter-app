@@ -2,7 +2,7 @@ import 'package:barter/ui/shared_widgets/form_components/input_icon_padding.dart
 import 'package:barter/ui/styles/form/style.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFormField extends StatelessWidget {
+class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
     Key? key,
     this.width,
@@ -44,24 +44,48 @@ class CustomTextFormField extends StatelessWidget {
   final InputDecoration? inputDecoration;
 
   @override
+  _CustomTextFormFieldState createState() => _CustomTextFormFieldState();
+}
+
+class _CustomTextFormFieldState extends State<CustomTextFormField> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    if (widget.controller != null) {
+      _controller = widget.controller!;
+    } else {
+      _controller = TextEditingController();
+    }
+    _controller.addListener(() => setState(() {}));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    final bool _isPrefix = prefixIcon != null;
-    final bool _isSuffix = suffixIcon != null;
+    final bool _isPrefix = widget.prefixIcon != null;
+    final bool _isSuffix = widget.suffixIcon != null;
 
     return Container(
-      width: width,
-      height: height,
+      width: widget.width,
+      height: widget.height,
       child: TextFormField(
-        readOnly: readOnly,
-        maxLength: maxLength,
-        validator: validator,
-        textAlign: textAlign,
-        controller: controller,
-        obscureText: obscureText,
+        readOnly: widget.readOnly,
+        maxLength: widget.maxLength,
+        validator: widget.validator,
+        textAlign: widget.textAlign,
+        obscureText: widget.obscureText,
         style: _themeData.textTheme.caption,
-        decoration: inputDecoration ??
+        controller: widget.controller ?? _controller,
+        decoration: widget.inputDecoration ??
             InputDecoration(
               isDense: true,
               counterText: '',
@@ -72,32 +96,40 @@ class CustomTextFormField extends StatelessWidget {
                       child: IconButton(
                         splashRadius: 1,
                         padding: EdgeInsets.zero,
-                        icon: Icon(suffixIcon),
+                        icon: Icon(widget.suffixIcon),
                         color: _themeData.indicatorColor,
-                        onPressed: suffixOnPressed,
+                        onPressed: widget.suffixOnPressed,
                       ),
                     )
-                  : null,
+                  : _controller.text.isNotEmpty
+                      ? InputIconPadding(
+                          left: 0,
+                          right: 10,
+                          child: IconButton(
+                            iconSize: 18,
+                            splashRadius: 1,
+                            onPressed: _controller.clear,
+                            icon: const Icon(Icons.backspace_outlined),
+                          ),
+                        )
+                      : null,
 
               ///
               prefixIcon: _isPrefix
                   ? InputIconPadding(
-                      child: Icon(
-                        prefixIcon,
-                        color: _themeData.indicatorColor,
-                      ),
+                      child: Icon(widget.prefixIcon, color: _themeData.indicatorColor),
                     )
                   : null,
 
               ///
-              hintText: hintText,
-              helperText: helperText,
+              hintText: widget.hintText,
+              helperText: widget.helperText,
               hintStyle: _themeData.textTheme.overline,
-              border: FormStyle.inputBorder(borderRadius: borderRadius),
-              enabledBorder: FormStyle.inputBorder(color: _themeData.accentColor, borderRadius: borderRadius),
+              border: FormStyle.inputBorder(borderRadius: widget.borderRadius),
+              enabledBorder: FormStyle.inputBorder(color: _themeData.accentColor, borderRadius: widget.borderRadius),
               contentPadding: FormStyle.contentPadding.copyWith(
-                top: verticalContentPadding,
-                bottom: verticalContentPadding,
+                top: widget.verticalContentPadding,
+                bottom: widget.verticalContentPadding,
               ),
             ),
       ),
