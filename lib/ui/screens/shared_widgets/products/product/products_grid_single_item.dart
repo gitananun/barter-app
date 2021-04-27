@@ -1,4 +1,4 @@
-import 'package:barter/ui/navigators/custom_navigators.dart';
+import 'package:barter/app/router.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/domain/models/store/product/product.dart';

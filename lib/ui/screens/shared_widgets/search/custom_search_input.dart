@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomSearchInput extends StatelessWidget {
-  const CustomSearchInput({Key? key}) : super(key: key);
+  const CustomSearchInput({Key? key, this.controller}) : super(key: key);
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomTextFormField(
+    return CustomTextFormField(
       hintText: 'Search',
+      controller: controller,
       verticalContentPadding: 10,
       prefixIcon: FontAwesomeIcons.search,
     );

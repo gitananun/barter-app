@@ -1,4 +1,5 @@
 import 'package:barter/domain/models/store/product/product.dart';
+import 'package:barter/infrastructure/repositories/store/memory_product_repository.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/details/single_product_details_container.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/images_carousel/components/single_product_single_image.dart';
 import 'package:barter/ui/screens/store/products/single_product/components/images_carousel/single_product_images_carousel.dart';
@@ -8,11 +9,13 @@ import 'package:barter/ui/screens/store/products/single_product/components/layou
 import 'package:flutter/material.dart';
 
 class SingleProductScreen extends StatelessWidget {
-  const SingleProductScreen(this.product, {Key? key}) : super(key: key);
-  final Product product;
+  const SingleProductScreen(this.uuid, {Key? key}) : super(key: key);
+  final int uuid;
 
   @override
   Widget build(BuildContext context) {
+    final Product product = MemoryProductRepository().findByUuid(uuid);
+
     return SingleProductScaffold(
       body: SingleProductContentLayout(
         ///

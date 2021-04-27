@@ -4,7 +4,7 @@ import 'package:barter/domain/models/store/product/product.dart';
 
 class MemoryProductRepository implements ProductRepositoryInterface {
   MemoryProductRepository() {
-    _products = products;
+    _products = MockProducts;
   }
 
   late List<Product> _products;

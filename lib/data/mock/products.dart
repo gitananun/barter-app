@@ -4,7 +4,8 @@ import 'package:barter/domain/models/store/product/specifications.dart';
 import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/domain/models/store/product/specifications/state.dart';
 
-final List<Product> products = [
+// ignore: non_constant_identifier_names
+final List<Product> MockProducts = [
   Product(
     id: 1,
     rating: 4,
