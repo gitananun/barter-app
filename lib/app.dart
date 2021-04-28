@@ -16,11 +16,11 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Barter',
-      theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
       initialRoute: '/home_dashboard',
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
       onGenerateRoute: CustomRouter.generateRoutes,
+      theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
     );
   }
 }

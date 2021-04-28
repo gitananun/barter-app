@@ -1,5 +1,6 @@
 import 'package:barter/ui/screens/search/layout/components/search_scaffold_app_bar_filter_action.dart';
 import 'package:barter/ui/screens/shared_widgets/search/custom_search_input.dart';
+import 'package:barter/ui/shared_widgets/layout_components/custom_bottom_navigation_bar.dart';
 import 'package:barter/ui/shared_widgets/layout_components/custom_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,7 @@ class SearchScaffold extends StatelessWidget {
         actions: const [SearchScaffoldAppBarFilterAction()],
       ),
       body: body,
+      bottomNavigationBar: const CustomBottomNavigationBar(currentIndex: 1),
     );
   }
 }
