@@ -28,7 +28,7 @@ class CustomRouter {
     '/password_reset': const PasswordResetScreen(),
     '/home_dashboard': const HomeDashboardScreen(),
     '/search': const SearchScreen(),
-    '/search/results': SearchResultsScreen(),
+    '/search/results': const SearchResultsScreen(),
     '/splash': const SplashScreen()
   };
 
