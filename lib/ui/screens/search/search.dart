@@ -1,6 +1,5 @@
 import 'package:barter/ui/screens/search/components/search_suggestions_gridview.dart';
 import 'package:barter/ui/screens/search/components/search_text_results_list_view.dart';
-import 'package:barter/ui/screens/search/layout/seach_scaffold.dart';
 import 'package:barter/ui/screens/search/layout/search_layout.dart';
 import 'package:barter/ui/screens/shared_widgets/sections/dashboard_section_title_row.dart';
 import 'package:barter/ui/screens/shared_widgets/sections/dashboard_section_title_with_content_wrapper.dart';
@@ -13,22 +12,20 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SearchScaffold(
-      body: SearchLayout(
-        children: [
-          CustomThickDivider(),
-          CustomMainLayoutPadding(child: SearchTextResultsListView()),
-          CustomThickDivider(),
-          CustomMainLayoutPadding(
-            child: DashboardSectionTitleWithContentWrapper(
-              children: [
-                DashboardSectionTitleRow(title: 'Search Suggestions'),
-                SearchSuggestionsGridView(),
-              ],
-            ),
+    return const SearchLayout(
+      children: [
+        CustomThickDivider(),
+        CustomMainLayoutPadding(child: SearchTextResultsListView()),
+        CustomThickDivider(),
+        CustomMainLayoutPadding(
+          child: DashboardSectionTitleWithContentWrapper(
+            children: [
+              DashboardSectionTitleRow(title: 'Search Suggestions'),
+              SearchSuggestionsGridView(),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

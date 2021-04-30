@@ -1,6 +1,5 @@
 import 'package:barter/ui/screens/home/home_dashboard/layout/components/home_dashboard_app_bar_actions.dart';
 import 'package:barter/ui/screens/home/home_dashboard/layout/components/home_dashboard_app_bar_title.dart';
-import 'package:barter/ui/shared_widgets/layout_components/custom_bottom_navigation_bar.dart';
 import 'package:barter/ui/shared_widgets/layout_components/custom_fancy_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,6 @@ class HomeDashboardScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: body,
-      bottomNavigationBar: const CustomBottomNavigationBar(),
       floatingActionButton: const CustomFancyFloatingActionButton(),
       appBar: AppBar(
         elevation: 0,

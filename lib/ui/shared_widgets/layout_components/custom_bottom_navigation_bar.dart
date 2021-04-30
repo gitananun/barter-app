@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({Key? key, this.currentIndex = 0}) : super(key: key);
+  const CustomBottomNavigationBar({
+    Key? key,
+    required this.onTap,
+    required this.currentIndex,
+  }) : super(key: key);
+
   final int currentIndex;
+  final ValueChanged<int>? onTap;
 
   @override
   _CustomBottomNavigationBarState createState() => _CustomBottomNavigationBarState();
@@ -19,21 +25,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     {'icon': FontAwesomeIcons.solidUser, 'label': 'Profile'},
   ];
 
-  late int _currentIndex = widget.currentIndex;
-
   @override
   Widget build(BuildContext context) {
     final ThemeData _themeData = Theme.of(context);
 
-    void _navigate(int i) {
-      setState(() => _currentIndex = i);
-      Navigator.pushReplacementNamed(context, navigationBarItems[i]['route'] as String);
-    }
-
     return BottomNavigationBar(
-      onTap: _navigate,
-      currentIndex: _currentIndex,
+      onTap: widget.onTap,
       backgroundColor: Colors.white,
+      currentIndex: widget.currentIndex,
       type: BottomNavigationBarType.fixed,
       selectedItemColor: _themeData.primaryColor,
       unselectedItemColor: _themeData.accentColor,

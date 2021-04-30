@@ -1,5 +1,6 @@
 import 'package:barter/app/router.dart';
 import 'package:barter/ui/device_screen_helper.dart';
+import 'package:barter/ui/shared_widgets/layout_components/app_bottom_navigation_bar_controller.dart';
 import 'package:device_preview/device_preview.dart';
 
 import 'package:barter/ui/mts_theme.dart';
@@ -16,9 +17,9 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Barter',
-      initialRoute: '/home_dashboard',
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
+      home: const AppBottomNavigationBarController(),
       onGenerateRoute: CustomRouter.generateRoutes,
       theme: MTStheme.customThemeData(DeviceScreenHelper.getDeviceScreenSize(context)),
     );

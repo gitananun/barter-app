@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomSearchInput extends StatelessWidget {
-  const CustomSearchInput({Key? key, this.controller}) : super(key: key);
+  const CustomSearchInput({Key? key, this.controller, this.onFieldSubmitted}) : super(key: key);
+  final void Function(String)? onFieldSubmitted;
   final TextEditingController? controller;
 
   @override
@@ -12,6 +13,7 @@ class CustomSearchInput extends StatelessWidget {
       hintText: 'Search',
       controller: controller,
       verticalContentPadding: 10,
+      onFieldSubmitted: onFieldSubmitted,
       prefixIcon: FontAwesomeIcons.search,
     );
   }

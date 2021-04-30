@@ -7,6 +7,7 @@ class CustomTextFormField extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
+    this.onSaved,
     this.hintText,
     this.validator,
     this.maxLength,
@@ -19,6 +20,7 @@ class CustomTextFormField extends StatefulWidget {
     this.suffixOnPressed,
     this.readOnly = false,
     this.counterText = '',
+    this.onFieldSubmitted,
     this.withSuffix = true,
     this.borderRadius = 30,
     this.obscureText = false,
@@ -41,9 +43,11 @@ class CustomTextFormField extends StatefulWidget {
   final TextAlign textAlign;
   final VoidCallback? suffixOnPressed;
   final double? verticalContentPadding;
+  final void Function(String?)? onSaved;
   final String Function(String?)? validator;
   final TextEditingController? controller;
   final InputDecoration? inputDecoration;
+  final void Function(String)? onFieldSubmitted;
 
   @override
   _CustomTextFormFieldState createState() => _CustomTextFormFieldState();
@@ -80,12 +84,14 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       width: widget.width,
       height: widget.height,
       child: TextFormField(
+        onSaved: widget.onSaved,
         readOnly: widget.readOnly,
         maxLength: widget.maxLength,
         validator: widget.validator,
         textAlign: widget.textAlign,
         obscureText: widget.obscureText,
         style: _themeData.textTheme.caption,
+        onFieldSubmitted: widget.onFieldSubmitted,
         controller: widget.controller ?? _controller,
         decoration: widget.inputDecoration ??
             InputDecoration(
