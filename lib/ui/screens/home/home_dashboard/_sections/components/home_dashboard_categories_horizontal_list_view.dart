@@ -1,3 +1,4 @@
+import 'package:barter/app/router.dart';
 import 'package:barter/data/mock/categories.dart';
 import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/ui/screens/home/home_dashboard/_sections/components/home_dashboard_category_horizontal_list_item.dart';
@@ -13,7 +14,10 @@ class _HomeDashboardCategoriesHorizontalListViewState extends State<HomeDashboar
   int _activeCategory = 0;
   final List<Category> _categories = categories;
 
-  void makeActive(int id) => setState(() => _activeCategory = id);
+  void makeActive(int id) {
+    setState(() => _activeCategory = id);
+    CustomNavigators.category(context, _categories[id]);
+  }
 
   @override
   Widget build(BuildContext context) {

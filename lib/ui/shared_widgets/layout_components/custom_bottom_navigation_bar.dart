@@ -18,8 +18,8 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final navigationBarItems = const [
-    {'icon': FontAwesomeIcons.home, 'label': 'Home', 'route': '/home_dashboard'},
-    {'icon': FontAwesomeIcons.search, 'label': 'Search', 'route': '/search'},
+    {'icon': FontAwesomeIcons.home, 'label': 'Home'},
+    {'icon': FontAwesomeIcons.search, 'label': 'Search'},
     {'icon': FontAwesomeIcons.solidHeart, 'label': 'Favorites'},
     {'icon': FontAwesomeIcons.comments, 'label': 'Chat'},
     {'icon': FontAwesomeIcons.solidUser, 'label': 'Profile'},

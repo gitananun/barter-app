@@ -34,6 +34,8 @@ class _AppOriginatorState extends State<AppOriginator> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
     ]);
 
     return const MaterialApp(home: App());

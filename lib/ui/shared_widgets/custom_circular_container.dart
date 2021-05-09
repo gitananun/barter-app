@@ -12,6 +12,7 @@ class CustomCircularContainer extends StatelessWidget {
     this.alignment,
     this.boxShadow,
     this.active = true,
+    this.borderWidth = 0.3,
     this.padding = const EdgeInsets.all(12),
   }) : super(key: key);
 
@@ -21,6 +22,7 @@ class CustomCircularContainer extends StatelessWidget {
   final double? height;
   final Color? bgColor;
   final IconData? icon;
+  final double borderWidth;
   final List<BoxShadow>? boxShadow;
 
   final EdgeInsetsGeometry? margin;
@@ -42,8 +44,19 @@ class CustomCircularContainer extends StatelessWidget {
       margin: margin,
       padding: padding,
       alignment: alignment,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: bgColor ?? _bgColor, boxShadow: boxShadow),
-      child: icon != null ? Icon(icon, color: _textColor, size: _themeData.textTheme.subtitle2?.fontSize) : child,
+      decoration: BoxDecoration(
+        boxShadow: boxShadow,
+        shape: BoxShape.circle,
+        border: Border.all(width: borderWidth, color: _themeData.accentColor),
+        color: bgColor ?? _bgColor,
+      ),
+      child: icon != null
+          ? Icon(
+              icon,
+              color: _textColor,
+              size: _themeData.textTheme.subtitle2?.fontSize,
+            )
+          : child,
     );
   }
 }

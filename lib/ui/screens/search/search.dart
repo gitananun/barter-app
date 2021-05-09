@@ -12,20 +12,22 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SearchLayout(
-      children: [
-        CustomThickDivider(),
-        CustomMainLayoutPadding(child: SearchTextResultsListView()),
-        CustomThickDivider(),
-        CustomMainLayoutPadding(
-          child: DashboardSectionTitleWithContentWrapper(
-            children: [
-              DashboardSectionTitleRow(title: 'Search Suggestions'),
-              SearchSuggestionsGridView(),
-            ],
+    return const SingleChildScrollView(
+      child: SearchLayout(
+        children: [
+          CustomThickDivider(),
+          CustomMainLayoutPadding(child: SearchTextResultsListView()),
+          CustomThickDivider(),
+          CustomMainLayoutPadding(
+            child: DashboardSectionTitleWithContentWrapper(
+              children: [
+                DashboardSectionTitleRow(title: 'Search Suggestions'),
+                SearchSuggestionsGridView(),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

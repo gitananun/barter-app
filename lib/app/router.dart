@@ -1,3 +1,5 @@
+import 'package:barter/domain/models/store/product/specifications/category.dart';
+import 'package:barter/ui/screens/category/category.dart';
 import 'package:barter/ui/screens/store/products/single_product/single_product_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +27,7 @@ class CustomRouter {
     '/password_recover': const PasswordRecoverScreen(),
     '/password_reset': const PasswordResetScreen(),
     '/home_dashboard': const HomeDashboardScreen(key: PageStorageKey('home')),
-    '/splash': const SplashScreen()
+    '/splash': const SplashScreen(),
   };
 
   static Route<dynamic> generateRoutes(RouteSettings settings) {
@@ -41,5 +43,10 @@ class CustomNavigators {
   static void singleProduct(BuildContext context, int id) {
     Navigator.maybePop(context);
     Navigator.push(context, MaterialPageRoute<Widget>(builder: (BuildContext ctx) => SingleProductScreen(id)));
+  }
+
+  static void category(BuildContext context, Category category) {
+    Navigator.push(
+        context, MaterialPageRoute<Widget>(builder: (BuildContext ctx) => CategoryScreen(category: category)));
   }
 }
