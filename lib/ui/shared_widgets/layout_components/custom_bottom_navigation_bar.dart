@@ -1,6 +1,6 @@
+import 'package:barter/app/navigation.dart';
 import 'package:barter/ui/shared_widgets/layout_components/components/custom_bottom_navigation_bar_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({
@@ -17,13 +17,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
-  final navigationBarItems = const [
-    {'icon': FontAwesomeIcons.home, 'label': 'Home'},
-    {'icon': FontAwesomeIcons.search, 'label': 'Search'},
-    {'icon': FontAwesomeIcons.solidHeart, 'label': 'Favorites'},
-    {'icon': FontAwesomeIcons.comments, 'label': 'Chat'},
-    {'icon': FontAwesomeIcons.solidUser, 'label': 'Profile'},
-  ];
+  final _items = navigationBarItems;
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +31,11 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       selectedItemColor: _themeData.primaryColor,
       unselectedItemColor: _themeData.accentColor,
       items: [
-        for (int i = 0; i < navigationBarItems.length; i++)
+        for (int i = 0; i < _items.length; i++)
           BottomNavigationBarItem(
-            label: navigationBarItems[i]['label'] as String,
-            icon: CustomBottomNavigationBarIcon(icon: navigationBarItems[i]['icon'] as IconData),
-            activeIcon: CustomBottomNavigationBarIcon(icon: navigationBarItems[i]['icon'] as IconData, active: true),
+            label: _items[i]['label'] as String,
+            icon: CustomBottomNavigationBarIcon(icon: _items[i]['icon'] as IconData),
+            activeIcon: CustomBottomNavigationBarIcon(icon: _items[i]['icon'] as IconData, active: true),
           ),
       ],
     );

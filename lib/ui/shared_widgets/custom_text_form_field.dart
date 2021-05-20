@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
     Key? key,
+    this.onTap,
     this.width,
     this.height,
     this.onSaved,
@@ -37,10 +38,11 @@ class CustomTextFormField extends StatefulWidget {
   final String? hintText;
   final String? helperText;
   final String counterText;
+  final TextAlign textAlign;
+  final double borderRadius;
   final IconData? suffixIcon;
   final IconData? prefixIcon;
-  final double borderRadius;
-  final TextAlign textAlign;
+  final void Function()? onTap;
   final VoidCallback? suffixOnPressed;
   final double? verticalContentPadding;
   final void Function(String?)? onSaved;
@@ -84,6 +86,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       width: widget.width,
       height: widget.height,
       child: TextFormField(
+        onTap: widget.onTap,
         onSaved: widget.onSaved,
         readOnly: widget.readOnly,
         maxLength: widget.maxLength,

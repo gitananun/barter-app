@@ -19,6 +19,7 @@ class CategoryScaffold extends StatelessWidget {
       floatingActionButton: const CustomFancyFloatingActionButton(),
       appBar: AppBar(
         elevation: 0,
+        toolbarHeight: 60,
         title: CategoryScaffoldAppBarTitle(category: category),
         backgroundColor: Colors.transparent,
       ),

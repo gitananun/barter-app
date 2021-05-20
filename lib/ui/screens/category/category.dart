@@ -1,6 +1,9 @@
+import 'package:barter/data/mock/products.dart';
 import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/ui/screens/category/layout/category_scaffold.dart';
-import 'package:barter/ui/shared_widgets/layout_components/custom_main_layout_padding.dart';
+import 'package:barter/ui/screens/shared_widgets/products/main_products_grid.dart';
+import 'package:barter/ui/shared_widgets/dividers/custom_thick_divider.dart';
+import 'package:barter/ui/styles/types/widget/widget_style.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -11,8 +14,17 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CategoryScaffold(
       category: category,
-      body: const CustomMainLayoutPadding(
-        child: Text('123'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            WidgetStyle.verticalSpace,
+            const CustomThickDivider(),
+            MainProductsGrid(
+              padding: const EdgeInsets.all(15),
+              products: MockProducts,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:barter/domain/models/store/product/specifications/category.dart';
 import 'package:barter/ui/screens/category/category.dart';
-import 'package:barter/ui/screens/store/products/single_product/single_product_screen.dart';
+import 'package:barter/ui/screens/store/products/single_product/single_product.dart';
 import 'package:flutter/material.dart';
 
 import 'package:barter/ui/screens/system/splash.dart';
@@ -26,7 +26,7 @@ class CustomRouter {
     '/auth_verify_with_code': const VerifyWithCodeScreen(),
     '/password_recover': const PasswordRecoverScreen(),
     '/password_reset': const PasswordResetScreen(),
-    '/home_dashboard': const HomeDashboardScreen(key: PageStorageKey('home')),
+    '/home_dashboard': const HomeDashboardScreen(),
     '/splash': const SplashScreen(),
   };
 

@@ -2,6 +2,7 @@ import 'package:barter/ui/screens/search/layout/components/search_scaffold_app_b
 import 'package:barter/ui/screens/search/search.dart';
 import 'package:barter/ui/screens/search_results/search_results.dart';
 import 'package:barter/ui/screens/shared_widgets/search/custom_search_input.dart';
+import 'package:barter/ui/screens/store/products/products.dart';
 import 'package:barter/ui/shared_widgets/layout_components/custom_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +14,22 @@ class SearchScaffold extends StatefulWidget {
 }
 
 class _SearchScaffoldState extends State<SearchScaffold> {
+  late String? _currentScreen;
+
   final Map<String, Widget> _screens = {
+    'products': const ProductsScreen(),
     'search': const SearchScreen(),
     'results': const SearchResultsScreen(),
   };
 
-  late String? _currentScreen;
-
   @override
   void initState() {
     super.initState();
-    _currentScreen = 'search';
+    _currentScreen = 'products';
   }
 
   void search() => setState(() => _currentScreen = 'results');
+  void toSearch() => setState(() => _currentScreen = 'search');
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +40,10 @@ class _SearchScaffoldState extends State<SearchScaffold> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         actions: const [SearchScaffoldAppBarFilterAction()],
-        title: CustomSearchInput(onFieldSubmitted: (v) => search()),
+        title: CustomSearchInput(
+          onTap: toSearch,
+          onFieldSubmitted: (String? v) => search(),
+        ),
       ),
       body: _screens[_currentScreen],
     );
