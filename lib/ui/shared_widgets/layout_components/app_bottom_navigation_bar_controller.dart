@@ -1,5 +1,5 @@
 import 'package:barter/ui/screens/home/home_dashboard/home_dashboard.dart';
-import 'package:barter/ui/screens/search/layout/seach_scaffold.dart';
+import 'package:barter/ui/screens/search/layout/search_scaffold.dart';
 import 'package:barter/ui/shared_widgets/layout_components/custom_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
