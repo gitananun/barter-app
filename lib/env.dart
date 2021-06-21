@@ -1,3 +1,3 @@
-import 'package:barter/ui/enums/app_mode.dart';
+import 'constants/enums.dart';
 
 const AppMode APP_MODE = AppMode.Release;

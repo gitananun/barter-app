@@ -1,5 +1,5 @@
-import 'package:barter/domain/models/shared/location.dart';
-import 'package:barter/domain/models/store/product/specifications.dart';
+import '../../shared/location.dart';
+import 'specifications.dart';
 
 class Product {
   Product({

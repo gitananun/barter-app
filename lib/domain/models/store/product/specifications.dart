@@ -1,7 +1,7 @@
-import 'package:barter/domain/models/store/product/specifications/category.dart';
-import 'package:barter/domain/models/store/product/specifications/color.dart';
-import 'package:barter/domain/models/store/product/specifications/state.dart';
-import 'package:barter/domain/models/store/product/specifications/weight.dart';
+import 'specifications/category.dart';
+import 'specifications/color.dart';
+import 'specifications/state.dart';
+import 'specifications/weight.dart';
 
 class Specifications {
   Specifications({

@@ -1,43 +1,18 @@
-import 'package:barter/app.dart';
-import 'package:barter/app/app_helper.dart';
-import 'package:barter/env.dart';
-import 'package:barter/ui/mts_theme.dart';
-import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'app.dart';
+import 'env.dart';
+import 'infrastructure/mixins/app_mixin.dart';
 
 void main() => runApp(
       /// [DevicePreview] Package Runner
       DevicePreview(
-        enabled: AppHelper.getDevicePreviewStatus(APP_MODE),
-        builder: (context) => AppHelper.getMainAppWidget,
+        enabled: AppMixin.getDevicePreviewStatus(APP_MODE),
+        builder: (context) => const AnnotatedRegion<SystemUiOverlayStyle>(
+          value: SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+          child: App(),
+        ),
       ),
-      // AppHelper.getMainAppWidget,
     );
-
-class AppOriginator extends StatefulWidget {
-  const AppOriginator({Key? key}) : super(key: key);
-  @override
-  _AppOriginatorState createState() => _AppOriginatorState();
-}
-
-class _AppOriginatorState extends State<AppOriginator> {
-  @override
-  Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.top]);
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      systemNavigationBarColor: MTStheme.primaryColor,
-    ));
-
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-
-    return const MaterialApp(home: App());
-  }
-}

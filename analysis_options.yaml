@@ -104,6 +104,10 @@ linter:
     constant_identifier_names: false
 
     # Outside of lib folder there are always widgets that must have the same naming conventions for me
-    lowercase_with_underscores: false
+    lowercase_with_underscores: true
 
-    avoid_positional_boolean_parameters: false
+    # Out of presentation layer it's looks good to gave camel case
+    file_names: false
+
+    # Not convenient
+    sort_constructors_first: false
