@@ -10,7 +10,7 @@ class MemoryProductRepository implements ProductRepositoryInterface {
   late List<Product> _products;
 
   @override
-  Product findByUuid(int id) {
+  Product findById(int id) {
     return _products.firstWhere((el) => el.id == id);
   }
 }

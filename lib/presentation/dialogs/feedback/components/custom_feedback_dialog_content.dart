@@ -63,10 +63,10 @@ class _CustomFeedbackDialogContentState extends State<CustomFeedbackDialogConten
           crossFadeState: _rating > 0 ? CrossFadeState.showFirst : CrossFadeState.showSecond,
           firstChild: Center(
             child: CustomFlatButton(
+              text: 'Submit',
               onPressed: () {},
               minWidth: double.infinity,
               color: _themeData.primaryColor,
-              child: Text('Submit', style: _themeData.textTheme.button),
             ),
           ),
           secondChild: CustomFlatButton(

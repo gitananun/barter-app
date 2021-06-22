@@ -20,8 +20,8 @@ class OnBoardingCustomCircularButton extends StatelessWidget {
         padding: _btnPadding,
         child: const Icon(
           Icons.navigate_next,
-          size: OnBoardingStyle.nextBtnIconSize,
           color: Colors.white,
+          size: OnBoardingStyle.nextBtnIconSize,
         ),
       ),
     );

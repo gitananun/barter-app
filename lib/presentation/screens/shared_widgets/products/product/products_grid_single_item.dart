@@ -1,4 +1,6 @@
+import 'package:barter/presentation/screens/store/products/single_product/single_product.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../../../domain/models/store/product/product.dart';
 import '../components/products_grid_item_details_column.dart';
@@ -15,7 +17,13 @@ class ProductsGridSingleItem extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         GestureDetector(
-          onTap: () => print('go to single product'),
+          onTap: () {
+            HapticFeedback.mediumImpact();
+            Navigator.push(
+              context,
+              MaterialPageRoute<Widget>(builder: (context) => SingleProductScreen(product.id)),
+            );
+          },
           child: Container(
             padding: const EdgeInsets.only(top: 10),
             decoration: BoxDecoration(

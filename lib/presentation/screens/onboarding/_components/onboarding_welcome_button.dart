@@ -10,8 +10,8 @@ class OnBoardingWelcomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomFlatButton(
       text: 'Get started',
-      minWidth: MediaQuery.of(context).size.width - 80,
       onPressed: onPressed,
+      minWidth: MediaQuery.of(context).size.width - 80,
     );
   }
 }

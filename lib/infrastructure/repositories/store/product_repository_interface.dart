@@ -1,3 +1,3 @@
 class ProductRepositoryInterface {
-  void findByUuid(int id) {}
+  void findById(int id) {}
 }

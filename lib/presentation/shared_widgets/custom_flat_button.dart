@@ -30,16 +30,17 @@ class CustomFlatButton extends StatelessWidget {
     final Color _bgColor = color ?? (primary ? _theme.primaryColor : Colors.white);
     final Color _borderColor = borderColor ?? (primary ? Colors.transparent : _theme.accentColor);
 
-    final Color _textColor = primary ? Colors.white : _theme.accentColor;
+    final Color _textColor = primary ? _theme.canvasColor : _theme.accentColor;
 
     return SizedBox(
+      height: height,
       width: minWidth,
-      height: height ?? 20,
       child: TextButton(
         onPressed: onPressed ?? () {},
         style: ButtonStyle(
           enableFeedback: true,
           backgroundColor: MaterialStateProperty.all<Color>(_bgColor),
+          padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.symmetric(vertical: 15)),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),

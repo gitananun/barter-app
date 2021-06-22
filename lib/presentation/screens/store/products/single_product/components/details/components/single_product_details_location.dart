@@ -26,11 +26,11 @@ class SingleProductDetailsLocation extends StatelessWidget {
               ),
               icon: Icon(
                 FontAwesomeIcons.mapPin,
-                color: _themeData.errorColor,
+                color: _themeData.primaryColor,
                 size: _iconSize,
               ),
             ),
-            Icon(FontAwesomeIcons.chevronRight, size: _iconSize, color: Colors.red),
+            Icon(FontAwesomeIcons.chevronRight, size: _iconSize, color: _themeData.primaryColor),
           ],
         ),
         const Divider(thickness: 1),

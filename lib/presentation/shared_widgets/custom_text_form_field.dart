@@ -104,34 +104,24 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
 
               ///
               suffixIcon: _isSuffix
-                  ? InputIconPadding(
-                      child: IconButton(
-                        splashRadius: 1,
-                        padding: EdgeInsets.zero,
-                        icon: Icon(widget.suffixIcon),
-                        color: _themeData.indicatorColor,
-                        onPressed: widget.suffixOnPressed,
-                      ),
+                  ? IconButton(
+                      splashRadius: 1,
+                      padding: EdgeInsets.zero,
+                      icon: Icon(widget.suffixIcon),
+                      onPressed: widget.suffixOnPressed,
                     )
                   : widget.withSuffix && _controller.text.isNotEmpty
-                      ? InputIconPadding(
-                          left: 0,
-                          right: 10,
-                          child: IconButton(
-                            iconSize: 18,
-                            splashRadius: 1,
-                            onPressed: _controller.clear,
-                            icon: const Icon(Icons.backspace_outlined),
-                          ),
+                      ? IconButton(
+                          iconSize: 18,
+                          splashRadius: 1,
+                          onPressed: _controller.clear,
+                          color: _themeData.accentColor,
+                          icon: const Icon(Icons.backspace_outlined),
                         )
                       : null,
 
               ///
-              prefixIcon: _isPrefix
-                  ? InputIconPadding(
-                      child: Icon(widget.prefixIcon, color: _themeData.indicatorColor),
-                    )
-                  : null,
+              prefixIcon: _isPrefix ? Icon(widget.prefixIcon, color: _themeData.accentColor) : null,
 
               ///
               hintText: widget.hintText,
@@ -139,6 +129,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               hintStyle: _themeData.textTheme.overline,
               border: FormStyle.inputBorder(borderRadius: widget.borderRadius),
               enabledBorder: FormStyle.inputBorder(color: _themeData.accentColor, borderRadius: widget.borderRadius),
+              focusedBorder: FormStyle.inputBorder(color: _themeData.primaryColor, borderRadius: widget.borderRadius),
               contentPadding: FormStyle.contentPadding.copyWith(
                 top: widget.verticalContentPadding,
                 bottom: widget.verticalContentPadding,

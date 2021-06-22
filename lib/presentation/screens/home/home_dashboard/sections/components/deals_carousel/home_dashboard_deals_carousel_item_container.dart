@@ -11,7 +11,7 @@ class HomeDashboardDealsCarouselItemContainer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(color: _themeData.cardColor, borderRadius: BorderRadius.circular(25)),
+      decoration: BoxDecoration(color: _themeData.primaryColor, borderRadius: BorderRadius.circular(25)),
       child: child,
     );
   }

@@ -9,12 +9,12 @@ import 'components/layout/single_product_content_layout.dart';
 import 'components/layout/single_product_scaffold.dart';
 
 class SingleProductScreen extends StatelessWidget {
-  const SingleProductScreen(this.uuid, {Key? key}) : super(key: key);
-  final int uuid;
+  const SingleProductScreen(this.id, {Key? key}) : super(key: key);
+  final int id;
 
   @override
   Widget build(BuildContext context) {
-    final Product product = MemoryProductRepository().findByUuid(uuid);
+    final Product product = MemoryProductRepository().findById(id);
 
     return SingleProductScaffold(
       body: SingleProductContentLayout(

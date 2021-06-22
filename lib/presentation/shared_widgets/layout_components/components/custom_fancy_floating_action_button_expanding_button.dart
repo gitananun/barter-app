@@ -10,12 +10,14 @@ class CustomFancyFloatingActionButtonExpandingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData _themeData = Theme.of(context);
+
     return FloatingActionButton(
       elevation: 0,
-      heroTag: Random().nextDouble(),
       onPressed: onPressed,
-      backgroundColor: Colors.red,
-      child: Icon(icon, size: Theme.of(context).textTheme.caption?.fontSize, color: Colors.white),
+      heroTag: Random().nextDouble(),
+      backgroundColor: _themeData.primaryColor,
+      child: Icon(icon, size: _themeData.textTheme.caption?.fontSize, color: Colors.white),
     );
   }
 }

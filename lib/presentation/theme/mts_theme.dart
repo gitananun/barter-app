@@ -9,13 +9,10 @@ abstract class MTStheme {
   Color get primaryColor;
   Color get dividerColor;
   Color get errorColor;
-  Color get splashColor;
+  Color? get splashColor;
   Color get primaryTextColor;
   Color get secondaryTextColor;
   Color get successColor;
-
-  static const Color getPrimaryColor = Color(0xFFFA8E4B);
-  static const List<Color> primaryGradientColors = [Color(0xFFB620E0), Color(0xFFEED810)];
 
   TextTheme get getSmallTextTheme => TextTheme(
         headline1: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w400, fontSize: 96),
@@ -59,8 +56,8 @@ abstract class MTStheme {
         buttonColor: primaryColor,
         primaryColor: primaryColor,
         dividerColor: dividerColor,
+        indicatorColor: primaryColor,
         fontFamily: 'AvenirNextRounded',
-        indicatorColor: primaryTextColor,
         disabledColor: secondaryTextColor,
         scaffoldBackgroundColor: canvasColor,
         textButtonTheme: TextButtonThemeData(

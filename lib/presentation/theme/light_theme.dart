@@ -30,7 +30,7 @@ class LightTheme extends MTStheme {
   Color get secondaryTextColor => const Color(0xFF9fa5c0);
 
   @override
-  Color get splashColor => Colors.orange;
+  Color? get splashColor => Colors.transparent;
 
   @override
   Color get successColor => const Color(0xFF02C338);

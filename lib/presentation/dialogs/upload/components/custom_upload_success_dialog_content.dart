@@ -20,10 +20,10 @@ class CustomUploadSuccessDialogContent extends StatelessWidget {
         ),
         const Divider(),
         CustomFlatButton(
+          text: 'Done',
           onPressed: () {},
           minWidth: double.infinity,
           color: _themeData.primaryColor,
-          child: Text('Done', style: _themeData.textTheme.button),
         ),
       ],
     );

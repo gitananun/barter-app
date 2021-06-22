@@ -44,8 +44,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return Scaffold(
       appBar: const OnBoardingAppBar(),
       bottomNavigationBar: const OnBoardingBottomNavBar(),
-      floatingActionButton: OnBoardingFloatingActionButton(isLastPage: _isLastPage, onNextPage: _onNextPage),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: OnBoardingFloatingActionButton(isLastPage: _isLastPage, onNextPage: _onNextPage),
       body: Stack(
         children: [
           PageView(

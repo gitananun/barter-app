@@ -12,7 +12,7 @@ class HomeDashboardScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: body,
-      floatingActionButton: const CustomFancyFloatingActionButton(),
+      floatingActionButton: CustomFancyFloatingActionButton(context: context),
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
