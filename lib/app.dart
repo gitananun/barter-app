@@ -1,4 +1,3 @@
-import 'package:barter/presentation/shared_widgets/layout_components/app_bottom_navigation_bar_controller.dart';
 import 'package:flutter/material.dart';
 
 import 'app/routes/app_router.dart';
@@ -14,6 +13,7 @@ class App extends StatefulWidget {
 
 class _AppState extends State<App> {
   late DeviceScreenSize _deviceScreenSize;
+  final AppRouter _appRouter = AppRouter();
 
   @override
   void initState() {
@@ -21,15 +21,13 @@ class _AppState extends State<App> {
     _deviceScreenSize = DeviceScreenSize.Medium;
   }
 
-  final AppRouter _appRouter = AppRouter();
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Barter',
       themeMode: ThemeMode.light,
       theme: LightTheme().getTheme(_deviceScreenSize),
-      home: const AppBottomNavigationBarController(),
+      // home: const AppBottomNavigationBarController(),
       onGenerateRoute: (settings) => _appRouter.onGenerateRoute(context, settings),
       builder: (context, widget) {
         WidgetsBinding.instance!.addPostFrameCallback(
