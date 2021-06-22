@@ -111,3 +111,6 @@ linter:
 
     # Not convenient
     sort_constructors_first: false
+
+    # When debug mode it's useful
+    avoid_print: false

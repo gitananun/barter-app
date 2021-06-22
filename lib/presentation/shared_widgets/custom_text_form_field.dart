@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../styles/form/style.dart';
-import 'form_components/input_icon_padding.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
