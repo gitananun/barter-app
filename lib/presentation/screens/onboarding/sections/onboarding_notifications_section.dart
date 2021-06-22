@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../paths.dart';
 import '../../../shared_widgets/containers/custom_wrap_with_runspacing.dart';
-import '../_components/notification_list_tile.dart';
+import '../components/notification_list_tile.dart';
 
 @immutable
 class OnBoardingNotificationsSection extends StatefulWidget {

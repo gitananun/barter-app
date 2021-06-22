@@ -1,10 +1,10 @@
-import 'package:barter/presentation/screens/auth/password_recover/_sections/password_recover_buttons.dart';
-import 'package:barter/presentation/screens/auth/password_recover/_sections/password_recover_form.dart';
 import 'package:barter/presentation/screens/auth/password_recover/layout/password_recover_layout.dart';
+import 'package:barter/presentation/screens/auth/password_recover/sections/password_recover_buttons.dart';
+import 'package:barter/presentation/screens/auth/password_recover/sections/password_recover_form.dart';
 import 'package:flutter/material.dart';
 
-import '../_shared_widgets/auth_form_heading.dart';
-import '../_shared_widgets/auth_scaffold.dart';
+import '../shared_widgets/auth_form_heading.dart';
+import '../shared_widgets/auth_scaffold.dart';
 
 class PasswordRecoverScreen extends StatelessWidget {
   const PasswordRecoverScreen({Key? key}) : super(key: key);

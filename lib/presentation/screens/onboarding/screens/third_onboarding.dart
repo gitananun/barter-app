@@ -1,12 +1,12 @@
+import 'package:barter/presentation/screens/onboarding/layout/onboarding_layout.dart';
+import 'package:barter/presentation/screens/onboarding/sections/onboarding_notifications_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared_widgets/containers/custom_wrap_with_runspacing.dart';
-import '../_sections/onboarding_notifications_section.dart';
-import '../_shared_widgets/onboarding_content_image.dart';
-import '../_shared_widgets/onboarding_content_title.dart';
-import '../_shared_widgets/onboarding_content_title_vertical_space.dart';
-import '../layout/onboarding_layout.dart';
+import '../shared_widgets/onboarding_content_image.dart';
+import '../shared_widgets/onboarding_content_title.dart';
+import '../shared_widgets/onboarding_content_title_vertical_space.dart';
 
 @immutable
 class ThirdOnboarding extends StatefulWidget {

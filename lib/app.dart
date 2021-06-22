@@ -1,3 +1,4 @@
+import 'package:barter/presentation/shared_widgets/layout_components/app_bottom_navigation_bar_controller.dart';
 import 'package:flutter/material.dart';
 
 import 'app/routes/app_router.dart';
@@ -27,7 +28,7 @@ class _AppState extends State<App> {
       title: 'Barter',
       themeMode: ThemeMode.light,
       theme: LightTheme().getTheme(_deviceScreenSize),
-      // home: const AppBottomNavigationBarController(),
+      home: const AppBottomNavigationBarController(),
       onGenerateRoute: (settings) => _appRouter.onGenerateRoute(context, settings),
       builder: (context, widget) {
         WidgetsBinding.instance!.addPostFrameCallback(

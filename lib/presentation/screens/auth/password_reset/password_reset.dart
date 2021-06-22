@@ -1,10 +1,11 @@
+import 'package:barter/presentation/screens/auth/password_reset/sections/password_reset_buttons.dart';
+import 'package:barter/presentation/screens/auth/password_reset/sections/password_reset_form.dart';
 import 'package:flutter/material.dart';
 
-import '../_shared_widgets/auth_form_heading.dart';
-import '../_shared_widgets/auth_scaffold.dart';
-import '../_shared_widgets/password_validation_column.dart';
-import '_sections/password_reset_buttons.dart';
-import '_sections/password_reset_form.dart';
+import '../shared_widgets/auth_form_heading.dart';
+import '../shared_widgets/auth_scaffold.dart';
+import '../shared_widgets/password_validation_column.dart';
+
 import 'layout/password_reset_layout.dart';
 
 class PasswordResetScreen extends StatelessWidget {

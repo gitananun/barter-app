@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../shared_widgets/containers/custom_wrap_with_runspacing.dart';
 import '../../../../shared_widgets/list_view_with_column.dart';
-import '../../_shared_widgets/auth_form_heading.dart';
+import '../../shared_widgets/auth_form_heading.dart';
 import 'login_form.dart';
 
 class LoginFormWithHeading extends StatelessWidget {

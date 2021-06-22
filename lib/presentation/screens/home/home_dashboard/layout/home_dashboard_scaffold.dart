@@ -1,6 +1,6 @@
+import 'package:barter/presentation/shared_widgets/layout_components/custom_fancy_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../shared_widgets/layout_components/custom_fancy_floating_action_button.dart';
 import 'components/home_dashboard_app_bar_actions.dart';
 import 'components/home_dashboard_app_bar_title.dart';
 

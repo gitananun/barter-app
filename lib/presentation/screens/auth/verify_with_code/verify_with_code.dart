@@ -1,10 +1,11 @@
+import 'package:barter/presentation/screens/auth/verify_with_code/sections/verify_with_code_buttons.dart';
+import 'package:barter/presentation/screens/auth/verify_with_code/sections/verify_with_code_form.dart';
 import 'package:flutter/material.dart';
 
-import '../_shared_widgets/auth_form_heading.dart';
-import '../_shared_widgets/auth_scaffold.dart';
-import '../_shared_widgets/components/code_expires_in.dart';
-import '_sections/verify_with_code_buttons.dart';
-import '_sections/verify_with_code_form.dart';
+import '../shared_widgets/auth_form_heading.dart';
+import '../shared_widgets/auth_scaffold.dart';
+import '../shared_widgets/components/code_expires_in.dart';
+
 import 'layout/verify_with_code_layout.dart';
 
 class VerifyWithCodeScreen extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../_shared_widgets/onboarding_content_image.dart';
-import '../_shared_widgets/onboarding_content_info.dart';
-import '../_shared_widgets/onboarding_content_title.dart';
-import '../_shared_widgets/onboarding_content_title_vertical_space.dart';
 import '../layout/onboarding_layout.dart';
+import '../shared_widgets/onboarding_content_image.dart';
+import '../shared_widgets/onboarding_content_info.dart';
+import '../shared_widgets/onboarding_content_title.dart';
+import '../shared_widgets/onboarding_content_title_vertical_space.dart';
 
 @immutable
 class SecondOnboarding extends StatelessWidget {

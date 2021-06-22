@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../shared_widgets/containers/custom_wrap_with_runspacing.dart';
-import '../../_shared_widgets/inputs/custom_email_phone_input.dart';
-import '../../_shared_widgets/inputs/custom_password_input.dart';
+import '../../shared_widgets/inputs/custom_email_phone_input.dart';
+import '../../shared_widgets/inputs/custom_password_input.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);

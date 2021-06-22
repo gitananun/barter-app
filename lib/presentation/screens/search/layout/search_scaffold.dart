@@ -1,6 +1,6 @@
+import 'package:barter/presentation/shared_widgets/layout_components/custom_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared_widgets/layout_components/custom_floating_action_button.dart';
 import '../../search_results/search_results.dart';
 import '../../shared_widgets/search/custom_search_input.dart';
 import '../../store/products/products.dart';
@@ -17,7 +17,7 @@ class SearchScaffold extends StatefulWidget {
 class _SearchScaffoldState extends State<SearchScaffold> {
   late String? _currentScreen;
 
-  final Map<String, Widget> _screens = {
+  final Map<String, Widget> screens = {
     'products': const ProductsScreen(),
     'search': const SearchScreen(),
     'results': const SearchResultsScreen(),
@@ -46,7 +46,7 @@ class _SearchScaffoldState extends State<SearchScaffold> {
           onFieldSubmitted: (String? v) => search(),
         ),
       ),
-      body: _screens[_currentScreen],
+      body: screens[_currentScreen],
     );
   }
 }

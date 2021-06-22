@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:slider_indicators/slider_indicators.dart';
 
-import '_components/onboarding_bottom_nav_bar.dart';
-import '_components/onboarding_floating_action_button.dart';
-import '_screens/first_onboarding.dart';
-import '_screens/second_onboarding.dart';
-import '_screens/third_onboarding.dart';
-import '_shared_widgets/onboarding_app_bar.dart';
+import 'components/onboarding_bottom_nav_bar.dart';
+import 'components/onboarding_floating_action_button.dart';
+import 'screens/first_onboarding.dart';
+import 'screens/second_onboarding.dart';
+import 'screens/third_onboarding.dart';
+import 'shared_widgets/onboarding_app_bar.dart';
 
 @immutable
 class OnBoardingScreen extends StatefulWidget {

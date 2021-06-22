@@ -1,7 +1,7 @@
+import 'package:barter/presentation/shared_widgets/layout_components/custom_main_layout_padding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../shared_widgets/layout_components/custom_main_layout_padding.dart';
 import '../../../../styles/types/double/double_style.dart';
 
 @immutable

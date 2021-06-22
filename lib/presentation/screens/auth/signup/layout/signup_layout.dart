@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../_shared_widgets/auth_main_layout.dart';
+import '../../shared_widgets/auth_main_layout.dart';
 
 @immutable
 class SignupLayout extends StatelessWidget {

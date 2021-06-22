@@ -1,9 +1,10 @@
+import 'package:barter/presentation/screens/auth/login/sections/login_buttons_list.dart';
+import 'package:barter/presentation/screens/auth/login/sections/login_form_with_heading.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared_widgets/barter_logo.dart';
-import '../_shared_widgets/auth_scaffold.dart';
-import '_sections/login_buttons_list.dart';
-import '_sections/login_form_with_heading.dart';
+import '../shared_widgets/auth_scaffold.dart';
+
 import 'layout/login_layout.dart';
 
 class LoginScreen extends StatefulWidget {

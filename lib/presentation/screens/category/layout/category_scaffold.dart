@@ -1,7 +1,7 @@
+import 'package:barter/presentation/shared_widgets/layout_components/custom_fancy_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../domain/models/store/product/specifications/category.dart';
-import '../../../shared_widgets/layout_components/custom_fancy_floating_action_button.dart';
 import 'components/category_scaffold_app_bar_title.dart';
 
 class CategoryScaffold extends StatelessWidget {

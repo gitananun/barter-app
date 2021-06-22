@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../_shared_widgets/onboarding_custom_circular_button.dart';
+import '../shared_widgets/onboarding_custom_circular_button.dart';
 import 'onboarding_welcome_button.dart';
 
 class OnBoardingFloatingActionButton extends StatelessWidget {
